@@ -154,5 +154,44 @@ main {
   .btn__return a {
     color: white; }
 
+.role-menu {
+  z-index: 1;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 30px;
+  justify-content: center;
+  padding-bottom: 40px; }
+  .role-menu__card {
+    cursor: pointer;
+    border-radius: 40px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 2px 2px 5px rgba(145, 145, 145, 0.39); }
+    .role-menu__card h4 {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 24px;
+      color: #C4817F; }
+    .role-menu__card:hover {
+      animation: move-up-down .5s linear 1; }
+  @media (max-width: 650px) {
+    .role-menu {
+      grid-template-columns: repeat(1, 300px); } }
+  @media (max-width: 400px) {
+    .role-menu {
+      grid-template-columns: repeat(1, 250px); } }
+
+@keyframes move-up-down {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(-30px); }
+  100% {
+    transform: translateY(0); } }
 .btn .btn__return a {
   color: white; }
