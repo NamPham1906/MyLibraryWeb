@@ -193,3 +193,5 @@ main {
     transform: translateY(-30px); }
   100% {
     transform: translateY(0); } }
+.btn .btn__return a {
+  color: white; }

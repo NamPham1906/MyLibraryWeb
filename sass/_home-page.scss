@@ -24,6 +24,10 @@
             font-size: 24px;
             color: $pink-1;
         }
+        img{
+            width: 70%;
+            height: auto;
+        }
         &:hover{
             animation: move-up-down .5s linear 1;
         }

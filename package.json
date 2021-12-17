@@ -5,8 +5,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "start:dev": "nodemon ./bin/www",
-    "sasstocss": "node-sass sass/main.scss css/style.css -w"
-
+    "sasstocss":"node-sass sass/main.scss css/style.css -w"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
