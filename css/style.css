@@ -454,3 +454,35 @@ main {
   font-weight: bold;
   font-size: 18px;
   margin: 20px auto; }
+
+.edit-user {
+  background-color: white;
+  padding: 40px;
+  margin-top: 70px;
+  border-radius: 20px;
+  width: 90%; }
+  .edit-user__title {
+    text-align: center;
+    color: #C4817F; }
+  .edit-user__form input, .edit-user__form select {
+    width: 100%;
+    background-color: #F6E5D2;
+    padding-left: 5px;
+    border: none; }
+  .edit-user__form input:not(:read-only):focus, .edit-user__form select:focus {
+    background-color: #F6E5D2; }
+  .edit-user__form button {
+    background-color: #F5BD8A;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    width: 150px;
+    display: block;
+    padding: 5px 0; }
+  .edit-user__form .user-avatar {
+    margin: 0 auto;
+    max-width: 250px; }
+  .edit-user .custom-file input {
+    position: absolute;
+    display: none; }
