@@ -625,3 +625,54 @@ main {
   .edit-user .custom-file input {
     position: absolute;
     display: none; }
+
+.create-book-borrow {
+  margin-top: 30px;
+  padding: 10px;
+  background-color: white;
+  max-width: 90vw;
+  border-radius: 20px; }
+  .create-book-borrow__id {
+    text-align: right; }
+    .create-book-borrow__id h5 {
+      font-size: 14px;
+      color: #747474; }
+  .create-book-borrow__title {
+    text-align: center;
+    color: #C4817F;
+    text-transform: uppercase;
+    margin-bottom: 20px; }
+    .create-book-borrow__title--sub {
+      color: #F5BD8A;
+      margin-top: 20px; }
+    .create-book-borrow__title h2 {
+      font-size: 20px; }
+  .create-book-borrow__form input, .create-book-borrow__form select {
+    width: 100%;
+    background-color: #F6E5D2;
+    padding-left: 5px;
+    border: none; }
+  .create-book-borrow__form input:not(:read-only):focus, .create-book-borrow__form select:focus {
+    background-color: #F6E5D2; }
+  .create-book-borrow__form button {
+    background-color: #F5BD8A;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    width: 150px;
+    display: block;
+    padding: 5px 0;
+    margin: 0 auto; }
+  .create-book-borrow__form .table-responsive td input {
+    width: 200px; }
+  .create-book-borrow__form .add-book-btn {
+    background-color: #F09295;
+    color: white;
+    width: 200px;
+    text-align: center;
+    margin: 20px auto;
+    padding: 5px 0;
+    border-radius: 20px; }
+  .create-book-borrow__form .delete-row {
+    cursor: pointer; }
