@@ -1,0 +1,75 @@
+div class="site-bg">
+        <div class="site-bg__curve"></div>
+    </div>
+    <main class="create-user">
+        <div class="create-user__title">
+            <h2>Thẻ độc giả</h2>
+        </div>
+        <form class="create-user__form">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="form-group">
+                            <label for="fullname">Họ tên:</label>
+                            <input type="text" class="form-control" name="fullname" id="fullname" autocomplete="false" >
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="form-group">
+                            <label for="user-type">Loại độc giả</label>
+                            <select name="userType" class="form-control" id="user-type">
+                                <option value="1">X</option>
+                                <option value="2">Y</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="form-group">
+                            <label for="dob">Ngày sinh</label>
+                            <input type="date" class="form-control" name="dob" id="dob" autocomplete="false" >
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="form-group">
+                            <label for="address">Địa chỉ:</label>
+                            <input type="text" class="form-control" name="address" id="address" autocomplete="false" >
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" name="email" id="email" autocomplete="false" >
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="form-group">
+                            <label for="create-at">Ngày lập thẻ:</label>
+                            <input type="date" class="form-control" name="createAt" id="create-at" autocomplete="false" >
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="form-group">
+                            <label for="admin-create">Người lập thẻ:</label>
+                            <input type="text" class="form-control" name="adminCreate" id="admin-create" autocomplete="false" >
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="custom-file">
+                            <label for="admin-create" style="opacity: 0;">place holder</label>
+                            <div class="position-relative">
+                                <input type="file" class="custom-file-input" id="avatar">
+                                <label class="custom-file-label" for="avatar">Thêm ảnh độc giả</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="btn add-user-btn" type="submit">Tạo thẻ độc giả</button>
+                </div>
+            </div>
+        </form>
+    </main>
