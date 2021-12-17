@@ -1,56 +1,12 @@
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  outline: 0;
-  border: 0; }
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  width: 100%;
-  position: relative;
-  align-items: center;
-  background-color: #F5BD8A; }
-
-img {
-  display: block;
-  width: 100%;
-  height: auto; }
-
-a {
-  text-decoration: none !important; }
-
-main {
-  z-index: 1; }
-
-.sgk-nav {
-  background-color: #F8E9BD;
-  padding: 5px 0;
-  padding-left: 20px;
-  width: 100%;
-  z-index: 1;
-  box-shadow: 0 5px 3px rgba(119, 119, 119, 0.26); }
-  .sgk-nav img {
-    width: 300px; }
-
-.role {
-  z-index: 1;
-  margin-top: 30px;
-  display: grid;
-  grid-template-columns: repeat(2, 300px);
-  gap: 30px;
-  justify-content: center;
-  padding-bottom: 40px; }
-  .role__card {
-    cursor: pointer;
-    border-radius: 40px;
-    padding: 20px;
-    margin: 0 auto;
-    background-color: white;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    border: 0; }
+  
+  body {
     display: flex;
-    align-items: center;
     flex-direction: column;
     box-shadow: 2px 2px 5px rgba(145, 145, 145, 0.39); }
     .role__card h4 {
@@ -58,6 +14,9 @@ main {
       text-align: center;
       font-size: 24px;
       color: #C4817F; }
+    .role__card img {
+      width: 70%;
+      height: auto; }
     .role__card:hover {
       animation: move-up-down .5s linear 1; }
   @media (max-width: 650px) {
@@ -86,62 +45,133 @@ main {
   .site-bg__curve {
     z-index: -9;
     position: absolute;
-    width: 100%;
-    height: 100vh;
-    clip-path: ellipse(84% 39% at 50% 10%);
-    background-color: #FCF5E1; }
-  .site-bg__paper-plane {
-    z-index: -8;
-    position: absolute;
-    z-index: -1;
-    top: 20px;
-    left: 0;
-    width: 320px; }
-  .site-bg__boy {
-    z-index: -8;
-    position: absolute;
-    z-index: -1;
-    top: 40px;
-    right: 0;
-    width: 280px; }
 
-.login {
-  padding: 30px;
-  background-color: white;
-  border-radius: 40px;
-  margin-top: 40px; }
-  .login__title {
-    text-align: center;
-    font-size: 28px;
-    color: #C4817F;
-    margin-bottom: 20px; }
-  .login__logo {
-    width: 200px; }
-  .login__form form {
-    display: flex;
-    flex-direction: column; }
-  .login__form input {
-    width: 300px;
-    background-color: #F6E5D2;
-    padding-left: 5px;
-    border: none; }
-  .login__form input:focus {
-    background-color: #F6E5D2; }
-  .login__form .form-group:nth-child(2) {
-    margin-bottom: 5px; }
-  .login__form .forget-password-txt {
-    color: black;
-    font-size: 14px;
-    font-weight: 600;
-    font-style: italic; }
-  .login__form .btn {
-    color: white;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0 5px 3px rgba(119, 119, 119, 0.26); }
+    .sgk-nav img {
+      width: 300px; }
+  
+  .role {
+    z-index: 1;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    gap: 30px;
+    justify-content: center;
+    padding-bottom: 40px; }
+    .role__card {
+      cursor: pointer;
+      border-radius: 40px;
+      padding: 20px;
+      margin: 0 auto;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      box-shadow: 2px 2px 5px rgba(145, 145, 145, 0.39); }
+      .role__card h4 {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 24px;
+        color: #C4817F; }
+      .role__card img {
+        width: 70%;
+        height: auto; }
+      .role__card:hover {
+        animation: move-up-down .5s linear 1; }
+    @media (max-width: 650px) {
+      .role {
+        grid-template-columns: repeat(1, 300px); } }
+    @media (max-width: 400px) {
+      .role {
+        grid-template-columns: repeat(1, 250px); } }
+  
+  @keyframes move-up-down {
+    0% {
+      transform: translateY(0); }
+    50% {
+      transform: translateY(-30px); }
+    100% {
+      transform: translateY(0); } }
+  
+  .site-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+    .site-bg__curve {
+      z-index: -9;
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      clip-path: ellipse(84% 39% at 50% 10%);
+      background-color: #FCF5E1; }
+    .site-bg__paper-plane {
+      z-index: -8;
+      position: absolute;
+      z-index: -1;
+      top: 20px;
+      left: 0;
+      width: 320px; }
+    .site-bg__boy {
+      z-index: -8;
+      position: absolute;
+      z-index: -1;
+      top: 40px;
+      right: 0;
+      width: 280px; }
+  
+  .login {
+    padding: 30px;
+    background-color: white;
+    border-radius: 40px;
+    margin-top: 40px; }
+    .login__title {
+      text-align: center;
+      font-size: 28px;
+      color: #C4817F;
+      margin-bottom: 20px; }
+    .login__logo {
+      width: 200px; }
+    .login__form form {
+      display: flex;
+      flex-direction: column; }
+    .login__form input {
+      width: 300px;
+      background-color: #F6E5D2;
+      padding-left: 5px;
+      border: none; }
+    .login__form input:focus {
+      background-color: #F6E5D2; }
+    .login__form .form-group:nth-child(2) {
+      margin-bottom: 5px; }
+    .login__form .forget-password-txt {
+      color: black;
+      font-size: 14px;
+      font-weight: 600;
+      font-style: italic; }
+    .login__form .btn {
+      color: white;
+      background-color: #F5BD8A;
+      border-radius: 20px;
+      font-weight: bold;
+      flex-grow: 0;
+      align-self: flex-end; }
+      .login__form .btn a {
+        color: white; }
+  
+  .btn__return {
+    position: absolute;
+    top: 90px;
+    left: 30px;
     background-color: #F5BD8A;
     border-radius: 20px;
-    font-weight: bold;
-    flex-grow: 0;
-    align-self: flex-end; }
-    .login__form .btn a {
+    font-weight: bold; }
+    .btn__return a {
       color: white; }
 
 .btn__return {
@@ -171,6 +201,22 @@ main {
     cursor: pointer;
     border-radius: 40px;
     padding: 20px 40px;
+    color: white; }
+
+.ceo-menu {
+  z-index: 1;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 30px;
+  justify-content: center;
+  padding-bottom: 40px; }
+  .ceo-menu__card {
+    cursor: pointer;
+    border-radius: 40px;
+    padding: 20px 20px 0px 20px;
+    width: 285px;
+    height: 285px;
     margin: 0 auto;
     background-color: white;
     display: flex;
@@ -219,3 +265,22 @@ main {
     margin-top: 20px; }
     .create-user__form .add-user-btn a {
       color: white; }
+    .ceo-menu__card h4 {
+      margin: auto 0;
+      text-align: center;
+      font-size: 18px;
+      color: #C4817F; }
+    .ceo-menu__card img {
+      width: 70%;
+      height: auto; }
+    .ceo-menu__card:hover {
+      animation: move-up-down .5s linear 1; }
+  @media (max-width: 960px) {
+    .ceo-menu {
+      grid-template-columns: repeat(2, 300px); } }
+  @media (max-width: 650px) {
+    .ceo-menu {
+      grid-template-columns: repeat(1, 300px); } }
+  @media (max-width: 400px) {
+    .ceo-menu {
+      grid-template-columns: repeat(1, 250px); } }

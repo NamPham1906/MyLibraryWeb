@@ -49,6 +49,9 @@ main{
     @if $breakpoint == 900{
         @media (max-width: 900px){@content};  //900px
     }
+    @if $breakpoint == 960{
+        @media (max-width: 960px){@content};  //960px
+    }
     @if $breakpoint == 1200{
         @media (max-width: 1200px){@content}; //1200px
     }
