@@ -5,9 +5,12 @@
 @import './site-bg';
 @import './login';
 @import './forgot-password';
-@import './menu-stocker';
+@import './stocker/menu';
+@import './stocker/add-book';
+@import './stocker/edit-book';
 @import './librarian/menu';
 @import './librarian/add-user';
+@import './treasurer/menu';
 @import './ceo/ceo-page';
 @import './pagination';
 @import './librarian/all-user';
