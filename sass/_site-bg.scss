@@ -1,0 +1,34 @@
+.site-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   
+    &__curve{
+        z-index: -9;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        clip-path: ellipse(84% 39% at 50% 10%);
+        background-color: $brown-2;
+    }
+    &__paper-plane{
+        z-index: -8;
+        position: absolute;
+        z-index: -1;
+        top: 20px;
+        left: 0;
+        width: 320px;
+    }
+    &__boy{
+        z-index: -8;
+        position: absolute;
+        z-index: -1;
+        top: 40px;
+        right: 0;
+        width: 280px;
+    }
+}
