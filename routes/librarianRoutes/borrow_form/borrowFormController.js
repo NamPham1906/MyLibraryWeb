@@ -10,3 +10,7 @@ exports.detail = async (req,res)=> {
 exports.list = async (req,res)=> {
     res.render('librarian/borrow_form/list');
 }
+
+exports.print = async (req,res)=> {
+    res.render('librarian/borrow_form/print');
+}
