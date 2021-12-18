@@ -1,0 +1,108 @@
+
+<div class="site-bg">
+    <div class="site-bg__curve"></div>
+</div>
+<main class="create-book-borrow">
+    <div class="create-book-borrow__id">
+        <h5>Mã phiếu: ABCDEF</h5>
+    </div>
+    <div class="create-book-borrow__title">
+        <h2>Phiếu trả sách</h2>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    <label >Họ tên:</label>
+                    <input readonly type="text" value="Nguyễn Xuân Trường" class="form-control" autocomplete="false" >
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    <label >Mã độc giả:</label>
+                    <input readonly type="text" value="DG000009" class="form-control" autocomplete="false" >
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    <label for="created-at">Ngày trả: </label>
+                    <input readonly type="date" value="2021-09-05" readonly class="form-control" autocomplete="false" >
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    <label >Tiền phạt kì này:</label>
+                    <input readonly type="text" value="4.000 vnđ" class="form-control" autocomplete="false" >
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    <label >Tiền nợ:</label>
+                    <input readonly type="text" value="1.000 vnđ" class="form-control" autocomplete="false" >
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    <label >Tổng nợ: </label>
+                    <input readonly type="text" value="60.000 vnđ" class="form-control"  autocomplete="false" >
+                </div>
+            </div>
+        </div>
+        <div class="create-book-borrow__title create-book-borrow__title--sub">
+            <h2>Danh sách sách trả</h2>
+        </div>
+        
+        <div class="table-responsive">
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th scope="col">STT</th>
+                        <th scope="col">Mã sách</th>
+                        <th scope="col">Tên sách</th>
+                        <th scope="col">Thể loại</th>
+                        <th scope="col">Tác giả</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody id="book-table">
+                    <tr data-id="1">
+                        <th scope="row" class="row-no">1</th>
+                        <td>
+                            <input value="BAA00011" readonly class="form-control" type="text" >
+                        </td>
+                        <td>
+                            <input readonly value="31/08/2021" class="form-control" readonly type="text" >
+                        </td>
+                        <td>
+                            <input readonly value="6" class="form-control" readonly type="text" >
+                        </td>
+                        <td>
+                            <input readonly value="2.000 vnđ" class="form-control"  type="text" >
+                        </td>
+                        
+                    </tr>
+                    <tr data-id="1">
+                        <th scope="row" class="row-no">2</th>
+                        <td>
+                            <input value="GEO00002 " readonly class="form-control" type="text" >
+                        </td>
+                        <td>
+                            <input readonly value=" 31/08/2021 " class="form-control" readonly type="text" >
+                        </td>
+                        <td>
+                            <input readonly value="6" class="form-control" readonly type="text" >
+                        </td>
+                        <td>
+                            <input readonly value="2.000 vnđ" class="form-control"  type="text" >
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <button class="btn create-book-borrow__btn" type="submit">In</button>
+        </div>
+    </div>
+</main>

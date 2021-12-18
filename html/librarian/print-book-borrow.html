@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/public/images/logo_small.png">
+    <script src="https://kit.fontawesome.com/28493d7750.js" crossorigin="anonymous"></script>
+    <title>SGK Library</title>
+</head>
+<body>
+    <div class="navbar sgk-nav">
+        <a href="/">
+            <img src="/public/images/logo.png" alt="skg-logo">
+        </a>
+    </div>
+    <div class="site-bg">
+        <div class="site-bg__curve"></div>
+    </div>
+    <main class="create-book-borrow">
+        <div class="create-book-borrow__id">
+            <h5>Mã phiếu: ABCDEF</h5>
+        </div>
+        <div class="create-book-borrow__title">
+            <h2>Phiếu mượn sách</h2>
+        </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <label >Họ tên:</label>
+                            <input readonly type="text" value="Nguyễn Quốc Vinh" class="form-control" autocomplete="false" >
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <label for="user-id">Mã độc giả:</label>
+                            <input readonly type="text" value="DG000006" class="form-control" autocomplete="false" >
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <label for="created-at">Ngày mượn: </label>
+                            <input type="date" readonly value="2021-02-02" class="form-control" name="createdAt" id="created-at" autocomplete="false" >
+                        </div>
+                    </div>
+                </div>
+                <div class="create-book-borrow__title create-book-borrow__title--sub">
+                    <h2>Danh sách sách mượn</h2>
+                </div>
+                
+                <div class="table-responsive">
+                    <table class="table table-borderless">
+                        <thead>
+                            <tr>
+                                <th scope="col">STT</th>
+                                <th scope="col">Mã sách</th>
+                                <th scope="col">Tên sách</th>
+                                <th scope="col">Thể loại</th>
+                                <th scope="col">Tác giả</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="book-table">
+                            <tr>
+                                <th scope="row" class="row-no">1</th>
+                                <td>
+                                    <input readonly value="CSC10006" class="form-control" type="text" >
+                                </td>
+                                <td>
+                                    <input readonly value="Cơ sở dữ liệu" class="form-control" readonly type="text">
+                                </td>
+                                <td>
+                                    <input readonly value="B" class="form-control" readonly type="text">
+                                </td>
+                                <td>
+                                    <input readonly value="Đồng Thị Bích Thủy" class="form-control" readonly type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="row-no">2</th>
+                                <td>
+                                    <input readonly value="GEO00002" class="form-control" type="text" >
+                                </td>
+                                <td>
+                                    <input readonly value="Khoa học Trái Đất" class="form-control" readonly type="text">
+                                </td>
+                                <td>
+                                    <input readonly value="C" class="form-control" readonly type="text">
+                                </td>
+                                <td>
+                                    <input readonly value="HCMUS" class="form-control" readonly type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="row-no">3</th>
+                                <td>
+                                    <input readonly value="BIO00002" class="form-control" type="text" >
+                                </td>
+                                <td>
+                                    <input readonly value="Sinh đại cương 1" class="form-control" readonly type="text">
+                                </td>
+                                <td>
+                                    <input readonly value="C" class="form-control" readonly type="text">
+                                </td>
+                                <td>
+                                    <input readonly value="Phan Kim Ngọc" class="form-control" readonly type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="row-no">3</th>
+                                <td>
+                                    <input readonly value="BAA00004" class="form-control" type="text" >
+                                </td>
+                                <td>
+                                    <input readonly value="Pháp luật đại cương" class="form-control" readonly type="text">
+                                </td>
+                                <td>
+                                    <input readonly value="B" class="form-control" readonly type="text">
+                                </td>
+                                <td>
+                                    <input readonly value="HCMUS" class="form-control" readonly type="text">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row">
+                    <button class="btn create-book-borrow__btn" type="button">In</button>
+                </div>
+            </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    
+</body>
+</html>
