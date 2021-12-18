@@ -274,7 +274,6 @@ main {
     margin: 5px auto 5px auto;
     max-width: 200px; }
   .edit-book__form h5 {
-    margin: 0 auto;
     width: max-content;
     font-weight: 600;
     margin-bottom: 15px;
@@ -420,6 +419,58 @@ main {
   font-size: 18px;
   margin: 20px auto 0px auto; }
 
+.edit-liquidation {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: white;
+  max-width: 90vw;
+  border-radius: 20px; }
+  .edit-liquidation__id {
+    text-align: right; }
+    .edit-liquidation__id h5 {
+      font-weight: 600;
+      font-size: 14px;
+      color: #747474; }
+  .edit-liquidation__title {
+    text-align: center;
+    color: #C4817F;
+    margin-bottom: 20px;
+    text-transform: uppercase; }
+    .edit-liquidation__title h2 {
+      font-weight: 600; }
+    .edit-liquidation__title--sub {
+      color: #F5BD8A;
+      margin-top: 20px; }
+  .edit-liquidation__form input, .edit-liquidation__form select {
+    width: 100%;
+    background-color: #F6E5D2;
+    padding-left: 5px;
+    border: none; }
+  .edit-liquidation__form .input-liquidation {
+    color: coral;
+    font-weight: bold; }
+  .edit-liquidation__form input:not(:read-only):focus, .edit-liquidation__form select:focus {
+    background-color: #F6E5D2; }
+  .edit-liquidation__form button {
+    background-color: #F5BD8A;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 600;
+    width: 150px;
+    display: block;
+    padding: 5px 0;
+    margin: 10px auto 5px auto; }
+  .edit-liquidation__form .table-responsive th {
+    text-align: center;
+    width: 100%; }
+  .edit-liquidation__form .table-responsive td input {
+    width: 200px; }
+  .edit-liquidation__form .delete-row {
+    cursor: pointer; }
+
 .librarian-menu {
   width: 100%; }
   .librarian-menu__row {
@@ -534,6 +585,108 @@ main {
     transform: translateY(-30px); }
   100% {
     transform: translateY(0); } }
+
+.all-fine-form {
+  padding: 80px 20px;
+  width: 90vw; }
+  .all-fine-form__title {
+    text-align: center;
+    font-size: 24px;
+    color: #C4817F;
+    margin-bottom: 20px; }
+  .all-fine-form__search {
+    background-color: white;
+    padding: 20px;
+    border-radius: 40px; }
+    .all-fine-form__search input {
+      background-color: #F6E5D2;
+      padding-right: 35px;
+      border: none; }
+    .all-fine-form__search button {
+      cursor: pointer; }
+    .all-fine-form__search input:focus {
+      background-color: #F6E5D2; }
+    .all-fine-form__search button {
+      background-color: unset;
+      width: 30px;
+      height: 30px; }
+    .all-fine-form__search .input-wrapper {
+      position: relative; }
+      .all-fine-form__search .input-wrapper button {
+        position: absolute;
+        z-index: 2;
+        width: 30px;
+        height: 30px;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%); }
+    .all-fine-form__search label, .all-fine-form__search span {
+      text-align: right;
+      color: #000;
+      font-weight: bold; }
+    .all-fine-form__search span {
+      margin-right: 10px; }
+    .all-fine-form__search .form-group {
+      margin-bottom: 0; }
+  .all-fine-form__container {
+    margin-top: 20px; }
+  .all-fine-form .fine-form {
+    margin: 20px 0; }
+    .all-fine-form .fine-form__card {
+      background-color: white;
+      padding: 20px 30px;
+      border-radius: 20px; }
+      .all-fine-form .fine-form__card span {
+        font-weight: 600; }
+      .all-fine-form .fine-form__card__title {
+        text-align: center; }
+        .all-fine-form .fine-form__card__title h4 {
+          color: #CF7D7D;
+          font-size: 18px; }
+      .all-fine-form .fine-form__card__action {
+        margin-top: 20px; }
+        .all-fine-form .fine-form__card__action img {
+          width: 30px; }
+        .all-fine-form .fine-form__card__action button {
+          background-color: unset; }
+
+.add-penalty {
+  margin-top: 30px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 20px; }
+  .add-penalty__id {
+    text-align: right; }
+    .add-penalty__id h5 {
+      font-size: 14px;
+      color: #747474; }
+  .add-penalty__title {
+    text-align: center;
+    color: #C4817F;
+    text-transform: uppercase;
+    margin-bottom: 20px; }
+    .add-penalty__title--sub {
+      color: #F5BD8A;
+      margin-top: 20px; }
+    .add-penalty__title h2 {
+      font-size: 20px; }
+  .add-penalty__form input {
+    width: 250px;
+    background-color: #F6E5D2;
+    padding-left: 5px;
+    border: none; }
+  .add-penalty__form input:not(:read-only):focus, .add-penalty__form select:focus {
+    background-color: #F6E5D2; }
+  .add-penalty__btn {
+    background-color: #F5BD8A;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    width: 150px;
+    display: block;
+    padding: 5px 0;
+    margin: 0 auto; }
 
 .ceo-menu {
   z-index: 1;
@@ -767,6 +920,92 @@ input[type=number] {
   font-size: 18px;
   margin: 20px auto; }
 
+.list-debt {
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 90vw;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  .list-debt__title {
+    text-align: center;
+    font-size: 20px;
+    color: #C4817F;
+    margin-bottom: 20px; }
+  .list-debt__search input {
+    background-color: #F6E5D2;
+    padding-right: 35px;
+    border: none; }
+  .list-debt__search button {
+    cursor: pointer; }
+  .list-debt__search input:focus {
+    background-color: #F6E5D2; }
+  .list-debt__search input[type=date] {
+    padding-right: 5px; }
+  .list-debt__search select {
+    background-color: #F6E5D2; }
+  .list-debt__search select:focus {
+    background-color: #F6E5D2; }
+  .list-debt__search button {
+    background-color: unset;
+    width: 30px;
+    height: 30px; }
+  .list-debt__search .input-wrapper {
+    position: relative; }
+    .list-debt__search .input-wrapper button {
+      position: absolute;
+      z-index: 2;
+      width: 30px;
+      height: 30px;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%); }
+  .list-debt__search label, .list-debt__search span {
+    text-align: left;
+    color: #000;
+    font-weight: bold; }
+  .list-debt__search span {
+    margin-right: 10px; }
+  .list-debt__search .form-group {
+    margin-bottom: 20px; }
+  .list-debt table {
+    border-spacing: 0 10px; }
+    .list-debt table thead th {
+      padding: 20px 10px;
+      border-top: 1px solid rgba(0, 0, 0, 0.452);
+      margin: 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.452); }
+    .list-debt table thead th:first-child {
+      overflow: hidden;
+      border-left: 1px solid rgba(0, 0, 0, 0.452);
+      border-radius: 20px 0 0 20px; }
+    .list-debt table thead th:last-child {
+      border-right: 1px solid rgba(0, 0, 0, 0.452);
+      border-radius: 0 20px 20px 0; }
+    .list-debt table tbody tr {
+      padding: 0 10px; }
+      .list-debt table tbody tr td {
+        transition: .2s;
+        font-weight: 600; }
+      .list-debt table tbody tr td:first-child {
+        border-radius: 20px 0 0 20px; }
+      .list-debt table tbody tr td:last-child {
+        border-radius: 0 20px 20px 0; }
+
+.list-debt__pagi {
+  margin-bottom: 20px; }
+
+.btn-print-report {
+  background-color: #EF8885;
+  width: 150px;
+  text-align: center;
+  border-radius: 30px;
+  color: white !important;
+  font-size: 18px; }
+  .btn-print-report a {
+    color: white !important; }
+
 .pagination {
   padding: 5px;
   background-color: white;
@@ -970,16 +1209,6 @@ input[type=number] {
     border: none; }
   .create-book-borrow__form input:not(:read-only):focus, .create-book-borrow__form select:focus {
     background-color: #F6E5D2; }
-  .create-book-borrow__form button {
-    background-color: #F5BD8A;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    text-align: center;
-    width: 150px;
-    display: block;
-    padding: 5px 0;
-    margin: 0 auto; }
   .create-book-borrow__form .table-responsive td input {
     width: 200px; }
   .create-book-borrow__form .add-book-btn {
@@ -992,6 +1221,16 @@ input[type=number] {
     border-radius: 20px; }
   .create-book-borrow__form .delete-row {
     cursor: pointer; }
+  .create-book-borrow button {
+    background-color: #F5BD8A;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    width: 150px;
+    display: block;
+    padding: 5px 0;
+    margin: 0 auto; }
 
 .list-book-borrow {
   background-color: white;
@@ -1515,3 +1754,64 @@ input[type=number] {
   .detail-book .custom-file input {
     position: absolute;
     display: none; }
+
+.print-statictic-book-borrow {
+  margin-top: 30px;
+  padding: 10px;
+  background-color: white;
+  max-width: 90vw;
+  border-radius: 20px; }
+  .print-statictic-book-borrow__id {
+    text-align: right; }
+    .print-statictic-book-borrow__id h5 {
+      font-size: 14px;
+      color: #747474; }
+  .print-statictic-book-borrow__title {
+    text-align: center;
+    color: #C4817F;
+    text-transform: uppercase;
+    margin-bottom: 20px; }
+    .print-statictic-book-borrow__title--sub {
+      color: #F5BD8A;
+      margin-top: 20px; }
+    .print-statictic-book-borrow__title h2 {
+      font-size: 20px; }
+  .print-statictic-book-borrow input, .print-statictic-book-borrow select {
+    width: 100%;
+    background-color: #F6E5D2;
+    padding-left: 5px;
+    border: none; }
+  .print-statictic-book-borrow input:not(:read-only):focus, .print-statictic-book-borrow select:focus {
+    background-color: #F6E5D2; }
+  .print-statictic-book-borrow .input-wrapper {
+    position: relative; }
+    .print-statictic-book-borrow .input-wrapper button {
+      position: absolute;
+      z-index: 2;
+      width: 30px;
+      height: 30px;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%); }
+  .print-statictic-book-borrow .table-responsive td input {
+    width: 200px; }
+  .print-statictic-book-borrow .add-book-btn {
+    background-color: #F09295;
+    color: white;
+    width: 200px;
+    text-align: center;
+    margin: 20px auto;
+    padding: 5px 0;
+    border-radius: 20px; }
+  .print-statictic-book-borrow .delete-row {
+    cursor: pointer; }
+  .print-statictic-book-borrow button {
+    background-color: #F5BD8A;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    width: 150px;
+    display: block;
+    padding: 5px 0;
+    margin: 0 auto; }

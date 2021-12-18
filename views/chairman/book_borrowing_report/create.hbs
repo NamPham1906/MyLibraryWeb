@@ -1,0 +1,95 @@
+ <div class="site-bg">
+        <div class="site-bg__curve"></div>
+    </div>
+    
+    <main class="list-debt">
+        <div class="list-debt__title">
+            <h2>DANH SÁCH BÁO CÁO THỐNG KÊ TÌNH HÌNH MƯỢN SÁCH THEO THỂ LOẠI</h2>
+        </div>
+        <form class="list-debt__search">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group row">                            
+                            <label for="user-id" class="col-12 col-sm-4 col-form-label">Thể loại: </label>
+                            <div class="col-12 col-sm-8 input-wrapper">
+                                <div class="input-wrapper">
+                                    <!-- <input type="text" id="user-id" name="userId" class="form-control"> -->
+                                    <select name="bookType" class="form-control" id="book-type">
+                                        <option value="0">Tất cả</option>
+                                        <option value="1">A</option>
+                                        <option value="2">B</option>
+                                        <option value="3">C</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group row">      
+                            <label for="month" class="col-12 col-sm-4 col-form-label">Tháng: </label>
+                            <div class="col-12 col-sm-8 input-wrapper">
+                                <div class="input-wrapper">
+                                    <input type="month" id="fullname" name="fullname" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="table-responsive">
+            <table class="table table-borderless" style="border-collapse: unset;">
+                <thead>
+                    <tr>
+                            <th scope="col">STT</th>
+                            <th scope="col">Tên thể loại</th>
+                            <th scope="col">Số lượt mượn</th>
+                            <th scope="col">Tỉ lệ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>00001</td>
+                        <td>
+                            <span>A</span>
+                        </td>
+                        <td>
+                            <span>20</span>
+                        </td>
+                        <td>
+                            <span>20%</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>00002</td>
+                        <td>
+                            <span>B</span>
+                        </td>
+                        <td>
+                            <span>50</span>
+                        </td>
+                        <td>
+                            <span>50%</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>00003</td>
+                        <td>
+                            <span>C</span>
+                        </td>
+                        <td>
+                            <span>30</span>
+                        </td>
+                        <td>
+                            <span>30%</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <div class="d-flex flex-row justify-content-between w-100 mb-4" style="max-width: 90vw; z-index: 1">
+        <div style="width: 150px;"></div>
+        <button class="btn btn-print-report"><a href="/chairman/book-borrowing-report/print">In báo cáo</a></button>
+    </div>
