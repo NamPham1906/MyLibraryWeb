@@ -1,0 +1,106 @@
+.list-book-borrow{
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 90vw;
+    width: 100%;
+    &__title{
+        text-align: center;
+        font-size: 24px;
+        color: $pink-1;
+        margin-bottom: 20px;
+    }
+    &__search{
+       
+        input{
+            background-color: $brown-4;
+            padding-right: 35px;
+            border: none;
+        }
+        button{
+            cursor: pointer;
+        }
+        input:focus{
+            background-color: $brown-4;
+        }
+        input[type=date]{
+            padding-right: 5px;
+        }
+        button{
+            background-color: unset;
+            width: 30px;
+            height: 30px;
+        }
+        .input-wrapper{
+            position: relative;
+            button{
+                position: absolute;
+                z-index: 2;
+                width: 30px;
+                height: 30px;
+                right: 5px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        label, span{
+            text-align: left;
+            color: #000;
+            font-weight: bold;
+        }
+        span{
+            margin-right: 10px;
+        }
+        .form-group{
+            margin-bottom: 20px;
+        }
+
+    }
+    table{
+        border-spacing: 0 10px;
+        thead{
+            th{
+                padding: 20px 10px;
+                border-top: 1px solid rgba(0, 0, 0, 0.452);
+                margin: 0;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.452);
+            }
+            th:first-child {
+                overflow: hidden;
+                border-left: 1px solid rgba(0, 0, 0, 0.452);
+                border-radius: 20px 0 0 20px;
+            }
+             th:last-child {
+                border-right: 1px solid rgba(0, 0, 0, 0.452);
+                border-radius: 0 20px 20px 0;
+            }
+        }
+        tbody{
+            tr{
+                cursor: pointer;
+                padding: 0 10px;
+                &:hover{
+                    td{
+                        background-color: $brown-1;
+                    }
+                    
+                }
+                td{
+                    transition: .2s;
+                    font-weight: 600;
+                }
+                td:first-child {
+                    border-radius: 20px 0 0 20px;
+                }
+                td:last-child {
+                    border-radius: 0 20px 20px 0;
+                }
+            }
+        }
+    }
+    margin-bottom: 20px;
+}
+
+.list-book-borrow__pagi{
+    margin-bottom: 20px;
+}
