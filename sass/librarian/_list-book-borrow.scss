@@ -4,6 +4,7 @@
     border-radius: 20px;
     max-width: 90vw;
     width: 100%;
+    margin-top: 20px;
     &__title{
         text-align: center;
         font-size: 24px;
@@ -99,8 +100,27 @@
         }
     }
     margin-bottom: 20px;
+    
 }
 
 .list-book-borrow__pagi{
     margin-bottom: 20px;
+}
+
+.btn-report-book-borrow{
+    background-color: #EF8885;
+    width: 150px;
+    text-align: center;
+    border-radius: 30px;
+    color: white !important;
+    font-size: 18px;
+}
+
+.btn-add-book-return{
+    background-color: white;
+    width: 150px;
+    text-align: center;
+    border-radius: 30px;
+    color: $brown-3 !important;
+    font-size: 18px;
 }
