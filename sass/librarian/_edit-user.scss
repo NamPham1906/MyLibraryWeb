@@ -1,0 +1,43 @@
+.edit-user{
+    background-color: white;
+    padding: 40px;
+    margin-top: 70px;
+    border-radius: 20px;
+    width: 90%;
+    &__title{
+        text-align: center;
+        color: $pink-1;
+    }
+    &__form{
+        input, select{
+            width: 100%;
+            background-color: $brown-4;
+            padding-left: 5px;
+            border: none;
+        }
+        input:not(:read-only):focus, select:focus{
+            background-color: $brown-4;
+        }
+    
+        button{
+            background-color: $brown-3;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            text-align: center;
+            width: 150px;
+            display: block;
+            padding: 5px 0;
+        }
+        .user-avatar{
+            margin: 0 auto;
+            max-width: 250px;
+        }
+    }
+    .custom-file{
+        input{
+            position: absolute;
+            display: none;
+        }
+    }
+}
