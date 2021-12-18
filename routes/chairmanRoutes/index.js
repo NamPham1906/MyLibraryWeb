@@ -2,16 +2,25 @@ const express = require('express');
 const router = express.Router();
 
 const chairmanController = require('./chairmanController');
-const staffManagementController = require('./staff_management/staffManagementController');
+const staffController = require('./staff/staffController');
 
 router.get('/',chairmanController.menu);
 router.get('/logout',chairmanController.logout);
 
 // STAFF
-router.get('/staff',staffManagementController.list);
-router.get('/staff/add',staffManagementController.add);
-router.get('/staff/detail',staffManagementController.detail);
-router.get('/staff/list',staffManagementController.list);
+router.get('/staff',staffController.list);
+router.get('/staff/add',staffController.add);
+router.get('/staff/detail',staffController.detail);
+router.get('/staff/list',staffController.list);
+
+// DEBT REPORT
+
+
+// BOOK RETURN REPORT
+
+
+
+//BOOK BORROWING REPORT
 
 
 
