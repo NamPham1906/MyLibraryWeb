@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,57 +19,66 @@
     <div class="site-bg">
         <div class="site-bg__curve"></div>
     </div>
-    <main class="detail-book-lost">
-        <div class="detail-book-return__id">
-            <h5>Mã phiếu: ABCDEF</h5>
+    <main class="create-book-lost">
+        <div class="create-book-lost__id">
+            <h5>Mã phiếu: XXXXXX</h5>
         </div>
-        <div class="detail-book-lost__title">
-            <h2>XEM THÔNG TIN PHIẾU GHI NHẬN MẤT SÁCH</h2>
+        <div class="create-book-lost__title">
+            <h2>PHIẾU THU GHI NHẬN MẤT SÁCH</h2>
         </div>
-        <div class="detail-book-lost__form">
+        <form class="create-book-lost__form">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-md-6">
                         <div class="form-group">
-                            <label>Mã độc giả: :</label>
-                            <input readonly type="text" class="form-control" value="DG000001"autocomplete="false" >
-                        </div>
-                        <div class="form-group">
-                            <label >Tên sách:</label>
-                            <input readonly type="text" class="form-control" value="Hóa đại cương 1"autocomplete="false" >
-                        </div>
-                        <div class="form-group">
-                            <label >Ngày ghi nhận:</label>
-                            <input readonly type="text" class="form-control" value="2/2/2020" autocomplete="false" >
+                            <label for="fullname">Họ tên:</label>
+                            <input type="text" class="form-control" name="fullname" id="fullname" autocomplete="false" >
                         </div>
                     </div>
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-md-6">
                         <div class="form-group">
-                            <label >Tên độc giả: </label>
-                            <input readonly  type="text" value="Lê Kiệt"class="form-control"/>
+                            <label for="user-id">Mã độc giả:</label>
+                            <input type="text" class="form-control" name="userId" id="user-id" autocomplete="false" >
                         </div>
-                        <div class="form-group">
-                            <label>Tiền phạt:</label>
-                            <input readonly type="text" class="form-control" value="23.000 vnđ"  autocomplete="false" >
-                        </div>
-                        <div class="form-group">
-                            <label >Người ghi nhận:</label>
-                            <input readonly type="date" class="form-control" value="Phạm Sơn Nam " readonly autocomplete="false" >
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-4 order-first order-lg-last text-center">
-                        <label style="text-align: center;">Mã sách: BIO00001</label>
-                        <img class="user-avatar" id="user-avatar" src="/public/images/librarian/book/book2.png" alt="">
                     </div>
                 </div>
-                <form id="delete-book-lost-form"></form>
-                <button type="submit" form="delete-book-lost-form" class="btn mx-auto">Xóa</button>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="book">Tên sách: </label>
+                            <input type="book" class="form-control" name="book" id="book" autocomplete="false" >
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="created-at">Ngày ghi nhận: </label>
+                            <input type="date" readonly class="form-control" name="createdAt" id="created-at" autocomplete="false" >
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="admin">Người ghi nhận:</label>
+                            <input type="text" class="form-control" name="admin" id="admin" autocomplete="false" >
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="money">Tiền phạt:</label>
+                            <input type="text" class="form-control" name="money" id="money" autocomplete="false" >
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="btn create-book-lost__btn" type="submit">Tạo phiếu</button>
+                </div>
             </div>
-        </div>
+        </form>
     </main>
-    
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+ 
 </body>
 </html>
