@@ -31,5 +31,16 @@
             }
         })
     </script>
+     <script>
+        $(document).ready(function(){
+            const item = document.getElementsByClassName("liquidation-item");
+            const n = item.length;
+            for(let i = 0; i < n; i++){
+                item[i].onclick=function(e){
+                    item[i].getElementsByTagName("a")[0].click();
+                }
+            }
+        })
+    </script>
 </body>
 </html>

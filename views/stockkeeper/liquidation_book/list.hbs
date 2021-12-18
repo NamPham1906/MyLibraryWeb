@@ -1,0 +1,172 @@
+ <div class="site-bg">
+        <div class="site-bg__curve"></div>
+    </div>
+    
+    <main class="list-liquidation">
+        <div class="list-liquidation__title">
+            <h2>Danh sách thanh lý</h2>
+        </div>
+        <form class="list-liquidation__search">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-12">
+                        <div class="form-group row">                            
+                            <label for="form-id" class="col-12 col-md-2 col-sm-4 col-form-label">Mã danh sách: </label>
+                            <div class="col-12 col-md-10 col-sm-8 input-wrapper">
+                                <div class="input-wrapper">
+                                    <input type="text" id="form-id" name="formId" class="form-control">
+                                    <button type="submit">
+                                        <img src="/images/librarian/search.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group row">                            
+                            <label for="create-at" class="col-12 col-sm-4 col-form-label">Ngày thanh lý: </label>
+                            <div class="col-12 col-sm-8 input-wrapper">
+                                <div class="input-wrapper">
+                                    <input type="date" id="create-at" name="createAt" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group row">      
+                            <label for="user-id" class="col-12 col-sm-4 col-form-label">Người thanh lý: </label>
+                            <div class="col-12 col-sm-8 input-wrapper">
+                                <div class="input-wrapper">
+                                    <input type="text" id="user-id" name="userId" class="form-control">
+                                    <button type="submit">
+                                        <img src="/images/librarian/search.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="table-responsive">
+            <table class="table table-borderless" style="border-collapse: unset;">
+                <thead>
+                    <tr>
+                            <th scope="col">STT</th>
+                            <th scope="col">Mã danh sách</th>
+                            <th scope="col">Ngày thanh lý</th>
+                            <th scope="col">Mã người thanh lý</th>
+                            <th scope="col">Người thanh lý</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="liquidation-item">
+                        <td>00001</td>
+                        <td>
+                            <span>DS0009</span>
+                        </td>
+                        <td>
+                            <span>8/11/2021</span>
+                        </td>
+                        <td>
+                            <span>NV00001</span>
+                        </td>
+                        <td class="td-near-last-child">
+                            <span>Nam Phạm</span>
+                        </td>
+                        <td style="display: none;">
+                            <a href="/stockkeeper/liquidation-book/detail"></a>
+                        </td>
+                    </tr>
+                    <tr class="liquidation-item">
+                        
+                        <td>00001</td>
+                        <td>
+                            <span>DS0009</span>
+                        </td>
+                        <td>
+                            <span>8/11/2021</span>
+                        </td>
+                        <td>
+                            <span>NV00001</span>
+                        </td>
+                        <td class="td-near-last-child">
+                            <span>Nam Phạm</span>
+                        </td>
+                        <td style="display: none;">
+                            <a href="/stockkeeper/liquidation-book/detail"></a>
+                        </td>
+                        
+                    </tr>
+                    <tr class="liquidation-item">
+                        <td>00001</td>
+                        <td>
+                            <span>DS0009</span>
+                        </td>
+                        <td>
+                            <span>8/11/2021</span>
+                        </td>
+                        <td>
+                            <span>NV00001</span>
+                        </td>
+                        <td class="td-near-last-child">
+                            <span>Nam Phạm</span>
+                        </td>
+                        <td style="display: none;">
+                            <a href="/stockkeeper/liquidation-book/detail"></a>
+                        </td>
+                    </tr>
+                    <tr class="liquidation-item">
+                        <td>00001</td>
+                        <td>
+                            <span>DS0009</span>
+                        </td>
+                        <td>
+                            <span>8/11/2021</span>
+                        </td>
+                        <td>
+                            <span>NV00001</span>
+                        </td>
+                        <td class="td-near-last-child">
+                            <span>Nam Phạm</span>
+                        </td>
+                        <td style="display: none;">
+                            <a href="/stockkeeper/liquidation-book/detail"></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+    </main>
+    <div class="d-flex flex-row justify-content-between w-100 mb-4" style="max-width: 90vw; z-index: 1">
+        <a href="/stockkeeper/liquidation-book/add" class="btn btn-liquidation">Thêm</a>
+        <div class="pagination">
+            <div class="pagination__item pagination__item--prev">
+                <i class="fas fa-angle-left"></i>
+            </div>
+            <div class="pagination__item">
+                1
+            </div>
+            <div class="pagination__item">
+                2
+            </div>
+            <div class="pagination__item current">
+                3
+            </div>
+            <div class="pagination__item">
+                4
+            </div>
+            <div class="pagination__item">
+                5
+            </div>
+            <div class="pagination__item pagination__item--next">
+                <i class="fas fa-angle-right"></i>
+            </div>
+        </div>
+        <button class="btn btn-liquidation">Xuất báo cáo</button>
+    </div>
+   
