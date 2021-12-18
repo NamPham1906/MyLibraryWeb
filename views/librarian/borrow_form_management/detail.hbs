@@ -1,0 +1,236 @@
+  <div class="site-bg">
+        <div class="site-bg__curve"></div>
+    </div>
+    <main class="detail-book-borrow">
+        <div class="detail-book-borrow__id">
+            <h5>Mã phiếu: ABCDEF</h5>
+        </div>
+        <div class="detail-book-borrow__title">
+            <h2>Phiếu mượn sách</h2>
+        </div>
+        <div class="detail-book-borrow__content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-4">
+                        <div class="form-group">
+                            <label>Họ tên:</label>
+                            <input type="text" readonly class="form-control" value="Nguyễn Quốc Vinh" autocomplete="false" >
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="form-group">
+                            <label>Mã độc giả:</label>
+                            <input type="text" readonly class="form-control" value="DG000006" autocomplete="false" >
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="form-group">
+                            <label>Ngày mượn:</label>
+                            <input type="text" readonly class="form-control" value="02/02/2021" autocomplete="false"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="create-book-borrow__title create-book-borrow__title--sub">
+                <h2>Danh sách sách mượn</h2>
+            </div>
+            <div class="detail-book-borrow__book-list">
+                <form id="return-book-form">
+                    <div class="book-card">
+                        <div class="container-fluid ">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-4 p-0">
+                                            <div class="book-card__avatar mx-auto mx-sm-0">
+                                                <img  src="/public/images/librarian/book/book1.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-8">
+                                            <div class="book-card__info">
+                                                <p>Mã sách: BAA00011</p>
+                                                <p>Tên sách: Anh văn 2</p>
+                                                <p>Tác giả: HCMUS</p>
+                                                <p>Thể loại: A</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="row h-100">
+                                        <div class="col-12 col-sm-7">
+                                            <div class="book-card__info">
+                                                <p>Năm xuất bản: 2019 </p>
+                                                <p>Nhà xuất bản: Longman</p>
+                                                <p>Trị giá: 160.000vnđ</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-5 pr-0">
+                                            <div class="d-flex flex-column justify-content-arround book-card__action">
+                                                <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
+                                                    <img src="/public/images/librarian/lost-book.png" alt="">
+                                                    <span>Mất sách</span>
+                                                </div>
+                                                <label class="my-checkbox-container">Trả sách
+                                                    <input name="books[]" type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="container-fluid ">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-4 p-0">
+                                            <div class="book-card__avatar mx-auto mx-sm-0">
+                                                <img  src="/public/images/librarian/book/book1.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-8">
+                                            <div class="book-card__info">
+                                                <p>Mã sách: BAA00011</p>
+                                                <p>Tên sách: Anh văn 2</p>
+                                                <p>Tác giả: HCMUS</p>
+                                                <p>Thể loại: A</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="row h-100">
+                                        <div class="col-12 col-sm-7">
+                                            <div class="book-card__info">
+                                                <p>Năm xuất bản: 2019 </p>
+                                                <p>Nhà xuất bản: Longman</p>
+                                                <p>Trị giá: 160.000vnđ</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-5 pr-0">
+                                            <div class="d-flex flex-column justify-content-arround book-card__action">
+                                                <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
+                                                    <img src="/public/images/librarian/lost-book.png" alt="">
+                                                    <span>Mất sách</span>
+                                                </div>
+                                                <label class="my-checkbox-container">Trả sách
+                                                    <input name="books[]" type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="container-fluid ">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-4 p-0">
+                                            <div class="book-card__avatar mx-auto mx-sm-0">
+                                                <img  src="/public/images/librarian/book/book1.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-8">
+                                            <div class="book-card__info">
+                                                <p>Mã sách: BAA00011</p>
+                                                <p>Tên sách: Anh văn 2</p>
+                                                <p>Tác giả: HCMUS</p>
+                                                <p>Thể loại: A</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="row h-100">
+                                        <div class="col-12 col-sm-7">
+                                            <div class="book-card__info">
+                                                <p>Năm xuất bản: 2019 </p>
+                                                <p>Nhà xuất bản: Longman</p>
+                                                <p>Trị giá: 160.000vnđ</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-5 pr-0">
+                                            <div class="d-flex flex-column justify-content-arround book-card__action">
+                                                <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
+                                                    <img src="/public/images/librarian/lost-book.png" alt="">
+                                                    <span>Mất sách</span>
+                                                </div>
+                                                <label class="my-checkbox-container">Trả sách
+                                                    <input name="books[]" type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="container-fluid ">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-4 p-0">
+                                            <div class="book-card__avatar mx-auto mx-sm-0">
+                                                <img  src="/public/images/librarian/book/book1.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-8">
+                                            <div class="book-card__info">
+                                                <p>Mã sách: BAA00011</p>
+                                                <p>Tên sách: Anh văn 2</p>
+                                                <p>Tác giả: HCMUS</p>
+                                                <p>Thể loại: A</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="row h-100">
+                                        <div class="col-12 col-sm-7">
+                                            <div class="book-card__info">
+                                                <p>Năm xuất bản: 2019 </p>
+                                                <p>Nhà xuất bản: Longman</p>
+                                                <p>Trị giá: 160.000vnđ</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-5 pr-0">
+                                            <div class="d-flex flex-column justify-content-arround book-card__action">
+                                                <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
+                                                    <img src="/public/images/librarian/lost-book.png" alt="">
+                                                    <span>Mất sách</span>
+                                                </div>
+                                                <label class="my-checkbox-container">Trả sách
+                                                    <input name="books[]" type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </form>
+                <div class="d-flex justify-content-around flex-row w-100">
+                    <form  id="delete-borrow-book-form" style="display: none;"></form>
+                    <button class="btn" type="submit" form=delete-borrow-book-form"">
+                        XÓA
+                    </button>
+                    <button class="btn" type="submit"  form="return-book-form">
+                        LẬP PHIẾU TRẢ
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>

@@ -1,0 +1,400 @@
+
+    <div class="site-bg">
+        <div class="site-bg__curve"></div>
+    </div>
+    <button class="btn btn__return"><a href="index.html">Trở lại</a></button>
+    <button class="btn btn__add"><a href="create-user-card.html">Thêm độc giả</a></button>
+    <main class="all-user text-center text-sm-left d-flex justify-content-center flex-column">
+        <div class="all-user__title">
+            <h2>DANH SÁCH THẺ ĐỘC GIẢ</h2>
+        </div>
+        <div class="all-user__search">
+            <form action="" class="container">
+                <div class="row">
+                    <div class="col-12 col-md-5 mb-3 mb-md-0">
+                        <div class="form-group row">
+                            <label for="user-id" class="col-12 col-sm-4 col-form-label">Mã độc giả: </label>
+                            <div class="col-12 col-sm-8 input-wrapper">
+                                <div class="input-wrapper">
+                                    <input type="text" id="user-id" name="userId" class="form-control">
+                                    <button type="submit">
+                                        <img src="/images/librarian/search.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 mb-3 mb-md-0">
+                        <div class="form-group row">
+                            <label for="fullname" class="col-12 col-sm-4 col-form-label">Tên độc giả </label>
+                            <div class="col-12 col-sm-8">
+                                <div class="input-wrapper">
+                                    <input type="text" id="fullname" name="fullname" class="form-control">
+                                    <button type="submit">
+                                        <img src="/images/librarian/search.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-2 mb-3 mb-md-0">
+                        <div class="d-flex align-items-center" style="cursor: pointer;" data-toggle="modal" data-target="#advancedFilterModal">
+                            <span>Tìm kiếm nâng cao</span>
+                            <button type="button">
+                                <img src="/images/librarian/filter.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="all-user__container">
+            <div class="user-card">
+                <div class="container-fluid ">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="row">
+                                <div class="col-12 col-sm-4">
+                                    <div class="user-card__avatar mx-auto mx-sm-0">
+                                        <img  src="/images/librarian/user/user1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-8">
+                                    <div class="user-card__info">
+                                        <p>Mã độc giả: DG000005</p>
+                                        <p>Họ và tên: Tống Mĩ Lệ</p>
+                                        <p>Ngày sinh: 10/10/2000</p>
+                                        <p>Địa chỉ: Quận 12, TP.HCM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="row h-100">
+                                <div class="col-12 col-sm-7">
+                                    <div class="user-card__info">
+                                        <p>Email: tmyle@gmail.com </p>
+                                        <p>Loại độc giả: X</p>
+                                        <p>Người lập thẻ: Huỳnh Minh Tiến</p>
+                                        <p>Ngày lập thẻ: 01/01/2021</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-5">
+                                    <div class="d-flex flex-column justify-content-between user-card__action">
+                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
+                                            <img src="/images/librarian/edit-user.png" alt="">
+                                            <span>Chỉnh sửa</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
+                                            <img src="/images/librarian/delete-user.png" alt="">
+                                            <span>Xóa</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
+                                            <img src="/images/librarian/print-user.png" alt="">
+                                            <span>In thẻ độc giả</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="user-card">
+                <div class="container-fluid ">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="row">
+                                <div class="col-12 col-sm-4">
+                                    <div class="user-card__avatar mx-auto mx-sm-0">
+                                        <img  src="/images/librarian/user/user1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-8">
+                                    <div class="user-card__info">
+                                        <p>Mã độc giả: DG000005</p>
+                                        <p>Họ và tên: Tống Mĩ Lệ</p>
+                                        <p>Ngày sinh: 10/10/2000</p>
+                                        <p>Địa chỉ: Quận 12, TP.HCM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="row h-100">
+                                <div class="col-12 col-sm-7">
+                                    <div class="user-card__info">
+                                        <p>Email: tmyle@gmail.com </p>
+                                        <p>Loại độc giả: X</p>
+                                        <p>Người lập thẻ: Huỳnh Minh Tiến</p>
+                                        <p>Ngày lập thẻ: 01/01/2021</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-5">
+                                    <div class="d-flex flex-column justify-content-between user-card__action">
+                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
+                                            <img src="/images/librarian/edit-user.png" alt="">
+                                            <span>Chỉnh sửa</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
+                                            <img src="/images/librarian/delete-user.png" alt="">
+                                            <span>Xóa</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
+                                            <img src="/images/librarian/print-user.png" alt="">
+                                            <span>In thẻ độc giả</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="user-card">
+                <div class="container-fluid ">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="row">
+                                <div class="col-12 col-sm-4">
+                                    <div class="user-card__avatar mx-auto mx-sm-0">
+                                        <img  src="/images/librarian/user/user1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-8">
+                                    <div class="user-card__info">
+                                        <p>Mã độc giả: DG000005</p>
+                                        <p>Họ và tên: Tống Mĩ Lệ</p>
+                                        <p>Ngày sinh: 10/10/2000</p>
+                                        <p>Địa chỉ: Quận 12, TP.HCM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="row h-100">
+                                <div class="col-12 col-sm-7">
+                                    <div class="user-card__info">
+                                        <p>Email: tmyle@gmail.com </p>
+                                        <p>Loại độc giả: X</p>
+                                        <p>Người lập thẻ: Huỳnh Minh Tiến</p>
+                                        <p>Ngày lập thẻ: 01/01/2021</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-5">
+                                    <div class="d-flex flex-column justify-content-between user-card__action">
+                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
+                                            <img src="/images/librarian/edit-user.png" alt="">
+                                            <span>Chỉnh sửa</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
+                                            <img src="/images/librarian/delete-user.png" alt="">
+                                            <span>Xóa</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
+                                            <img src="/images/librarian/print-user.png" alt="">
+                                            <span>In thẻ độc giả</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="user-card">
+                <div class="container-fluid ">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="row">
+                                <div class="col-12 col-sm-4">
+                                    <div class="user-card__avatar mx-auto mx-sm-0">
+                                        <img  src="/images/librarian/user/user1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-8">
+                                    <div class="user-card__info">
+                                        <p>Mã độc giả: DG000005</p>
+                                        <p>Họ và tên: Tống Mĩ Lệ</p>
+                                        <p>Ngày sinh: 10/10/2000</p>
+                                        <p>Địa chỉ: Quận 12, TP.HCM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="row h-100">
+                                <div class="col-12 col-sm-7">
+                                    <div class="user-card__info">
+                                        <p>Email: tmyle@gmail.com </p>
+                                        <p>Loại độc giả: X</p>
+                                        <p>Người lập thẻ: Huỳnh Minh Tiến</p>
+                                        <p>Ngày lập thẻ: 01/01/2021</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-5">
+                                    <div class="d-flex flex-column justify-content-between user-card__action">
+                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
+                                            <img src="/images/librarian/edit-user.png" alt="">
+                                            <span>Chỉnh sửa</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
+                                            <img src="/images/librarian/delete-user.png" alt="">
+                                            <span>Xóa</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
+                                            <img src="/images/librarian/print-user.png" alt="">
+                                            <span>In thẻ độc giả</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="user-card">
+                <div class="container-fluid ">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="row">
+                                <div class="col-12 col-sm-4">
+                                    <div class="user-card__avatar mx-auto mx-sm-0">
+                                        <img  src="/images/librarian/user/user1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-8">
+                                    <div class="user-card__info">
+                                        <p>Mã độc giả: DG000005</p>
+                                        <p>Họ và tên: Tống Mĩ Lệ</p>
+                                        <p>Ngày sinh: 10/10/2000</p>
+                                        <p>Địa chỉ: Quận 12, TP.HCM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="row h-100">
+                                <div class="col-12 col-sm-7">
+                                    <div class="user-card__info">
+                                        <p>Email: tmyle@gmail.com </p>
+                                        <p>Loại độc giả: X</p>
+                                        <p>Người lập thẻ: Huỳnh Minh Tiến</p>
+                                        <p>Ngày lập thẻ: 01/01/2021</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-5">
+                                    <div class="d-flex flex-column justify-content-between user-card__action">
+                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
+                                            <img src="/images/librarian/edit-user.png" alt="">
+                                            <span>Chỉnh sửa</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
+                                            <img src="/images/librarian/delete-user.png" alt="">
+                                            <span>Xóa</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
+                                            <img src="/images/librarian/print-user.png" alt="">
+                                            <span>In thẻ độc giả</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pagination">
+            <div class="pagination__item pagination__item--prev">
+                <i class="fas fa-angle-left"></i>
+            </div>
+            <div class="pagination__item">
+                1
+            </div>
+            <div class="pagination__item">
+                2
+            </div>
+            <div class="pagination__item current">
+                3
+            </div>
+            <div class="pagination__item">
+                4
+            </div>
+            <div class="pagination__item">
+                5
+            </div>
+            <div class="pagination__item pagination__item--next">
+                <i class="fas fa-angle-right"></i>
+            </div>
+        </div>
+    </main>
+    <div class="modal fade user-advance-filter" id="advancedFilterModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h4>Bộ lọc</h4>
+                    <form id="advancedFilterForm" class="container">
+                        <div class="row">
+                            <div class="col-12 col-xl-6">
+                                <div class="form-group row">
+                                    <label for="modal-user-id" class="col-12 col-md-4 col-form-label">Mã độc giả: </label>
+                                    <div class="col-12 col-md-8 input-wrapper">
+                                        <input type="text" id="modal-user-id" name="modalUserId" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="modal-user-type" class="col-12 col-md-4 col-form-label">Loại độc giả:</label>
+                                    <div class="col-12 col-md-8 input-wrapper">
+                                        <select name="modalUserType" class="form-control" id="modal-user-type">
+                                            <option value="1">X</option>
+                                            <option value="2">Y</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="modal-user-email" class="col-12 col-md-4 col-form-label">Email: </label>
+                                    <div class="col-12 col-md-8 input-wrapper">
+                                        <input type="email" id="modal-user-email" name="modalUserEmail" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="modal-user-created-at" class="col-12 col-md-4 col-form-label">Ngày lập thẻ: </label>
+                                    <div class="col-12 col-md-8 input-wrapper">
+                                        <input type="date" id="modal-user-created-at" name="modalUserCreatedAt" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xl-6">
+                                <div class="form-group row">
+                                    <label for="modal-user-fullname" class="col-12 col-md-4 col-form-label">Tên độc giả: </label>
+                                    <div class="col-12 col-md-8 input-wrapper">
+                                        <input type="text" id="modal-user-fullname" name="modalFullname" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="modal-user-created-dob" class="col-12 col-md-4 col-form-label">Ngày sinh thẻ: </label>
+                                    <div class="col-12 col-md-8 input-wrapper">
+                                        <input type="date" id="modal-user-dob" name="modalUserDob" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="modal-user-address" class="col-12 col-md-4 col-form-label">Địa chỉ: </label>
+                                    <div class="col-12 col-md-8 input-wrapper">
+                                        <input type="text" id="modal-user-address" name="modalUserAddress" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="modal-user-admin" class="col-12 col-md-4 col-form-label">Người lập thẻ: </label>
+                                    <div class="col-12 col-md-8 input-wrapper">
+                                        <input type="text" id="modal-user-admin" name="modalUserAdmin" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <button type="submit" form="advancedFilterForm" class="btn btn-primary">Tìm kiếm</button>
+            </div>
+        </div>
+      </div>
