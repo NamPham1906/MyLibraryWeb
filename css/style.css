@@ -241,60 +241,48 @@ main {
 
 .edit-book {
   background-color: white;
-  padding: 20px 20px;
-  border-radius: 40px;
-  position: relative;
-  z-index: 1;
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 80%; }
+  padding: 40px;
+  margin-top: 70px;
+  border-radius: 20px;
+  width: 90%; }
   .edit-book__title {
     text-align: center;
-    font-size: 28px;
-    color: #C4817F;
-    margin-bottom: 20px; }
+    color: #C4817F; }
     .edit-book__title h2 {
-      font-weight: 700; }
-  .edit-book__form .container {
-    width: 66%;
-    float: left; }
+      font-weight: 600; }
   .edit-book__form input, .edit-book__form select {
-    width: 300px;
+    width: 100%;
     background-color: #F6E5D2;
     padding-left: 5px;
     border: none; }
-  .edit-book__form input:focus, .edit-book__form select:focus {
+  .edit-book__form input:not(:read-only):focus, .edit-book__form select:focus {
     background-color: #F6E5D2; }
-  .edit-book__form .custom-file .custom-file-label {
-    background-color: #F6E5D2; }
-    .edit-book__form .custom-file .custom-file-label:after {
-      background-color: #F5BD8A; }
-  .edit-book__form .edit-book-btn {
-    color: white;
+  .edit-book__form button {
     background-color: #F5BD8A;
+    color: white;
+    border: none;
     border-radius: 20px;
-    font-weight: bold;
-    flex-grow: 0;
-    align-self: flex-end;
+    font-weight: 650;
+    text-align: center;
+    width: 150px;
+    display: block;
+    padding: 5px 0;
+    margin: 0 auto !important; }
+  .edit-book__form img {
+    margin: 5px auto 5px auto;
+    max-width: 200px; }
+  .edit-book__form h5 {
     margin: 0 auto;
-    margin-top: 20px;
-    width: 150px; }
-    .edit-book__form .edit-book-btn a {
-      color: white; }
-  .edit-book__form .image {
-    width: 33%;
-    float: right;
-    text-align: center; }
-    .edit-book__form .image h5 {
-      font-weight: 600;
-      margin-bottom: 15px;
-      margin-left: auto;
-      margin-right: auto; }
-    .edit-book__form .image .book-img {
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 5px;
-      width: 200px; }
+    width: max-content;
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto; }
+  .edit-book .custom-file button {
+    margin: 10px auto 10px auto !important; }
+  .edit-book .custom-file input {
+    position: absolute;
+    display: none; }
 
 .librarian-menu {
   width: 100%; }
