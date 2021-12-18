@@ -1,0 +1,84 @@
+<div class="site-bg">
+        <div class="site-bg__curve"></div>
+    </div>
+    <main class="print-statictic-book-borrow">
+        <div class="print-statictic-book-borrow__title">
+            <h2>BÁO CÁO THỐNG KÊ TÌNH HÌNH MƯỢN SÁCH THEO THỂ LOẠI</h2>
+        </div>
+        <div class="w-100 d-flex flex-wrap justify-content-center align-items-center">
+            <label class="mr-2" >Ngày thống kê:</label>
+            <div class="input-wrapper">
+                <div class="input-wrapper">
+                    <input readonly type="text" value="01/09/2021" class="form-control text-center">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table table-borderless text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col">STT</th>
+                            <th scope="col">Tên sách</th>
+                            <th scope="col">Ngày mượn</th>
+                            <th scope="col">Số ngày trả trễ</th>
+                        </tr>
+                    </thead>
+                    <tbody id="book-table" >
+                        <tr >
+                            <th scope="row" class="row-no">1</th>
+                            <td>
+                                <input value="Anh văn 2" readonly class="form-control text-center" type="text" >
+                            </td>
+                            <td>
+                                <input readonly value="31/08/2021" class="form-control text-center" readonly type="text" >
+                            </td>
+                            <td>
+                                <input readonly value="2" class="form-control text-center" readonly type="text" >
+                            </td>
+                        </tr>
+                        <tr >
+                            <th scope="row" class="row-no">2</th>
+                            <td>
+                                <input value="Khoa học trái đất" readonly class="form-control text-center" type="text" >
+                            </td>
+                            <td>
+                                <input readonly value="31/08/2021" class="form-control text-center" readonly type="text" >
+                            </td>
+                            <td>
+                                <input readonly value="2" class="form-control text-center" readonly type="text" >
+                            </td>
+                        </tr>
+                        <tr >
+                            <th scope="row" class="row-no">3</th>
+                            <td>
+                                <input value="Hóa đại cương 1" readonly class="form-control text-center" type="text" >
+                            </td>
+                            <td>
+                                <input readonly value="31/08/2021" class="form-control text-center" readonly type="text" >
+                            </td>
+                            <td>
+                                <input readonly value="5" class="form-control text-center" readonly type="text" >
+                            </td>
+                        </tr>
+                        <tr >
+                            <th scope="row" class="row-no">4</th>
+                            <td>
+                                <input value="Pháp luật đại cương" readonly class="form-control text-center" type="text" >
+                            </td>
+                            <td>
+                                <input readonly value="31/08/2021" class="form-control text-center" readonly type="text" >
+                            </td>
+                            <td>
+                                <input readonly value="4" class="form-control text-center" readonly type="text" >
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="row">
+                <button class="btn print-statictic-book-borrow__btn" type="submit">In</button>
+            </div>
+        </div>
+    </main>

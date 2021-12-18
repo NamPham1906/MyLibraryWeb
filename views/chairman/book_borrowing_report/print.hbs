@@ -1,0 +1,85 @@
+   <div class="site-bg">
+        <div class="site-bg__curve"></div>
+    </div>
+    <main class="print-statictic-book-borrow">
+        <div class="print-statictic-book-borrow__title">
+            <h2>BÁO CÁO THỐNG KÊ TÌNH HÌNH MƯỢN SÁCH THEO THỂ LOẠI</h2>
+        </div>
+        <div class="w-100 d-flex flex-wrap justify-content-center align-items-center">
+            <label class="mr-2" >Thống kê theo tháng:</label>
+            <div class="input-wrapper">
+                <div class="input-wrapper">
+                    <input readonly type="text" value="10/2021" class="form-control text-center">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table table-borderless text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col">STT</th>
+                            <th scope="col">Tên thể loại</th>
+                            <th scope="col">Số lượt mượn</th>
+                            <th scope="col">Tỉ lệ</th>
+                        </tr>
+                    </thead>
+                    <tbody id="book-table" >
+                        <tr >
+                            <th scope="row" class="row-no">1</th>
+                            <td>
+                                <input value="A" readonly class="form-control text-center" type="text" >
+                            </td>
+                            <td>
+                                <input readonly value="20" class="form-control text-center" readonly type="text" >
+                            </td>
+                            <td>
+                                <input readonly value="20%" class="form-control text-center" readonly type="text" >
+                            </td>
+                        </tr>
+                        <tr >
+                            <th scope="row" class="row-no">2</th>
+                            <td>
+                                <input value="B" readonly class="form-control text-center" type="text" >
+                            </td>
+                            <td>
+                                <input readonly value="50" class="form-control text-center" readonly type="text" >
+                            </td>
+                            <td>
+                                <input readonly value="50%" class="form-control text-center" readonly type="text" >
+                            </td>
+                        </tr>
+                        <tr >
+                            <th scope="row" class="row-no">3</th>
+                            <td>
+                                <input value="C" readonly class="form-control text-center" type="text" >
+                            </td>
+                            <td>
+                                <input readonly value="30" class="form-control text-center" readonly type="text" >
+                            </td>
+                            <td>
+                                <input readonly value="30%" class="form-control text-center" readonly type="text" >
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-no"></th>
+                            <td>
+                            </td>
+                            <td class="text-right">
+                                <div class="d-flex w-100 h-100 align-items-center justify-content-end">
+                                    <span>Tổng lượt mượn:</span>
+                                </div>
+                            </td>
+                            <td>
+                                <input readonly type="text" value="100" class="form-control text-center">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="row">
+                <button class="btn print-statictic-book-borrow__btn" type="submit">In</button>
+            </div>
+        </div>
+    </main>
