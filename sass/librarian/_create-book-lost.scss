@@ -1,8 +1,7 @@
-.create-book-borrow{
+.create-book-lost{
     margin-top: 30px;
     padding: 10px;
     background-color: white;
-    max-width: 90vw;
     border-radius: 20px;
     &__id{
         text-align: right;
@@ -26,39 +25,18 @@
         margin-bottom: 20px;
     }
     &__form{
-        input, select{
-            width: 100%;
+        input{
+            width: 250px;
             background-color: $brown-4;
             padding-left: 5px;
             border: none;
-            
         }
         input:not(:read-only):focus, select:focus{
             background-color: $brown-4;
         }
 
-       
-        .table-responsive{
-            td{
-                input{
-                    width: 200px;
-                }
-            }
-        }
-        .add-book-btn{
-            background-color: $pink-3;
-            color: white;
-            width: 200px;
-            text-align: center;
-            margin: 20px auto;
-            padding: 5px 0;
-            border-radius: 20px;
-        }
-        .delete-row{
-            cursor: pointer;
-        }
     }
-    button{
+    &__btn{
         background-color: $brown-3;
         color: white;
         border: none;
@@ -69,5 +47,4 @@
         padding: 5px 0;
         margin: 0 auto;
     }
-    
 }

@@ -1,0 +1,60 @@
+ <div class="site-bg">
+        <div class="site-bg__curve"></div>
+    </div>
+    <main class="create-book-lost">
+        <div class="create-book-lost__id">
+            <h5>Mã phiếu: XXXXXX</h5>
+        </div>
+        <div class="create-book-lost__title">
+            <h2>PHIẾU THU GHI NHẬN MẤT SÁCH</h2>
+        </div>
+        <form class="create-book-lost__form">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="fullname">Họ tên:</label>
+                            <input type="text" class="form-control" name="fullname" id="fullname" autocomplete="false" >
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="user-id">Mã độc giả:</label>
+                            <input type="text" class="form-control" name="userId" id="user-id" autocomplete="false" >
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="book">Tên sách: </label>
+                            <input type="book" class="form-control" name="book" id="book" autocomplete="false" >
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="created-at">Ngày ghi nhận: </label>
+                            <input type="date" readonly class="form-control" name="createdAt" id="created-at" autocomplete="false" >
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="admin">Người ghi nhận:</label>
+                            <input type="text" class="form-control" name="admin" id="admin" autocomplete="false" >
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="money">Tiền phạt:</label>
+                            <input type="text" class="form-control" name="money" id="money" autocomplete="false" >
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="btn create-book-lost__btn" type="submit">Tạo phiếu</button>
+                </div>
+            </div>
+        </form>
+    </main>

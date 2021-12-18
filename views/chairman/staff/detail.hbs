@@ -1,0 +1,110 @@
+    <div class="site-bg">
+        <div class="site-bg__curve"></div>
+    </div>
+    <main class="edit-staff">
+        <div class="edit-staff__title">
+            <h2>Hồ sơ nhân viên</h2>
+        </div>
+        <div class="edit-staff__form">
+            <form action="" class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-4">
+                        <div class="form-group">
+                            <label for="fullname">Họ tên:</label>
+                            <input type="text" class="form-control" name="fullname" id="fullname" autocomplete="false" value="Trần Minh Tuyết" >
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Điện thoại:</label>
+                            <input type="number" class="form-control" name="phone" id="phone" autocomplete="false" value="0123456789">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Địa chỉ:</label>
+                            <input type="text" class="form-control" name="address" id="address" autocomplete="false" value="42A Lam Sơn, phường 2, quận Tân Bình, HCM">
+                        </div>
+                        <div class="form-group">
+                            <label for="department">Bộ phận</label>
+                            <select name="department" class="form-control" id="department">
+                                <option value="1" selected="">Thủ Thư</option>
+                                <option value="2">Thủ Kho</option>
+                                <option value="3">Thủ Quỹ</option>
+                                <option value="4">Ban Giám Đốc</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="form-group">
+                            <label for="position">Chức vụ</label>
+                            <select name="position" class="form-control" id="position">
+                                <option value="1" selected="">Nhân Viên</option>
+                                <option value="2">Phó Phòng</option>
+                                <option value="3">Trưởng Phòng</option>
+                                <option value="4">Phó Giám Đốc</option>
+                                <option value="5">Giám Đốc</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="certificate">Bằng cấp</label>
+                            <select name="certificate" class="form-control" id="certificate">
+                                <option value="1">Tú Tài</option>
+                                <option value="2">Trung Cấp</option>
+                                <option value="3">Cao Đẳng</option>
+                                <option value="4" selected="">Đại Học</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">Ngày sinh</label>
+                            <input type="date" class="form-control" name="dob" id="dob" autocomplete="false" value="1988-01-15">
+                        </div>
+                        <div class="form-group">
+                            <label for="username">Tài khoản:</label>
+                            <input type="text" class="form-control" name="username" id="username" autocomplete="false" value="tt_tmtuyet">
+                        </div>
+                        <!-- <div class="form-group">
+                            <label for="password">Mật khẩu:</label>
+                            <input type="password" class="form-control" name="password" id="password" autocomplete="false" value="tt_tmtuyet">
+                        </div> -->
+                    </div>
+                    <div class="col-12 col-lg-4 order-first order-lg-last">
+                        <h5>Mã nhân viên: NV000005</h5>
+                        <img class="staff-avatar" id="user-avatar" src="/images/ceo/staff_1.png" alt="">
+                        <div class="custom-file">
+                            <button type="button" id="change-image-btn" class="btn mx-auto mb-3 mx-sm-0 mb-sm-0">Thay đổi ảnh</button>
+                            <input type="file" accept="image/png" class="custom-file-input" id="change-file">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                        <button type="submit" class="btn mx-auto mb-3 mx-sm-0 mb-sm-0">Cập nhật</button>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <button type="button" class="btn mx-auto mb-3 mx-sm-0 mb-sm-0">In hồ sơ</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script>
+        $(document).ready(function(){
+            const changeImageBtn = document.getElementById("change-image-btn");
+            const changeFile = document.getElementById("change-file");
+            changeImageBtn.addEventListener("click", (e)=>{
+
+                changeFile.click();
+            });
+
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#user-avatar').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+
+            $("#change-file").change(function(){
+                readURL(this);
+            });
+        })
+    </script>
