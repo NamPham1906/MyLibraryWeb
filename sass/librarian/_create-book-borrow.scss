@@ -37,17 +37,7 @@
             background-color: $brown-4;
         }
 
-        button{
-            background-color: $brown-3;
-            color: white;
-            border: none;
-            border-radius: 20px;
-            text-align: center;
-            width: 150px;
-            display: block;
-            padding: 5px 0;
-            margin: 0 auto;
-        }
+       
         .table-responsive{
             td{
                 input{
@@ -67,6 +57,17 @@
         .delete-row{
             cursor: pointer;
         }
+    }
+    button{
+        background-color: $brown-3;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        text-align: center;
+        width: 150px;
+        display: block;
+        padding: 5px 0;
+        margin: 0 auto;
     }
     
 }
