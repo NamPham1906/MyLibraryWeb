@@ -1084,6 +1084,124 @@ input[type=number] {
   color: #F5BD8A !important;
   font-size: 18px; }
 
+.all-book {
+  padding: 80px 20px; }
+  .all-book__title {
+    text-align: center;
+    font-size: 24px;
+    color: #C4817F;
+    margin-bottom: 20px; }
+  .all-book__search {
+    background-color: white;
+    padding: 20px;
+    border-radius: 40px; }
+    .all-book__search input {
+      background-color: #F6E5D2;
+      padding-right: 35px;
+      border: none; }
+    .all-book__search button {
+      cursor: pointer; }
+    .all-book__search input:focus {
+      background-color: #F6E5D2; }
+    .all-book__search button {
+      background-color: unset;
+      width: 30px;
+      height: 30px; }
+    .all-book__search .input-wrapper {
+      position: relative; }
+      .all-book__search .input-wrapper button {
+        position: absolute;
+        z-index: 2;
+        width: 30px;
+        height: 30px;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%); }
+    .all-book__search label, .all-book__search span {
+      text-align: right;
+      color: #000;
+      font-weight: bold; }
+    .all-book__search span {
+      margin-right: 10px; }
+    .all-book__search .form-group {
+      margin-bottom: 0; }
+  .all-book__container {
+    margin-top: 20px; }
+  .all-book .book-card {
+    background-color: white;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.26); }
+    .all-book .book-card__avatar {
+      width: 100px;
+      margin: 0 auto; }
+    .all-book .book-card__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 10px;
+      height: 100%; }
+      .all-book .book-card__info p {
+        margin-bottom: 0; }
+    .all-book .book-card__action {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 100%; }
+      .all-book .book-card__action img {
+        width: 30px;
+        height: 30px; }
+      .all-book .book-card__action > div {
+        cursor: pointer; }
+
+.btn__add {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background-color: white;
+  border-radius: 50px; }
+  .btn__add a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #F5BD8A; }
+
+.book-advance-filter .modal-content {
+  background-color: #F5BD8A;
+  padding: 20px;
+  border-radius: 20px;
+  padding-bottom: 40px; }
+
+.book-advance-filter .modal-body {
+  border-radius: 20px;
+  background-color: white; }
+  .book-advance-filter .modal-body h4 {
+    color: #C4817F;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px; }
+  .book-advance-filter .modal-body form label {
+    color: #000;
+    font-weight: bold; }
+  .book-advance-filter .modal-body form input, .book-advance-filter .modal-body form select {
+    background-color: #F6E5D2;
+    padding-left: 5px;
+    border: none; }
+
+.book-advance-filter button[type=submit] {
+  background-color: white;
+  width: 150px;
+  color: #F5BD8A;
+  border-radius: 50px;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 20px auto; }
+
 .detail-book-borrow {
   background-color: white;
   padding: 20px;
@@ -1293,3 +1411,107 @@ input[type=number] {
     border-radius: 20px;
     padding: 10px;
     text-align: center; }
+
+.create-book-lost {
+  margin-top: 30px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 20px; }
+  .create-book-lost__id {
+    text-align: right; }
+    .create-book-lost__id h5 {
+      font-size: 14px;
+      color: #747474; }
+  .create-book-lost__title {
+    text-align: center;
+    color: #C4817F;
+    text-transform: uppercase;
+    margin-bottom: 20px; }
+    .create-book-lost__title--sub {
+      color: #F5BD8A;
+      margin-top: 20px; }
+    .create-book-lost__title h2 {
+      font-size: 20px; }
+  .create-book-lost__form input {
+    width: 250px;
+    background-color: #F6E5D2;
+    padding-left: 5px;
+    border: none; }
+  .create-book-lost__form input:not(:read-only):focus, .create-book-lost__form select:focus {
+    background-color: #F6E5D2; }
+  .create-book-lost__btn {
+    background-color: #F5BD8A;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    width: 150px;
+    display: block;
+    padding: 5px 0;
+    margin: 0 auto; }
+
+.detail-book-lost {
+  background-color: white;
+  padding: 10px;
+  margin-top: 70px;
+  border-radius: 20px;
+  width: 90%; }
+  .detail-book-lost__title {
+    text-align: center;
+    color: #C4817F;
+    margin-bottom: 40px; }
+  .detail-book-lost__form input, .detail-book-lost__form select {
+    width: 100%;
+    background-color: #F6E5D2;
+    padding-left: 5px;
+    border: none; }
+  .detail-book-lost__form input:not(:read-only):focus, .detail-book-lost__form select:focus {
+    background-color: #F6E5D2; }
+  .detail-book-lost__form button {
+    background-color: #F5BD8A;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    width: 150px;
+    display: block;
+    padding: 5px 0; }
+  .detail-book-lost__form .user-avatar {
+    margin: 0 auto;
+    max-width: 250px; }
+  .detail-book-lost .custom-file input {
+    position: absolute;
+    display: none; }
+
+.detail-book {
+  background-color: white;
+  padding: 10px;
+  margin-top: 70px;
+  border-radius: 20px;
+  width: 90%; }
+  .detail-book__title {
+    text-align: center;
+    color: #C4817F;
+    margin-bottom: 40px; }
+  .detail-book__form input, .detail-book__form select {
+    width: 100%;
+    background-color: #F6E5D2;
+    padding-left: 5px;
+    border: none; }
+  .detail-book__form input:not(:read-only):focus, .detail-book__form select:focus {
+    background-color: #F6E5D2; }
+  .detail-book__form button {
+    background-color: #F5BD8A;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    width: 150px;
+    display: block;
+    padding: 5px 0; }
+  .detail-book__form .user-avatar {
+    margin: 0 auto;
+    max-width: 250px; }
+  .detail-book .custom-file input {
+    position: absolute;
+    display: none; }

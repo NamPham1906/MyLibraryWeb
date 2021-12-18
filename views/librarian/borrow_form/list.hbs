@@ -16,7 +16,7 @@
                                 <div class="input-wrapper">
                                     <input type="text" id="form-id" name="formId" class="form-control">
                                     <button type="submit">
-                                        <img src="/public/images/librarian/search.png" alt="">
+                                        <img src="/images/librarian/search.png" alt="">
                                     </button>
                                 </div>
                             </div>
@@ -29,7 +29,7 @@
                                 <div class="input-wrapper">
                                     <input type="text" id="fullname" name="fullname" class="form-control">
                                     <button type="submit">
-                                        <img src="/public/images/librarian/search.png" alt="">
+                                        <img src="/images/librarian/search.png" alt="">
                                     </button>
                                 </div>
                             </div>
@@ -54,7 +54,7 @@
                                 <div class="input-wrapper">
                                     <input type="text" id="user-id" name="userId" class="form-control">
                                     <button type="submit">
-                                        <img src="/public/images/librarian/search.png" alt="">
+                                        <img src="/images/librarian/search.png" alt="">
                                     </button>
                                 </div>
                             </div>
@@ -94,7 +94,7 @@
                             <span>01/01/2021</span>
                         </td>
                         <td style="display: none;">
-                            <a href="/html/librarian/detail-book-borrow.html"></a>
+                            <a href="/librarian/borrow-form/detail"></a>
                         </td>
                     </tr>
                     <tr class="book-borrow-item">
@@ -115,7 +115,7 @@
                             <span>01/01/2021</span>
                         </td>
                         <td style="display: none;">
-                            <a href="/html/librarian/detail-book-borrow.html"></a>
+                            <a href="/librarian/borrow-form/detail"></a>
                         </td>
                     </tr>
                     <tr class="book-borrow-item">
@@ -136,7 +136,7 @@
                             <span>01/01/2021</span>
                         </td>
                         <td style="display: none;">
-                            <a href="/html/librarian/detail-book-borrow.html"></a>
+                            <a href="/librarian/borrow-form/detail"></a>
                         </td>
                     </tr>
                     <tr class="book-borrow-item">
@@ -157,25 +157,7 @@
                             <span>01/01/2021</span>
                         </td>
                         <td style="display: none;">
-                            <a href="/html/librarian/detail-book-borrow.html"></a>
-                        </td>
-                    </tr>
-                    <tr class="book-borrow-item">
-                        <td>00001</td>
-                        <td>
-                            <span>ABCDEF</span>
-                        </td>
-                        <td>
-                            <span>DG000005</span>
-                        </td>
-                        <td>
-                            <span>Tống Mĩ Lệ</span>
-                        </td>
-                        <td>
-                            <span>1</span>
-                        </td>
-                        <td>
-                            <span>01/01/2021</span>
+                            <a href="/librarian/borrow-form/detail"></a>
                         </td>
                     </tr>
                     <tr class="book-borrow-item">
@@ -196,7 +178,28 @@
                             <span>01/01/2021</span>
                         </td>
                         <td style="display: none;">
-                            <a href="/html/librarian/detail-book-borrow.html"></a>
+                            <a href="/librarian/borrow-form/detail"></a>
+                        </td>
+                    </tr>
+                    <tr class="book-borrow-item">
+                        <td>00001</td>
+                        <td>
+                            <span>ABCDEF</span>
+                        </td>
+                        <td>
+                            <span>DG000005</span>
+                        </td>
+                        <td>
+                            <span>Tống Mĩ Lệ</span>
+                        </td>
+                        <td>
+                            <span>1</span>
+                        </td>
+                        <td>
+                            <span>01/01/2021</span>
+                        </td>
+                        <td style="display: none;">
+                            <a href="/librarian/borrow-form/detail"></a>
                         </td>
                     </tr>
                 </tbody>
@@ -230,14 +233,4 @@
         </div>
         <button class="btn btn-report-book-borrow">Xuất báo cáo</button>
     </div>
-    <script>
-        $(document).ready(function(){
-            const item = document.getElementsByClassName("book-borrow-item");
-            const n = item.length;
-            for(let i = 0; i < n; i++){
-                item[i].onclick=function(e){
-                    item[i].getElementsByTagName("a")[0].click();
-                }
-            }
-        })
-    </script>
+
