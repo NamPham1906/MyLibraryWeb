@@ -1,5 +1,5 @@
 
-.treasure-menu{
+.treasurer-menu{
     z-index: 1;
     margin-top: auto;
     margin-bottom: auto;
@@ -45,15 +45,4 @@
     }
 }
 
-@keyframes move-up-down{
-    0%{
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(-30px);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
 

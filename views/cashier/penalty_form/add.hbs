@@ -1,0 +1,60 @@
+<div class="site-bg">
+        <div class="site-bg__curve"></div>
+    </div>
+    <main class="add-penalty">
+        <div class="add-penalty__id">
+            <h5>Mã phiếu: XXXXXX</h5>
+        </div>
+        <div class="add-penalty__title">
+            <h2>PHIẾU THU TIỀN PHẠT</h2>
+        </div>
+        <form class="add-penalty__form">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="user-id">Mã độc giả:</label>
+                            <input type="text" class="form-control" name="userId" id="user-id" autocomplete="false" >
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="fullname">Họ tên độc giả:</label>
+                            <input type="text" class="form-control" name="fullname" id="fullname" autocomplete="false" readonly="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="debt">Tiền nợ: </label>
+                            <input type="text" class="form-control" name="debt" id="debt" autocomplete="false" readonly="">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="received-money">Số tiền thu (vnđ): </label>
+                            <input type="number" class="form-control" name="receivedMoney" id="received-money" autocomplete="false">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="money-remain">Còn lại:</label>
+                            <input type="text" class="form-control" name="moneyRemain" id="money-remain" autocomplete="false" readonly="">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="admin">Người ghi nhận:</label>
+                            <input type="text" class="form-control" name="admin" id="admin" autocomplete="false" readonly="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="btn add-penalty__btn" type="submit">Tạo phiếu</button>
+                </div>
+            </div>
+        </form>
+    </main>
