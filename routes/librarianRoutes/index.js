@@ -44,6 +44,7 @@ router.get('/borrow-form/list',borrowFormController.list);
 router.get('/return-form',returnFormController.list);
 router.get('/return-form/add',returnFormController.add);
 router.get('/return-form/detail',returnFormController.detail);
+router.get('/return-form/print',returnFormController.print);
 router.get('/return-form/list',returnFormController.list);
 
 module.exports = router;
