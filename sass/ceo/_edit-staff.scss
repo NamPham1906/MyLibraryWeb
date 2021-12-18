@@ -1,4 +1,4 @@
-.edit-book{
+.edit-staff{
     background-color: white;
     padding: 40px;
     margin-top: 70px;
@@ -8,12 +8,8 @@
     &__title{
         text-align: center;
         color: $pink-1;
-        h2 {
-            font-weight: 600;
-        }
     }
     &__form{
-        
         input, select{
             width: 100%;
             background-color: $brown-4;
@@ -27,37 +23,24 @@
         button{
             background-color: $brown-3;
             color: white;
+            font-weight: bold;
             border: none;
             border-radius: 20px;
-            font-weight: 650;
             text-align: center;
             width: 150px;
             display: block;
             padding: 5px 0;
             margin: 0 auto !important;
         }
-        img{
-            
-            margin: 5px auto 5px auto;
-            max-width: 200px;
-        }
-        h5{
+        .staff-avatar{
             margin: 0 auto;
-            width: max-content;
-            font-weight: 600;
-            margin-bottom: 15px;
-            margin-left: auto;
-            margin-right: auto;
+            max-width: 250px;
         }
     }
     .custom-file{
-        button{
-            margin: 10px auto 10px auto !important;
-        }
         input{
             position: absolute;
             display: none;
         }
     }
-    
 }

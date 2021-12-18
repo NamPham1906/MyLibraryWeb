@@ -216,6 +216,8 @@ main {
     font-size: 28px;
     color: #C4817F;
     margin-bottom: 20px; }
+    .add-book__title h2 {
+      font-weight: 600; }
   .add-book__form input, .add-book__form select {
     width: 300px;
     background-color: #F6E5D2;
@@ -241,60 +243,182 @@ main {
 
 .edit-book {
   background-color: white;
-  padding: 20px 20px;
-  border-radius: 40px;
-  position: relative;
-  z-index: 1;
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 80%; }
+  padding: 40px;
+  margin-top: 70px;
+  border-radius: 20px;
+  width: 90%; }
   .edit-book__title {
     text-align: center;
-    font-size: 28px;
-    color: #C4817F;
-    margin-bottom: 20px; }
+    color: #C4817F; }
     .edit-book__title h2 {
-      font-weight: 700; }
-  .edit-book__form .container {
-    width: 66%;
-    float: left; }
+      font-weight: 600; }
   .edit-book__form input, .edit-book__form select {
-    width: 300px;
+    width: 100%;
     background-color: #F6E5D2;
     padding-left: 5px;
     border: none; }
-  .edit-book__form input:focus, .edit-book__form select:focus {
+  .edit-book__form input:not(:read-only):focus, .edit-book__form select:focus {
     background-color: #F6E5D2; }
-  .edit-book__form .custom-file .custom-file-label {
-    background-color: #F6E5D2; }
-    .edit-book__form .custom-file .custom-file-label:after {
-      background-color: #F5BD8A; }
-  .edit-book__form .edit-book-btn {
-    color: white;
+  .edit-book__form button {
     background-color: #F5BD8A;
+    color: white;
+    border: none;
     border-radius: 20px;
-    font-weight: bold;
-    flex-grow: 0;
-    align-self: flex-end;
+    font-weight: 650;
+    text-align: center;
+    width: 150px;
+    display: block;
+    padding: 5px 0;
+    margin: 0 auto !important; }
+  .edit-book__form img {
+    margin: 5px auto 5px auto;
+    max-width: 200px; }
+  .edit-book__form h5 {
     margin: 0 auto;
-    margin-top: 20px;
-    width: 150px; }
-    .edit-book__form .edit-book-btn a {
-      color: white; }
-  .edit-book__form .image {
-    width: 33%;
-    float: right;
-    text-align: center; }
-    .edit-book__form .image h5 {
-      font-weight: 600;
-      margin-bottom: 15px;
-      margin-left: auto;
-      margin-right: auto; }
-    .edit-book__form .image .book-img {
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 5px;
-      width: 200px; }
+    width: max-content;
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto; }
+  .edit-book .custom-file button {
+    margin: 10px auto 10px auto !important; }
+  .edit-book .custom-file input {
+    position: absolute;
+    display: none; }
+
+.all-book {
+  padding: 80px 20px; }
+  .all-book__title {
+    text-align: center;
+    font-size: 24px;
+    color: #C4817F;
+    margin-bottom: 20px; }
+    .all-book__title h2 {
+      font-weight: 600; }
+  .all-book__search {
+    background-color: white;
+    padding: 20px;
+    border-radius: 40px; }
+    .all-book__search input {
+      background-color: #F6E5D2;
+      padding-right: 35px;
+      border: none; }
+    .all-book__search button {
+      cursor: pointer; }
+    .all-book__search input:focus {
+      background-color: #F6E5D2; }
+    .all-book__search button {
+      background-color: unset;
+      width: 30px;
+      height: 30px; }
+    .all-book__search .input-wrapper {
+      position: relative; }
+      .all-book__search .input-wrapper button {
+        position: absolute;
+        z-index: 2;
+        width: 30px;
+        height: 30px;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%); }
+    .all-book__search label, .all-book__search span {
+      text-align: right;
+      color: #000;
+      font-weight: bold; }
+    .all-book__search span {
+      margin-right: 10px; }
+    .all-book__search .form-group {
+      margin-bottom: 0; }
+  .all-book__container {
+    margin-top: 20px; }
+  .all-book .user-card {
+    background-color: white;
+    overflow: hidden;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.26); }
+    .all-book .user-card__bookimg {
+      width: fit-content;
+      padding: 15px 0px 15px 10px;
+      margin: auto; }
+    .all-book .user-card__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 10px;
+      height: 100%; }
+      .all-book .user-card__info p {
+        margin-bottom: 0; }
+    .all-book .user-card__action {
+      padding: 35px 5px 35px 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 100%; }
+      .all-book .user-card__action img {
+        width: 25px;
+        height: 25px; }
+      .all-book .user-card__action .span1 {
+        color: cornflowerblue;
+        font-weight: 600;
+        font-size: 12;
+        padding-left: 5px; }
+      .all-book .user-card__action .span2 {
+        color: coral;
+        font-weight: 600;
+        font-size: 12;
+        padding-left: 5px; }
+      .all-book .user-card__action .span3 {
+        color: darkseagreen;
+        font-weight: 600;
+        font-size: 12;
+        padding-left: 5px; }
+      .all-book .user-card__action > div {
+        cursor: pointer; }
+
+.btn__add {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background-color: white;
+  border-radius: 50px; }
+  .btn__add a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #F5BD8A; }
+
+.book-advance-filter .modal-content {
+  background-color: #F5BD8A;
+  padding: 20px;
+  border-radius: 20px; }
+
+.book-advance-filter .modal-body {
+  border-radius: 20px;
+  background-color: white; }
+  .book-advance-filter .modal-body h4 {
+    color: #C4817F;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px; }
+  .book-advance-filter .modal-body form label {
+    color: #000;
+    font-weight: bold; }
+  .book-advance-filter .modal-body form input, .book-advance-filter .modal-body form select {
+    background-color: #F6E5D2;
+    padding-left: 5px;
+    border: none; }
+
+.book-advance-filter button[type=submit] {
+  background-color: white;
+  width: 150px;
+  color: #F5BD8A;
+  border-radius: 50px;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 20px auto 0px auto; }
 
 .librarian-menu {
   width: 100%; }
@@ -450,6 +574,75 @@ main {
   @media (max-width: 400px) {
     .ceo-menu {
       grid-template-columns: repeat(1, 250px); } }
+
+.add-staff {
+  background-color: white;
+  padding: 20px 20px;
+  border-radius: 40px;
+  position: relative;
+  z-index: 1;
+  margin-top: 40px; }
+  .add-staff__title {
+    text-align: center;
+    font-size: 28px;
+    color: #C4817F;
+    margin-bottom: 20px; }
+  .add-staff__form input, .add-staff__form select {
+    width: 300px;
+    background-color: #F6E5D2;
+    padding-left: 5px;
+    border: none; }
+  .add-staff__form input:focus, .add-staff__form select:focus {
+    background-color: #F6E5D2; }
+  .add-staff__form .custom-file .custom-file-label {
+    background-color: #F6E5D2; }
+    .add-staff__form .custom-file .custom-file-label:after {
+      background-color: #F5BD8A; }
+  .add-staff__form .add-staff-btn {
+    color: white;
+    background-color: #F5BD8A;
+    border-radius: 20px;
+    font-weight: bold;
+    flex-grow: 0;
+    align-self: flex-end;
+    margin: 0 auto;
+    margin-top: 20px; }
+    .add-staff__form .add-staff-btn a {
+      color: white; }
+
+.edit-staff {
+  background-color: white;
+  padding: 40px;
+  margin-top: 70px;
+  border-radius: 20px;
+  width: 90%; }
+  .edit-staff__title {
+    text-align: center;
+    color: #C4817F; }
+  .edit-staff__form input, .edit-staff__form select {
+    width: 100%;
+    background-color: #F6E5D2;
+    padding-left: 5px;
+    border: none; }
+  .edit-staff__form input:not(:read-only):focus, .edit-staff__form select:focus {
+    background-color: #F6E5D2; }
+  .edit-staff__form button {
+    background-color: #F5BD8A;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    width: 150px;
+    display: block;
+    padding: 5px 0;
+    margin: 0 auto !important; }
+  .edit-staff__form .staff-avatar {
+    margin: 0 auto;
+    max-width: 250px; }
+  .edit-staff .custom-file input {
+    position: absolute;
+    display: none; }
 
 .pagination {
   padding: 5px;
