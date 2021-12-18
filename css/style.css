@@ -540,7 +540,7 @@ main {
     .create-user__form .add-user-btn a {
       color: white; }
 
-.treasure-menu {
+.treasurer-menu {
   z-index: 1;
   margin-top: auto;
   margin-bottom: auto;
@@ -549,7 +549,7 @@ main {
   gap: 30px;
   justify-content: center;
   padding-bottom: 40px; }
-  .treasure-menu__card {
+  .treasurer-menu__card {
     cursor: pointer;
     border-radius: 40px;
     padding: 20px 20px 0px 20px;
@@ -561,30 +561,22 @@ main {
     align-items: center;
     flex-direction: column;
     box-shadow: 2px 2px 5px rgba(145, 145, 145, 0.39); }
-    .treasure-menu__card h4 {
+    .treasurer-menu__card h4 {
       margin-top: auto;
       margin-bottom: auto;
       text-align: center;
       font-size: 20px;
       color: #C4817F; }
-    .treasure-menu__card img {
+    .treasurer-menu__card img {
       width: 70%; }
-    .treasure-menu__card:hover {
+    .treasurer-menu__card:hover {
       animation: move-up-down .5s linear 1; }
   @media (max-width: 1096px) {
-    .treasure-menu {
+    .treasurer-menu {
       grid-template-columns: repeat(2, 250px); } }
   @media (max-width: 600px) {
-    .treasure-menu {
+    .treasurer-menu {
       grid-template-columns: repeat(1, 250px); } }
-
-@keyframes move-up-down {
-  0% {
-    transform: translateY(0); }
-  50% {
-    transform: translateY(-30px); }
-  100% {
-    transform: translateY(0); } }
 
 .all-fine-form {
   padding: 80px 20px;

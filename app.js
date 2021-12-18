@@ -8,6 +8,7 @@ var loginRouter = require('./routes/loginRoutes/index');
 var chairmanRouter = require('./routes/chairmanRoutes/index');
 var stockkeeperRouter = require('./routes/stockkeeperRoutes/index');
 var librarianRouter = require('./routes/librarianRoutes/index');
+var cashierRouter = require('./routes/cashierRoutes/index');
 
 var app = express();
 
@@ -25,7 +26,7 @@ app.use('/', loginRouter);
 app.use('/chairman', chairmanRouter);
 app.use('/stockkeeper', stockkeeperRouter);
 app.use('/librarian', librarianRouter);
-
+app.use('/cashier', cashierRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
