@@ -1,0 +1,76 @@
+.edit-liquidation{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: white;
+    max-width: 90vw;
+    border-radius: 20px;
+    &__id{
+        text-align: right;
+       h5{
+        font-weight: 600;
+        font-size: 14px;
+        color: rgb(116, 116, 116);
+       }
+    }
+    &__title{
+       
+        text-align: center;
+        color: $pink-1;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        h2{
+            font-weight: 600;
+        }
+        &--sub{
+            color: $brown-3;
+            margin-top: 20px;
+        }
+        
+    }
+    &__form{
+        input, select{
+            width: 100%;
+            background-color: $brown-4;
+            padding-left: 5px;
+            border: none;
+
+        }
+        .input-liquidation{
+            color: coral;
+            font-weight: bold;
+        }
+        input:not(:read-only):focus, select:focus{
+            background-color: $brown-4;
+        }
+
+        button{
+            background-color: $brown-3;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            text-align: center;
+            font-weight: 600;
+            width: 150px;
+            display: block;
+            padding: 5px 0;
+            margin: 10px auto 5px auto;
+        }
+        .table-responsive{
+            th{
+                text-align: center;
+                width: 100%;
+                
+            }
+            td{
+                input{
+                    width: 200px;
+                }
+            }
+        }
+        .delete-row{
+            cursor: pointer;
+        }
+    }
+    
+}
