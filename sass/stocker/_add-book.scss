@@ -11,6 +11,10 @@
         font-size: 28px;
         color: $pink-1;
         margin-bottom: 20px;
+        h2{
+            font-weight: 600;
+        }
+
     }
     &__form{
         input, select{
