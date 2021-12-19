@@ -12,19 +12,19 @@
                     <div class="col-12 col-lg-4">
                         <div class="form-group">
                             <label for="fullname">Họ tên:</label>
-                            <input type="text" class="form-control" value="Tống Mĩ Lệ" name="fullname" id="fullname" autocomplete="false" >
+                            <input type="text" class="form-control" value="{{user.hoten}}" name="fullname" id="fullname" autocomplete="false" >
                         </div>
                         <div class="form-group">
                             <label for="dob">Ngày sinh:</label>
-                            <input type="date" class="form-control" value="2000-10-10" name="dob" id="dob" autocomplete="false" >
+                            <input type="date" class="form-control" value="{{user.ngaysinh}}" name="dob" id="dob" autocomplete="false" >
                         </div>
                         <div class="form-group">
                             <label for="email">Email:</label>
-                            <input type="email" class="form-control" value="tmle@gmail.com" name="email" id="email" autocomplete="false" >
+                            <input type="email" class="form-control" value="{{user.email}}" name="email" id="email" autocomplete="false" >
                         </div>
                         <div class="form-group">
                             <label for="admi-name">Người lập thẻ:</label>
-                            <input type="text" class="form-control" value="Huỳnh Minh Tiến" name="adminName" id="admin-name" autocomplete="false" >
+                            <input type="text" readonly class="form-control" value="{{user.nguoilapthe}}" name="adminName" id="admin-name" autocomplete="false" >
                         </div>
                        
                     </div>
@@ -32,22 +32,23 @@
                         <div class="form-group">
                             <label for="user-type">Loại độc giả</label>
                             <select name="userType" id="user-type" class="form-control">
-                                <option value="1" selected>X</option>
-                                <option value="2" >Y</option>
+                                <option value="{{user.loaidocgia}}">{{user.loaidocgia}}</option>
+                                <option value="X">X</option>
+                                <option value="Y">Y</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="address">Địa chỉ:</label>
-                            <input type="text" class="form-control" value="Quận 12, TP.HCM" name="address" id="address" autocomplete="false" >
+                            <input type="text" class="form-control" value="{{user.diachi}}" name="address" id="address" autocomplete="false" >
                         </div>
                         <div class="form-group">
                             <label for="create-at">Ngày lập thẻ:</label>
-                            <input type="date" class="form-control" value="2021-01-01" readonly name="createAt" id="create-at" autocomplete="false" >
+                            <input type="text" class="form-control" value="{{user.ngaylapthe}}" readonly name="createAt" id="create-at" autocomplete="false" >
                         </div>
                     </div>
-                    <div class="col-12 col-lg-4 order-first order-lg-last">
-                        <label>Mã độc giả: DF000005</label>
-                        <img class="user-avatar" id="user-avatar" src="/images/librarian/user/user1-full.png" alt="">
+                    <div class="col-12 col-lg-4 order-first order-lg-last text-center">
+                        <label>Mã độc giả: {{user.madocgia}}</label>
+                        <img class="user-avatar" id="user-avatar" src="{{user.anhdaidien}}" alt="">
                     </div>
                 </div>
                 <div class="row mt-3">
@@ -55,7 +56,7 @@
                         <button type="submit" class="btn mx-auto mb-3 mx-sm-0 mb-sm-0">Lưu</button>
                     </div>
                     <div class="col-12 col-sm-4">
-                        <button type="button" class="btn mx-auto mb-3 mx-sm-0 mb-sm-0">Hủy</button>
+                        <button type="button" class="btn mx-auto mb-3 mx-sm-0 mb-sm-0">In hồ sơ</button>
                     </div>
                     <div class="col-12 col-sm-4">
                         <div class="custom-file">

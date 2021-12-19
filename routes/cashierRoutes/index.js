@@ -16,8 +16,8 @@ router.get('/debt-report/create',debtReportController.create);
 //PENALTY FORM
 router.get('/penalty-form',penaltyFormController.list);
 router.get('/penalty-form/add',penaltyFormController.add);
-router.get('/penalty-form/detail',penaltyFormController.detail);
-router.get('/penalty-form/print',penaltyFormController.print);
+router.get('/penalty-form/detail/:id',penaltyFormController.detail);
+router.get('/penalty-form/print/:id',penaltyFormController.print);
 router.get('/penalty-form/list',penaltyFormController.list);
 
 

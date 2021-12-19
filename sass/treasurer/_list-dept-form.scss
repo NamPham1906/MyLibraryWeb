@@ -58,6 +58,12 @@
     }
     .fine-form{
         margin: 20px 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        @include respon(960){
+            grid-template-columns: repeat(1, 1fr);
+        }
         &__card{
             background-color: white;
             padding: 20px 30px;
