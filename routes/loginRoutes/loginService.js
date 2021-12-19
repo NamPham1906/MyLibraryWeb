@@ -10,3 +10,12 @@ exports.findAccount=(username ="0") =>{
         raw:true
     });
 }
+
+exports.findUser=(manv="0")=>{
+    return models.nhanvien.findOne({
+        where:{
+            manv: manv,
+        },
+        raw: true
+    })
+};

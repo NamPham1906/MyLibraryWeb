@@ -1,0 +1,60 @@
+<div class="site-bg">
+        <div class="site-bg__curve"></div>
+    </div>
+    <main class="add-penalty">
+        <div class="add-penalty__id">
+            <h5>Mã phiếu: {{form.maphieuthu}}</h5>
+        </div>
+        <div class="add-penalty__title">
+            <h2>PHIẾU THU TIỀN PHẠT</h2>
+        </div>
+        <form class="add-penalty__form">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label >Mã độc giả:</label>
+                            <input type="text" class="form-control" autocomplete="false" readonly="" value="{{form.madocgia}}">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label >Họ tên độc giả:</label>
+                            <input type="text" class="form-control" autocomplete="false" readonly="" value="{{form.docgia}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label>Tiền nợ: </label>
+                            <input type="text" class="form-control" autocomplete="false" readonly="" value="{{form.tienno}}">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label>Số tiền thu: </label>
+                            <input type="text" class="form-control" autocomplete="false" readonly="" value="{{form.tienthu}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label >Còn lại:</label>
+                            <input type="text" class="form-control"  autocomplete="false" readonly="" value="{{form.conlai}}">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label >Người ghi nhận:</label>
+                            <input type="text" class="form-control"autocomplete="false" readonly="" value="{{form.nguoithu}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="btn add-penalty__btn" type="button">In phiếu</button>
+                </div>
+            </div>
+        </form>
+    </main>

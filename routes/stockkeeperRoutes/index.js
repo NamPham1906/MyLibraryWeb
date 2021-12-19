@@ -1,4 +1,5 @@
 var express = require('express');
+
 var router = express.Router();
 
 const stockkeeperController = require('./stockkeeperController');
@@ -12,7 +13,8 @@ router.get('/logout',stockkeeperController.logout);
 //BOOK
 router.get('/book',bookController.list);
 router.get('/book/add',bookController.add);
-router.get('/book/detail',bookController.detail);
+router.get('/book/detail/:id',bookController.edit);
+router.get('/book/edit/:id',bookController.edit);
 router.get('/book/list',bookController.list);
 
 //LIQUIDATION BOOK

@@ -24,5 +24,15 @@
             background-color: $pink-2;
             color: white;
         }
+        label{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+
+        }
     }
 }

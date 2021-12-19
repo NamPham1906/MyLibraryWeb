@@ -3,7 +3,7 @@
     </div>
     <main class="add-penalty">
         <div class="add-penalty__id">
-            <h5>Mã phiếu: XXXXXX</h5>
+            <h5>Mã phiếu: {{form.maphieuthu}}</h5>
         </div>
         <div class="add-penalty__title">
             <h2>PHIẾU THU TIỀN PHẠT</h2>
@@ -13,42 +13,42 @@
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <div class="form-group">
-                            <label for="user-id">Mã độc giả:</label>
-                            <input type="text" class="form-control" name="userId" id="user-id" autocomplete="false" readonly="" value="DG000001">
+                            <label >Mã độc giả:</label>
+                            <input type="text" class="form-control" autocomplete="false" readonly="" value="{{form.madocgia}}">
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="form-group">
-                            <label for="fullname">Họ tên độc giả:</label>
-                            <input type="text" class="form-control" name="fullname" id="fullname" autocomplete="false" readonly="" value="Lê Kiệt">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <div class="form-group">
-                            <label for="debt">Tiền nợ: </label>
-                            <input type="text" class="form-control" name="debt" id="debt" autocomplete="false" readonly="" value="83.000 vnđ">
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="form-group">
-                            <label for="received-money">Số tiền thu: </label>
-                            <input type="text" class="form-control" name="receivedMoney" id="received-money" autocomplete="false" readonly="" value="10.000 vnđ">
+                            <label >Họ tên độc giả:</label>
+                            <input type="text" class="form-control" autocomplete="false" readonly="" value="{{form.docgia}}">
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <div class="form-group">
-                            <label for="money-remain">Còn lại:</label>
-                            <input type="text" class="form-control" name="moneyRemain" id="money-remain" autocomplete="false" readonly="" value="73.000 vnđ">
+                            <label>Tiền nợ: </label>
+                            <input type="text" class="form-control" autocomplete="false" readonly="" value="{{form.tienno}}">
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="form-group">
-                            <label for="admin">Người ghi nhận:</label>
-                            <input type="text" class="form-control" name="admin" id="admin" autocomplete="false" readonly="" value="Phạm Sơn Nam">
+                            <label>Số tiền thu: </label>
+                            <input type="text" class="form-control" autocomplete="false" readonly="" value="{{form.tienthu}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label >Còn lại:</label>
+                            <input type="text" class="form-control"  autocomplete="false" readonly="" value="{{form.conlai}}">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label >Người ghi nhận:</label>
+                            <input type="text" class="form-control"autocomplete="false" readonly="" value="{{form.nguoithu}}">
                         </div>
                     </div>
                 </div>
