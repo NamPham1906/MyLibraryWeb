@@ -172,3 +172,46 @@
         margin: 20px auto 0px auto;
     }
 }
+.stocker-book-advance-filter{
+    .modal-content{
+        background-color: $brown-3;
+        padding: 20px;
+        border-radius: 20px;
+        padding-bottom: 40px;
+    }
+    .modal-body{
+        height: fit-content;
+        margin: auto 0;
+        border-radius: 20px;
+        background-color: white;
+        h4{
+            color: $pink-1;
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form{
+            label{
+                color: #000;
+                font-weight: bold;
+            }
+            input,select{
+                background-color: $brown-4;
+                padding-left: 5px;
+                border: none;
+            }
+        }
+    }
+    button[type=submit]{
+        background-color: white;
+        width: 150px;
+        color: $brown-3;
+        border-radius: 50px;
+        border: none;
+        font-weight: bold;
+        font-size: 18px;
+        margin: 20px auto;
+    }
+}
