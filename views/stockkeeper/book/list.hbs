@@ -49,6 +49,7 @@
         <div class="all-book__container">
             <div class="user-card">
                 <div class="container-fluid ">
+                      {{#each books}}
                     <div class="row">
                         <div class="col-12 col-md-5">
                             <div class="row">
@@ -59,11 +60,11 @@
                                 </div>
                                 <div class="col-12 col-sm-7">
                                     <div class="user-card__info">
-                                        <p>Mã sách: CSC10006</p>
-                                        <p>Tên sách: Cơ sở dữ liệu</p>
-                                        <p>Tác giả: Đồng Thị Bích Thủy</p>
-                                        <p>Thể loại: B</p>
-                                        <p>Năm xuất bản: 2019</p>
+                                        <p>Mã sách: {{masach}}</p>
+                                        <p>Tên sách: {{tensach}}</p>
+                                        <p>Tác giả:{{tacgia}}</p>
+                                        <p>Thể loại: {{theloai}}</p>
+                                        <p>Năm xuất bản: {{namxuatban}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -72,10 +73,10 @@
                             <div class="row h-100">
                                 <div class="col-12 col-sm-7">
                                     <div class="user-card__info">
-                                        <p>Nhà xuất bản: NXB Khoa học và Kỹ thuật </p>
+                                        <p>Nhà xuất bản: {{nhaxuatban}} </p>
                                         <p>Người tiếp nhận: Trần Minh Kỳ</p>
-                                        <p>Ngày nhập: 01/01/2021</p>
-                                        <p>Trị giá: 160.000vnđ</p>
+                                        <p>Ngày nhập: {{ngaynhap}}</p>
+                                        <p>Trị giá: {{trigia}}</p>
                                         <p>Tình trạng: Còn sách</p>
 
                                     </div>
@@ -99,7 +100,7 @@
                             </div>
                         </div>
                     </div>
-                    
+                     {{/each}}
                 </div>
             </div>
             <div class="user-card">
