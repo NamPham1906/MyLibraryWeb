@@ -559,6 +559,136 @@ main {
   color: white !important;
   font-size: 18px; }
 
+.add-liquidation {
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 90vw;
+  width: 100%;
+  height: 100%; }
+  .add-liquidation__title {
+    text-align: center;
+    font-size: 24px;
+    color: #C4817F;
+    margin-bottom: 20px; }
+    .add-liquidation__title h2 {
+      font-weight: 600; }
+  .add-liquidation__search input {
+    background-color: #F6E5D2;
+    padding-right: 35px;
+    border: none; }
+  .add-liquidation__search button {
+    cursor: pointer; }
+  .add-liquidation__search input:focus {
+    background-color: #F6E5D2; }
+  .add-liquidation__search input[type=date] {
+    padding-right: 5px; }
+  .add-liquidation__search button {
+    background-color: unset;
+    width: 30px;
+    height: 30px; }
+  .add-liquidation__search .input-wrapper {
+    position: relative; }
+    .add-liquidation__search .input-wrapper button {
+      position: absolute;
+      z-index: 2;
+      width: 30px;
+      height: 30px;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%); }
+  .add-liquidation__search label, .add-liquidation__search span {
+    text-align: left;
+    color: #000;
+    font-weight: bold; }
+  .add-liquidation__search span {
+    margin-right: 10px; }
+  .add-liquidation__search .form-group {
+    margin-bottom: 20px; }
+  .add-liquidation table {
+    border-spacing: 0 10px;
+    max-height: 700px;
+    overflow: auto; }
+    .add-liquidation table thead th {
+      padding: 20px;
+      border-top: 1px solid rgba(0, 0, 0, 0.452);
+      margin: 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.452); }
+    .add-liquidation table thead th:first-child {
+      overflow: hidden;
+      border-left: 1px solid rgba(0, 0, 0, 0.452);
+      border-radius: 20px 0 0 20px; }
+    .add-liquidation table thead th:last-child {
+      border-right: 1px solid rgba(0, 0, 0, 0.452);
+      border-radius: 0 20px 20px 0; }
+    .add-liquidation table tbody tr {
+      cursor: pointer; }
+      .add-liquidation table tbody tr:hover td {
+        background-color: #F8E9BD; }
+      .add-liquidation table tbody tr td {
+        transition: .2s;
+        font-weight: 600; }
+        .add-liquidation table tbody tr td span {
+          margin-left: 8px; }
+        .add-liquidation table tbody tr td button {
+          background-color: #EF8885;
+          width: fit-content;
+          padding: 3px 20px 3px 20px;
+          text-align: center;
+          font-weight: 600;
+          border-radius: 30px;
+          color: white !important;
+          font-size: 16px; }
+      .add-liquidation table tbody tr td:first-child {
+        border-radius: 20px 0 0 20px; }
+      .add-liquidation table tbody tr .td-near-last-child {
+        border-radius: 0 20px 20px 0; }
+
+.add-liquidation__pagi {
+  margin-bottom: 20px; }
+
+.btn-add-liquidation {
+  background-color: forestgreen;
+  width: 150px;
+  text-align: center;
+  float: right;
+  font-weight: 600;
+  border-radius: 30px;
+  margin-right: 5px;
+  color: white !important;
+  font-size: 18px; }
+
+.btn-delete-liquidation {
+  background-color: #EF8885;
+  width: 150px;
+  text-align: center;
+  float: right;
+  font-weight: 600;
+  border-radius: 30px;
+  margin-right: 15px;
+  color: white !important;
+  font-size: 18px; }
+
+.btn-reload-liquidation {
+  background-color: #90d9f1;
+  width: 150px;
+  text-align: center;
+  float: left;
+  font-weight: 600;
+  border-radius: 30px;
+  color: white !important;
+  font-size: 18px; }
+
+.btn-filter-liquidation {
+  background-color: #F5BD8A;
+  width: 150px;
+  text-align: center;
+  float: right;
+  font-weight: 600;
+  border-radius: 30px;
+  color: white !important;
+  font-size: 18px; }
+
 .librarian-menu {
   width: 100%; }
   .librarian-menu__row {

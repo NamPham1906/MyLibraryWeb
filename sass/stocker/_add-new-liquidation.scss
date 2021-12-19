@@ -1,0 +1,171 @@
+.add-liquidation{
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 90vw;
+    width:100%;
+    height: 100%;
+    &__title{
+        text-align: center;
+        font-size: 24px;
+        color: $pink-1;
+        margin-bottom: 20px;
+        h2{
+            font-weight: 600;
+        }
+    }
+    &__search{
+       
+        input{
+            background-color: $brown-4;
+            padding-right: 35px;
+            border: none;
+        }
+        button{
+            cursor: pointer;
+        }
+        input:focus{
+            background-color: $brown-4;
+        }
+        input[type=date]{
+            padding-right: 5px;
+        }
+        button{
+            background-color: unset;
+            width: 30px;
+            height: 30px;
+        }
+        .input-wrapper{
+            position: relative;
+            button{
+                position: absolute;
+                z-index: 2;
+                width: 30px;
+                height: 30px;
+                right: 5px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        label, span{
+            text-align: left;
+            color: #000;
+            font-weight: bold;
+        }
+        span{
+            margin-right: 10px;
+        }
+        .form-group{
+            margin-bottom: 20px;
+        }
+
+    }
+    table{
+        border-spacing: 0 10px;
+        max-height: 700px;
+        overflow:auto ;
+        thead{
+                th{
+                    padding: 20px;
+                    border-top: 1px solid rgba(0, 0, 0, 0.452);
+                    margin: 0;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.452);
+                }
+                th:first-child {
+                    overflow: hidden;
+                    border-left: 1px solid rgba(0, 0, 0, 0.452);
+                    border-radius: 20px 0 0 20px;
+                }
+                 th:last-child {
+                    border-right: 1px solid rgba(0, 0, 0, 0.452);
+                    border-radius: 0 20px 20px 0;
+                }
+            
+        }
+        tbody{
+            tr{
+                cursor: pointer;
+                &:hover{
+                    td{
+                        background-color: $brown-1;
+                    }
+                }
+                td{
+                    
+                    transition: .2s;
+                    font-weight: 600;
+                    span{
+                        margin-left: 8px;
+                    }
+                    button{
+                        background-color: #EF8885;
+                        width: fit-content;
+                        padding: 3px 20px 3px 20px;
+                        text-align: center;
+                        font-weight: 600;
+                        border-radius: 30px;
+                        color: white !important;
+                        font-size: 16px;
+                    }
+                }
+                td:first-child {
+                    border-radius: 20px 0 0 20px;
+                }
+                .td-near-last-child {
+                    border-radius: 0 20px 20px 0;
+                }
+            }
+        }
+    }
+    
+}
+
+.add-liquidation__pagi{
+    margin-bottom: 20px;
+}
+
+.btn-add-liquidation{
+    background-color:forestgreen;
+    width: 150px;
+    text-align: center;
+    float: right;
+    font-weight: 600;
+    border-radius: 30px;
+    margin-right: 5px;
+    color: white !important;
+    font-size: 18px;
+}
+
+.btn-delete-liquidation{
+    background-color: #EF8885;
+    width: 150px;
+    text-align: center;
+    float: right;
+    font-weight: 600;
+    border-radius: 30px;
+    margin-right: 15px;
+    color: white !important;
+    font-size: 18px;
+}
+
+.btn-reload-liquidation{
+    background-color:rgb(144, 217, 241);
+    width: 150px;
+    text-align: center;
+    float: left;
+    font-weight: 600;
+    border-radius: 30px;
+    color: white !important;
+    font-size: 18px;
+}
+
+.btn-filter-liquidation{
+    background-color: $brown-3;
+    width: 150px;
+    text-align: center;
+    float: right;
+    font-weight: 600;
+    border-radius: 30px;
+    color: white !important;
+    font-size: 18px;
+}
