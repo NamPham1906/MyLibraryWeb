@@ -156,13 +156,13 @@ add foreign key (masach) references sach(masach);
 
 insert into nhanvien 
 values('XXXXXTT','Trần Minh Tuyết', '1988-01-15','Đại Học', 'Thủ Thư','Nhân Viên','42A Lam Sơn, phường 2, quận Tân Bình, HCM', '0332224561','https://via.placeholder.com/150' ),
-	('XXXXXGD','Triệu Thủy Trang','1962-01-16', 'Tiến sĩ', 'Ban Giám Đốc','Giám Đốc','42A Lam Sơn, phường 2, quận Tân Bình, HCM', '0919123456','https://via.placeholder.com/150' ),
-    ('XXXXXTK','Trần Minh Kỳ','1982-05-05', 'Đại học', 'Thủ Kho','Nhân Viên','198 Phan Xích Long, phường 2, quận Phú Nhuận, HCM', '0341234556','https://via.placeholder.com/150' ),
-    ('XXXXXTQ','Phạm Sơn Nam','2000-12-30', 'Đại học', 'Thủ Quỹ','Nhân Viên','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM', '0351789423','https://via.placeholder.com/150' ),
+	('XXXXXGD','Triệu Thủy Trang','1962-01-16', 'Tiến Sĩ', 'Ban Giám Đốc','Giám Đốc','42A Lam Sơn, phường 2, quận Tân Bình, HCM', '0919123456','https://via.placeholder.com/150' ),
+    ('XXXXXTK','Trần Minh Kỳ','1982-05-05', 'Đại Học', 'Thủ Kho','Nhân Viên','198 Phan Xích Long, phường 2, quận Phú Nhuận, HCM', '0341234556','https://via.placeholder.com/150' ),
+    ('XXXXXTQ','Phạm Sơn Nam','2000-12-30', 'Đại Học', 'Thủ Quỹ','Nhân Viên','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM', '0351789423','https://via.placeholder.com/150' ),
     ('XXXXXTT1','Trần Minh Hoa', '1988-01-15','Đại Học', 'Thủ Thư','Nhân Viên','42A Lam Sơn, phường 2, quận Tân Bình, HCM', '0332224561','https://via.placeholder.com/150' ),
-	('XXXXXTT2','Triệu Thủy Trung','1962-01-16', 'Tiến sĩ', 'Thủ Thư','Nhân viên','42A Lam Sơn, phường 2, quận Tân Bình, HCM', '0919123456','https://via.placeholder.com/150' ),
-    ('XXXXXTK1','Trần Minh Công','1982-05-05', 'Đại học', 'Thủ Kho','Nhân Viên','198 Phan Xích Long, phường 2, quận Phú Nhuận, HCM', '0341234556','https://via.placeholder.com/150' ),
-    ('XXXXXTQ1','Phạm Sơn Kê','2000-12-30', 'Đại học', 'Thủ Quỹ','Nhân Viên','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM', '0351789423','https://via.placeholder.com/150' );
+	('XXXXXTT2','Triệu Thủy Trung','1962-01-16', 'Tiến Sĩ', 'Thủ Thư','Nhân viên','42A Lam Sơn, phường 2, quận Tân Bình, HCM', '0919123456','https://via.placeholder.com/150' ),
+    ('XXXXXTK1','Trần Minh Công','1982-05-05', 'Đại Học', 'Thủ Kho','Nhân Viên','198 Phan Xích Long, phường 2, quận Phú Nhuận, HCM', '0341234556','https://via.placeholder.com/150' ),
+    ('XXXXXTQ1','Phạm Sơn Kê','2000-12-30', 'Đại Học', 'Thủ Quỹ','Nhân Viên','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM', '0351789423','https://via.placeholder.com/150' );
     
 insert into taikhoan
 values('giamdoc1','giamdoc1','XXXXXGD'),
