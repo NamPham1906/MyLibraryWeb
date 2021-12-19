@@ -16,7 +16,7 @@
                 <img src="/images/logo_small.png" alt="">
             </div>
             <div class="login__form">   
-                <form autocomplete="off">
+                <form action="/login" method="post" autocomplete="off">
                     <div class="form-group">
                         <label for="username-input">Tài khoản:</label>
                         <input type="text" class="form-control" name="username" id="username-input" autocomplete="false" >
@@ -26,7 +26,7 @@
                         <input type="password" class="form-control" name="password" id="password-input">
                     </div>
                    <span><a href="/foget-password" class="forget-password-txt">Quên mật khẩu?</a></span>
-                   <button class="btn login-btn"><a href="index.html">Đăng nhập</a></button>
+                   <button class="btn login-btn" type="submit">Đăng nhập</button>
                 </form>
             </div>
         </div>
