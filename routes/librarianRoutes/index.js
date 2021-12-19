@@ -29,7 +29,7 @@ router.get('/book/list',bookController.list);
 //LOST BOOK FORM
 router.get('/lost-book-form',lostBookFormController.list);
 router.get('/lost-book-form/add',lostBookFormController.add);
-router.get('/lost-book-form/detail',lostBookFormController.detail);
+router.get('/lost-book-form/detail/:id',lostBookFormController.detail);
 router.get('/lost-book-form/list',lostBookFormController.list);
 
 //BORROW FORM 
