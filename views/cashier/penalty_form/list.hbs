@@ -67,15 +67,16 @@
         </div>
         <div class="fine-form">
             <div class="container-fluid p-0">
+                {{#each penalty}}
                 <div class="row mb-4">
                     <div class="col-12 col-lg-6">
                         <div class="fine-form__card">
                             <div class="fine-form__card__title">
-                                <h4>Mã phiếu: XXXXXX</h4>
+                                <h4>Mã phiếu: {{maphieuthu}}</h4>
                             </div>
                             <div class="row">
                                 <div class="col-12 col-md-6">
-                                    <span>Mã độc giả: DG000001</span>
+                                    <span>Mã độc giả: {{madocgia}}</span>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <span>Tên độc giả: Lê Kiệt</span>
@@ -86,7 +87,7 @@
                                     <span>Tiền nợ: 83.000 vnđ</span>
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    <span>Số tiền thu: 10.000 vnđ</span>
+                                    <span>Số tiền thu: {{tienthu}}</span>
                                 </div>
                             </div>
                             <div class="row">
@@ -94,7 +95,7 @@
                                     <span>Còn lại: 73.000 vnđ</span>
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    <span>Người thu: Phạm Sơn Nam</span>
+                                    <span>Người thu: {{nguoithu}}</span>
                                 </div>
                             </div>
                             <div class="d-flex w-100 justify-content-center fine-form__card__action">
@@ -157,186 +158,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mb-4">
-                    <div class="col-12 col-lg-6">
-                        <div class="fine-form__card">
-                            <div class="fine-form__card__title">
-                                <h4>Mã phiếu: XXXXXX</h4>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 col-md-6">
-                                    <span>Mã độc giả: DG000001</span>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <span>Tên độc giả: Lê Kiệt</span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 col-md-6">
-                                    <span>Tiền nợ: 83.000 vnđ</span>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <span>Số tiền thu: 10.000 vnđ</span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 col-md-6">
-                                    <span>Còn lại: 73.000 vnđ</span>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <span>Người thu: Phạm Sơn Nam</span>
-                                </div>
-                            </div>
-                            <div class="d-flex w-100 justify-content-center fine-form__card__action">
-                                <form action="" id="delete-fine-form-1"></form>
-                                <button type="submit" form="delete-fine-form-1" class="d-flex flex-row align-items-center mr-5">
-                                    <img src="/images/librarian/delete-user.png" alt="">
-                                    <span>Xóa</span>
-                                </button>
-                                <a href="/cashier/penalty-form/print">
-                                    <button class="d-flex flex-row align-items-center">
-                                        <img src="/images/librarian/print-user.png" alt="">
-                                        <span>In phiếu</span>
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <div class="fine-form__card">
-                            <div class="fine-form__card__title">
-                                <h4>Mã phiếu: XXXXXX</h4>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 col-md-6">
-                                    <span>Mã độc giả: DG000001</span>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <span>Tên độc giả: Lê Kiệt</span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 col-md-6">
-                                    <span>Tiền nợ: 83.000 vnđ</span>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <span>Số tiền thu: 10.000 vnđ</span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 col-md-6">
-                                    <span>Còn lại: 73.000 vnđ</span>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <span>Người thu: Phạm Sơn Nam</span>
-                                </div>
-                            </div>
-                            <div class="d-flex w-100 justify-content-center fine-form__card__action">
-                                <form action="" id="delete-fine-form-1"></form>
-                                <button type="submit" form="delete-fine-form-1" class="d-flex flex-row align-items-center mr-5">
-                                    <img src="/images/librarian/delete-user.png" alt="">
-                                    <span>Xóa</span>
-                                </button>
-                                <a href="/cashier/penalty-form/print">
-                                    <button class="d-flex flex-row align-items-center">
-                                        <img src="/images/librarian/print-user.png" alt="">
-                                        <span>In phiếu</span>
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mb-4">
-                    <div class="col-12 col-lg-6">
-                        <div class="fine-form__card">
-                            <div class="fine-form__card__title">
-                                <h4>Mã phiếu: XXXXXX</h4>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 col-md-6">
-                                    <span>Mã độc giả: DG000001</span>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <span>Tên độc giả: Lê Kiệt</span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 col-md-6">
-                                    <span>Tiền nợ: 83.000 vnđ</span>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <span>Số tiền thu: 10.000 vnđ</span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 col-md-6">
-                                    <span>Còn lại: 73.000 vnđ</span>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <span>Người thu: Phạm Sơn Nam</span>
-                                </div>
-                            </div>
-                            <div class="d-flex w-100 justify-content-center fine-form__card__action">
-                                <form action="" id="delete-fine-form-1"></form>
-                                <button type="submit" form="delete-fine-form-1" class="d-flex flex-row align-items-center mr-5">
-                                    <img src="/images/librarian/delete-user.png" alt="">
-                                    <span>Xóa</span>
-                                </button>
-                                <a href="/cashier/penalty-form/print">
-                                    <button class="d-flex flex-row align-items-center">
-                                        <img src="/images/librarian/print-user.png" alt="">
-                                        <span>In phiếu</span>
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <div class="fine-form__card">
-                            <div class="fine-form__card__title">
-                                <h4>Mã phiếu: XXXXXX</h4>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 col-md-6">
-                                    <span>Mã độc giả: DG000001</span>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <span>Tên độc giả: Lê Kiệt</span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 col-md-6">
-                                    <span>Tiền nợ: 83.000 vnđ</span>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <span>Số tiền thu: 10.000 vnđ</span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 col-md-6">
-                                    <span>Còn lại: 73.000 vnđ</span>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <span>Người thu: Phạm Sơn Nam</span>
-                                </div>
-                            </div>
-                            <div class="d-flex w-100 justify-content-center fine-form__card__action">
-                                <form action="" id="delete-fine-form-1"></form>
-                                <button type="submit" form="delete-fine-form-1" class="d-flex flex-row align-items-center mr-5">
-                                    <img src="/images/librarian/delete-user.png" alt="">
-                                    <span>Xóa</span>
-                                </button>
-                                <a href="/cashier/penalty-form/print">
-                                    <button class="d-flex flex-row align-items-center">
-                                        <img src="/images/librarian/print-user.png" alt="">
-                                        <span>In phiếu</span>
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {{/each}}
             </div>
         </div>
         <div class="d-flex flex-row justify-content-between w-100 mb-4" style="max-width: 90vw; z-index: 1">
