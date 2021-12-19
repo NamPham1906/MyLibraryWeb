@@ -3,10 +3,23 @@
 /**
  * Module dependencies.
  */
+ require ('dotenv').config();
+ const {sequelize} = require('../models');
 
 var app = require('../app');
 var debug = require('debug')('mylibraryweb:server');
 var http = require('http');
+
+
+sequelize.authenticate()
+.then(() => {
+  console.log('connection has been established successfully!');
+
+})
+.catch(err=>{
+  console.error('unable to connect to database',err);
+});
+
 
 /**
  * Get port from environment and store in Express.
