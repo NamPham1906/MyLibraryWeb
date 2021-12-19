@@ -43,7 +43,7 @@ CREATE TABLE IF not EXISTS docgia (
 	hoten varchar(50),
 	loaidocgia enum ('X', 'Y'),
 	ngaysinh date ,
-    diachi varchar(50) ,
+    diachi varchar(200) ,
 	email  varchar(50),
 	ngaylapthe date ,
     nguoilapthe varchar(10),
@@ -175,25 +175,25 @@ values('giamdoc1','giamdoc1','XXXXXGD'),
     ('thukho2', 'thukho2','XXXXXTK1');
 
 insert into sach
-values('SGK00001','Khoa học trái đất','A','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS','60000','XXXXXTK','/images/stocker/khtd-book.png'),
-	('SGK00002','Khoa học trái đất','B','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS','60000','XXXXXTK','/images/stocker/khtd-book.png'),
-    ('SGK00003','Khoa học trái đất','C','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS','60000','XXXXXTK','/images/stocker/khtd-book.png'),
-    ('SGK00004','Khoa học trái đất','A','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS','60000','XXXXXTK','/images/stocker/khtd-book.png'),
-    ('SGK00005','Khoa học trái đất','B','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS','60000','XXXXXTK','/images/stocker/khtd-book.png'),
-    ('SGK00006','Khoa học trái đất','C','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS','60000','XXXXXTK','/images/stocker/khtd-book.png'),
-    ('SGK00007','Khoa học trái đất','C','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS','60000','XXXXXTK','/images/stocker/khtd-book.png'),
-    ('SGK00008','Khoa học trái đất','C','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS','60000','XXXXXTK','/images/stocker/khtd-book.png'),
-    ('SGK00009','Khoa học trái đất','C','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS','60000','XXXXXTK','/images/stocker/khtd-book.png');
-    
+values('SGK00001','Khoa học trái đất','A','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS',60000,'XXXXXTK','/images/stocker/khtd-book.png'),
+	('SGK00002','Khoa học trái đất','B','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS',60000,'XXXXXTK','/images/stocker/khtd-book.png'),
+    ('SGK00003','Khoa học trái đất','C','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS',60000,'XXXXXTK','/images/stocker/khtd-book.png'),
+    ('SGK00004','Khoa học trái đất','A','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS',60000,'XXXXXTK','/images/stocker/khtd-book.png'),
+    ('SGK00005','Khoa học trái đất','B','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS',60000,'XXXXXTK','/images/stocker/khtd-book.png'),
+    ('SGK00006','Khoa học trái đất','C','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS',60000,'XXXXXTK','/images/stocker/khtd-book.png'),
+    ('SGK00007','Khoa học trái đất','C','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS',60000,'XXXXXTK','/images/stocker/khtd-book.png'),
+    ('SGK00008','Khoa học trái đất','C','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS',60000,'XXXXXTK','/images/stocker/khtd-book.png'),
+    ('SGK00009','Khoa học trái đất','C','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS',60000,'XXXXXTK','/images/stocker/khtd-book.png');
+
 insert into docgia
-values('DG0001','Phạm Sơn Nam','X','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam1@gmail.com','2021-12-07','XXXXXTT','10000','\images\librarian\user1.png'),
-('DG0002','Phạm Sơn Nam','Y','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam2@gmail.com','2021-12-07','XXXXXTT','20000','\images\librarian\user1.png'),
-('DG0003','Phạm Sơn Nam','Y','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam3@gmail.com','2021-12-07','XXXXXTT','30000','\images\librarian\user1.png'),
-('DG0004','Phạm Sơn Nam','Y','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam4@gmail.com','2021-12-07','XXXXXTT','40000','\images\librarian\user1.png'),
-('DG0005','Phạm Sơn Nam','X','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam5@gmail.com','2021-12-07','XXXXXTT','50000','\images\librarian\user1.png'),
-('DG0006','Phạm Sơn Nam','X','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam6@gmail.com','2021-12-07','XXXXXTT','6000','\images\librarian\user1.png'),
-('DG0007','Phạm Sơn Nam','Y','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam7@gmail.com','2021-12-07','XXXXXTT','8000','\images\librarian\user1.png'),
-('DG0008','Phạm Sơn Nam','X','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam8@gmail.com','2021-12-07','XXXXXTT','0','\images\librarian\user1.png');
+values('DG00001','Phạm Sơn Nam','X','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam1@gmail.com','2021-12-07','XXXXXTT',8000,'\images\librarian\user1.png'),
+('DG00002','Phạm Sơn Nam','Y','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam2@gmail.com','2021-12-07','XXXXXTT',13000,'\images\librarian\user1.png'),
+('DG00003','Phạm Sơn Nam','Y','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam3@gmail.com','2021-12-07','XXXXXTT',0,'\images\librarian\user1.png'),
+('DG00004','Phạm Sơn Nam','Y','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam4@gmail.com','2021-12-07','XXXXXTT',0,'\images\librarian\user1.png'),
+('DG00005','Phạm Sơn Nam','X','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam5@gmail.com','2021-12-07','XXXXXTT',0,'\images\librarian\user1.png'),
+('DG00006','Phạm Sơn Nam','X','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam6@gmail.com','2021-12-07','XXXXXTT',0,'\images\librarian\user1.png'),
+('DG00007','Phạm Sơn Nam','Y','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam7@gmail.com','2021-12-07','XXXXXTT',0,'\images\librarian\user1.png'),
+('DG00008','Phạm Sơn Nam','X','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam8@gmail.com','2021-12-07','XXXXXTT',0,'\images\librarian\user1.png');
 
 insert into phieumuonsach
 values('MS00001','DG00001','2021-02-01'),
