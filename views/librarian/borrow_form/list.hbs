@@ -76,166 +76,63 @@
                     </tr>
                 </thead>
                 <tbody>
+                    {{#each forms}}
                     <tr class="book-borrow-item">
-                        <td>00001</td>
+                        <td>{{No}}</td>
                         <td>
-                            <span>ABCDEF</span>
+                            <span>{{maphieumuon}}</span>
                         </td>
                         <td>
-                            <span>DG000005</span>
+                            <span>{{madocgia}}</span>
                         </td>
                         <td>
-                            <span>Tống Mĩ Lệ</span>
+                            <span>{{docgia}}</span>
                         </td>
                         <td>
-                            <span>1</span>
+                            <span>{{book}}</span>
                         </td>
                         <td style="display: none;">
                             <a href="/librarian/borrow-form/detail"></a>
                         </td>
                         <td>
-                            <span>01/01/2021</span>
+                            <span>{{ngay}}</span>
                         </td>
                     </tr>
-                    <tr class="book-borrow-item">
-                        <td>00001</td>
-                        <td>
-                            <span>ABCDEF</span>
-                        </td>
-                        <td>
-                            <span>DG000005</span>
-                        </td>
-                        <td>
-                            <span>Tống Mĩ Lệ</span>
-                        </td>
-                        <td>
-                            <span>1</span>
-                        </td>
-                        <td style="display: none;">
-                            <a href="/librarian/borrow-form/detail"></a>
-                        </td>
-                        <td>
-                            <span>01/01/2021</span>
-                        </td>
-                        
-                    </tr>
-                    <tr class="book-borrow-item">
-                        <td>00001</td>
-                        <td>
-                            <span>ABCDEF</span>
-                        </td>
-                        <td>
-                            <span>DG000005</span>
-                        </td>
-                        <td>
-                            <span>Tống Mĩ Lệ</span>
-                        </td>
-                        <td>
-                            <span>1</span>
-                        </td>
-                        <td style="display: none;">
-                            <a href="/librarian/borrow-form/detail"></a>
-                        </td>
-                        <td>
-                            <span>01/01/2021</span>
-                        </td>
-                       
-                    </tr>
-                    <tr class="book-borrow-item">
-                        <td>00001</td>
-                        <td>
-                            <span>ABCDEF</span>
-                        </td>
-                        <td>
-                            <span>DG000005</span>
-                        </td>
-                        <td>
-                            <span>Tống Mĩ Lệ</span>
-                        </td>
-                        <td>
-                            <span>1</span>
-                        </td>
-                         <td style="display: none;">
-                            <a href="/librarian/borrow-form/detail"></a>
-                        </td>
-                        <td>
-                            <span>01/01/2021</span>
-                        </td>
-                        
-                    </tr>
-                    <tr class="book-borrow-item">
-                        <td>00001</td>
-                        <td>
-                            <span>ABCDEF</span>
-                        </td>
-                        <td>
-                            <span>DG000005</span>
-                        </td>
-                        <td>
-                            <span>Tống Mĩ Lệ</span>
-                        </td>
-                        <td>
-                            <span>1</span>
-                        </td>
-                        <td style="display: none;">
-                            <a href="/librarian/borrow-form/detail"></a>
-                        </td>
-                        <td>
-                            <span>01/01/2021</span>
-                        </td>
-                        
-                    </tr>
-                    <tr class="book-borrow-item">
-                        <td>00001</td>
-                        <td>
-                            <span>ABCDEF</span>
-                        </td>
-                        <td>
-                            <span>DG000005</span>
-                        </td>
-                        <td>
-                            <span>Tống Mĩ Lệ</span>
-                        </td>
-                        <td>
-                            <span>1</span>
-                        </td>
-                        <td style="display: none;">
-                            <a href="/librarian/borrow-form/detail"></a>
-                        </td>
-                        <td>
-                            <span>01/01/2021</span>
-                        </td>
-                        
-                    </tr>
+                    {{/each}}
                 </tbody>
             </table>
         </div>
     </main>
     <div class="d-flex flex-row justify-content-between w-100 mb-4" style="max-width: 90vw; z-index: 1">
         <div style="width: 150px;"></div>
-        <div class="pagination">
-            <div class="pagination__item pagination__item--prev">
-                <i class="fas fa-angle-left"></i>
+        <form method="get">
+        {{#if paginationArray}}
+            <div class="pagination">
+                <div class="pagination__item--prev">
+                    <input onchange='this.form.submit();' style="display: none;" id="page-prev" value="{{prevPage}}" type="radio" name="page"/>
+                    <label for="page-prev" class="pagination__item"><i class="fas fa-angle-left"></i></label>
+                </div>
+                {{#each paginationArray}}  
+                    {{#if this.isCurrent}}
+                        <div>
+                            <input onchange='this.form.submit();' style="display: none;" id="page-{{this.page}}" value="{{this.page}}" type="radio" name="page"/>
+                            <label for="page-{{this.page}}" class="pagination__item current">{{this.page}}</label>
+                        </div>
+                    {{else}}
+                        <div>
+                            <input onchange='this.form.submit();' style="display: none;" id="page-{{this.page}}" value="{{this.page}}" type="radio" name="page"/>
+                            <label for="page-{{this.page}}" class="pagination__item">{{this.page}}</label>
+                        </div>
+                    {{/if}}
+                {{/each}}
+                <div class="pagination__item--next">
+                    <input onchange='this.form.submit();' style="display: none;" id="page-next" value="{{nextPage}}" type="radio" name="page"/>
+                    <label for="page-next" class="pagination__item"><i class="fas fa-angle-right"></i></label>
+                </div>
             </div>
-            <div class="pagination__item">
-                1
-            </div>
-            <div class="pagination__item">
-                2
-            </div>
-            <div class="pagination__item current">
-                3
-            </div>
-            <div class="pagination__item">
-                4
-            </div>
-            <div class="pagination__item">
-                5
-            </div>
-            <div class="pagination__item pagination__item--next">
-                <i class="fas fa-angle-right"></i>
-            </div>
-        </div>
+        {{/if}}
+        </form>
+       
         <button class="btn btn-report-book-borrow">Xuất báo cáo</button>
     </div>
 

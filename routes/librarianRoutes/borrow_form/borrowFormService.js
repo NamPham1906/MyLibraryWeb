@@ -1,10 +1,10 @@
 
+
 const {models} = require('../../../models/index');
 
 const { Op } = require("sequelize");
 
-
-exports.list=(page = 0, itemPerPage = 5 ) =>{
+exports.list=(page = 0, itemPerPage = 10 ) =>{
     return models.phieumuonsach.findAll({
         offset:page*itemPerPage,
         limit: itemPerPage,
@@ -12,52 +12,25 @@ exports.list=(page = 0, itemPerPage = 5 ) =>{
     });
 };
 
-exports.formBookAmount=(formId)=>{
-    return models.sachthuocphieumuon.count({
-        where:{
-            maphieumuon:formId
-        }
-    })
+
+exports.total=()=>{
+    return models.phieumuonsach.count();
 };
 
-exports.formUser=(userId)=>{
+exports.getUser=(userId)=>{
     return models.docgia.findOne({
         where:{
             madocgia: userId
-        }
+        },
+        raw: true
     })
-}
+};
 
-exports.formBooks=(formId)=>{
-    return models.sachthuocphieumuon.findAll({
+
+
+exports.totalBooks=(borrowId)=>{
+    return models.sachthuocphieumuon.count({
         where:{
-            maphieumuon:formId
+            maphieumuon: borrowId
         }
-    })
-}
-
-
-exports.addForm=(newId, userId, bookIds, createdAt)=>{
-    return models.phieumuonsach.create({
-        maphieumuon: newId,
-        madocgia: userId,
-        ngaymuon: createdAt,
-    }).then(form=>{
-        const pro = bookIds.map(bookId=>{
-            return models.sachthuocphieumuon.create({
-                maphieumuon: form.maphieumuon,
-                maphieutra:null,
-                masach:bookId
-            })
-        })
-        return Promise.all(pro);
-    })
-}
-
-exports.deleteForm=(formId)=>{
-    return models.phieumuonsach.destroy({
-        where:{
-            maphieumuon: formId
-        }
-    })
-}
+    });
