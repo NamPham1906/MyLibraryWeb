@@ -3,8 +3,26 @@ exports.add = async (req,res)=> {
     res.render('librarian/book/add');
 }
 
-exports.detail = async (req,res)=> {
-    res.render('librarian/book/detail');
+exports.detail = async (req,res, next)=> {
+    const id = req.params.id;
+    if(id){
+        try {
+            const book = await bookService.bookDetail(id);
+            const admin = await bookService.admin(book.nguoitiepnhan);
+            book.nguoitiepnhan = admin.hoten;
+            console.log(book);
+            res.render('librarian/book/detail', {
+                book
+            });
+        } catch (error) {
+            console.log(error);
+            next(error);
+        }
+
+    }else{
+        next();
+    }
+
 }
 
 const bookPerpage = 5;
@@ -66,7 +84,7 @@ exports.list = async (req,res,next)=> {
     
 }
 
-exports.edit = async (req,res)=> {
+exports.edit = async (req,res, next)=> {
     const id = req.params.id;
     if(id){
         try {
