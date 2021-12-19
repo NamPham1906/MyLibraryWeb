@@ -3,12 +3,15 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var session = require("express-session");
 
 var loginRouter = require('./routes/loginRoutes/index');
 var chairmanRouter = require('./routes/chairmanRoutes/index');
 var stockkeeperRouter = require('./routes/stockkeeperRoutes/index');
 var librarianRouter = require('./routes/librarianRoutes/index');
 var cashierRouter = require('./routes/cashierRoutes/index');
+const passport = require('./routes/loginRoutes/passport');
+var flash = require('connect-flash');
 
 var app = express();
 
@@ -21,6 +24,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({secret:process.env.SESSION_SECRET}));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
 
 app.use('/', loginRouter);
 app.use('/chairman', chairmanRouter);
