@@ -1,13 +1,8 @@
 var passport = require('passport')
   , LocalStrategy = require('passport-local').Strategy;
-  
-const { raw } = require('express');
-const { NULL } = require('node-sass');
-const {models} = require('../../models/index');
-const { Op } = require("sequelize");
+
 const loginService = require('../loginRoutes/loginService');
-
-
+const Util = require('../../utility/Util');
 passport.use(new LocalStrategy({
     usernameField: 'username',
     passwordField: 'password'
@@ -23,6 +18,7 @@ passport.use(new LocalStrategy({
 					const user = await loginService.findUser(account.manv);
 					user.tentaikhoan = account.tentaikhoan;
 					user.matkhau = account.matkhau;
+					user.ten = Util.getName(user.hoten);
 					return done(null, user);
 				} catch (error) {
 					console.log(error);

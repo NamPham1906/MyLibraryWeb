@@ -3,5 +3,6 @@ exports.menu = async (req,res)=> {
 }
 
 exports.logout = async (req,res)=> {
+    req.logout();
     res.redirect('/');
 }
