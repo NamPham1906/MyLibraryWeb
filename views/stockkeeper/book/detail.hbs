@@ -6,24 +6,24 @@
             <h2>CHỈNH SỬA THÔNG TIN SÁCH</h2>
         </div>
         <div class="edit-book__form">
-            <form action="" class="container">
+            <form action="/stockkeeper/book/edit/{{this.masach}}" method="post" class="container">
                 <div class="row">
                     <div class="col-12 col-lg-4">
                         <div class="form-group">
                             <label for="fullname">Tên sách:</label>
-                            <input type="text" class="form-control" value="Khoa học trái đất" name="fullname" id="fullname" autocomplete="false" >
+                            <input type="text" class="form-control" value="{{book.tensach}}" name="fullname" id="fullname" autocomplete="false" >
                         </div>
                         <div class="form-group">
-                            <label for="dob">Tác giả:</label>
-                            <input type="date" class="form-control" value="HCMUS" name="dob" id="dob" autocomplete="false" >
+                            <label for="author">Tác giả:</label>
+                            <input type="text" class="form-control" value="{{book.tacgia}}" name="author" id="author" autocomplete="false" >
                         </div>
                         <div class="form-group">
-                            <label for="email">Năm xuất bản:</label>
-                            <input type="email" class="form-control" value="2019" name="email" id="email" autocomplete="false" >
+                            <label for="year">Năm xuất bản:</label>
+                            <input type="text" class="form-control" value="{{book.namxuatban}}" name="year" id="year" autocomplete="false" >
                         </div>
                         <div class="form-group">
-                            <label for="admi-name">Trị giá:</label>
-                            <input type="text" class="form-control" value="50.000vnđ" name="adminName" id="admin-name" autocomplete="false" >
+                            <label for="price">Trị giá:</label>
+                            <input type="text" class="form-control" value="{{book.trigia}}" name="price" id="price" autocomplete="false" >
                         </div>
                        
                     </div>
@@ -31,29 +31,30 @@
                         <div class="form-group">
                             <label for="user-type">Thể loại</label>
                             <select name="userType" id="user-type" class="form-control">
-                                <option value="1" >A</option>
-                                <option value="2" >B</option>
-                                <option value="3" selected >C</option>
+                                <option value="{{book.theloai}}" selected>{{book.theloai}}</option>
+                                <option value="A" >A</option>
+                                <option value="B" >B</option>
+                                <option value="C" >C</option>
                                 
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="address">Nhà xuất bản:</label>
-                            <input type="text" class="form-control" value="NXB Khoa học và Kỹ thuật" name="address" id="address" autocomplete="false" >
+                            <label for="nxb">Nhà xuất bản:</label>
+                            <input type="text" class="form-control" value="{{book.nhaxuatban}}" name="nxb" id="nxb" autocomplete="false" >
                         </div>
                         <div class="form-group">
                             <label for="create-at">Ngày nhập:</label>
-                            <input type="date" class="form-control" value="2021-01-01" readonly name="createAt" id="create-at" autocomplete="false" >
+                            <input type="date" class="form-control" value="{{book.ngaynhap}}" readonly name="createAt" id="create-at" autocomplete="false" >
                         </div>
                         <div class="form-group">
-                            <label for="address">Người tiếp nhận:</label>
-                            <input type="text" class="form-control" value="Trần Minh Kì" name="address" id="address" autocomplete="false" >
+                            <label for="admin">Người tiếp nhận:</label>
+                            <input type="text" readonly class="form-control" value="{{book.nguoitiepnhan}}" name="admin" id="admin" autocomplete="false" >
                         </div>
 
                     </div>
                     <div class="col-12 col-lg-4 order-first order-lg-last">
-                        <h5>Mã sách: GEO00002</h5>
-                        <img id="user-avatar" src="/images/stocker/khtd-book.png" alt="">
+                        <h5>Mã sách: {{book.masach}}</h5>
+                        <img id="user-avatar" src="{{book.anhbia}}" alt="">
                         <div class="custom-file">
                             <button type="button" id="change-image-btn" class="btn mx-auto mb-3 mx-sm-0 mb-sm-0">Thay đổi ảnh</button>
                             <input type="file" accept="image/png" class="custom-file-input" id="change-file">
@@ -67,7 +68,6 @@
                     <div class="col-12 col-sm-4">
                         <button type="button" class="btn mx-auto mb-3 mx-sm-0 mb-sm-0">In thông tin</button>
                     </div>
-                   
                 </div>
             </form>
         </div>

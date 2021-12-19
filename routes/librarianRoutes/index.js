@@ -23,7 +23,7 @@ router.get('/reader/list',readerController.list);
 
 //BOOK
 router.get('/book',bookController.list);
-router.get('/book/detail',bookController.detail);
+router.get('/book/detail/:id',bookController.detail);
 router.get('/book/list',bookController.list);
 
 //LOST BOOK FORM

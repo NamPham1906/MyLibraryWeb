@@ -32,7 +32,7 @@
                         <div class="form-group">
                             <label for="user-type">Loại độc giả</label>
                             <select name="userType" id="user-type" class="form-control">
-                                <option value="{{this.loaidocgia}}">{{this.loaidocgia}}</option>
+                                <option value="{{user.loaidocgia}}">{{user.loaidocgia}}</option>
                                 <option value="X">X</option>
                                 <option value="Y">Y</option>
                             </select>
@@ -46,7 +46,7 @@
                             <input type="text" class="form-control" value="{{user.ngaylapthe}}" readonly name="createAt" id="create-at" autocomplete="false" >
                         </div>
                     </div>
-                    <div class="col-12 col-lg-4 order-first order-lg-last">
+                    <div class="col-12 col-lg-4 order-first order-lg-last text-center">
                         <label>Mã độc giả: {{user.madocgia}}</label>
                         <img class="user-avatar" id="user-avatar" src="{{user.anhdaidien}}" alt="">
                     </div>
@@ -56,7 +56,7 @@
                         <button type="submit" class="btn mx-auto mb-3 mx-sm-0 mb-sm-0">Lưu</button>
                     </div>
                     <div class="col-12 col-sm-4">
-                        <button type="button" class="btn mx-auto mb-3 mx-sm-0 mb-sm-0">Hủy</button>
+                        <button type="button" class="btn mx-auto mb-3 mx-sm-0 mb-sm-0">In hồ sơ</button>
                     </div>
                     <div class="col-12 col-sm-4">
                         <div class="custom-file">

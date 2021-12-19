@@ -32,6 +32,7 @@ exports.edit = async (req,res)=> {
             const user = await readerService.detail(id);
             const admin = await readerService.admin(user.nguoilapthe);
             user.nguoilapthe = admin.hoten;
+            console.log(user);
             res.render('librarian/reader/edit', {
                 user
             });
@@ -56,9 +57,13 @@ exports.list = async (req,res, next)=> {
     currentPage = (currentPage <= totalPage) ? currentPage : totalPage
     currentPage = (currentPage < 1) ? 1 : currentPage;
     try {
-        const readers = await readerService.list();
+        const readers = await readerService.list(currentPage-1, userPerPage);
         const total = await readerService.total();
-        const admin = await readerService.admin(readers.nguoilapthe);
+        for(let i = 0; i < readers.length;i++){
+            const admin = await readerService.admin(readers[i].nguoilapthe);
+            readers[i].nguoilapthe = admin.hoten;
+        }
+        
         let totalUser=total;
         let paginationArray = [];
         totalPage = Math.ceil(totalUser/userPerPage);
@@ -87,7 +92,6 @@ exports.list = async (req,res, next)=> {
         for(let i = 0 ; i  < usersLength;i++){
             readers[i].No = (currentPage -1)*userPerPage + 1 + i;
         }
-        readers.nguoilapthe = admin.hoten;
         res.render("librarian/reader/list",{
             readers,
             currentPage,

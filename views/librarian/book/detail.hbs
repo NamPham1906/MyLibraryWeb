@@ -11,42 +11,42 @@
                 <div class="col-12 col-lg-4">
                     <div class="form-group">
                         <label >Tên sách:</label>
-                        <input readonly type="text" class="form-control" value="Hóa đại cương 1"autocomplete="false" >
+                        <input readonly type="text" class="form-control" value="{{book.tensach}}"autocomplete="false" >
                     </div>
                     <div class="form-group">
                         <label>Tác giả :</label>
-                        <input readonly type="text" class="form-control" value="HCMUS"autocomplete="false" >
+                        <input readonly type="text" class="form-control"  value="{{book.tacgia}}"autocomplete="false" >
                     </div>
                     <div class="form-group">
                         <label>Năm xuất bản:</label>
-                        <input readonly type="text" class="form-control" value="2019"autocomplete="false" >
+                        <input readonly type="text" class="form-control"  value="{{book.namxuatban}}"autocomplete="false" >
                     </div>
                     <div class="form-group">
                         <label>Trị giá: </label>
-                        <input readonly type="text" class="form-control" value="50.000 vnđ"autocomplete="false" >
+                        <input readonly type="text" class="form-control" value="{{book.trigia}}"autocomplete="false" >
                     </div>
                 </div>
                 <div class="col-12 col-lg-4">
                     <div class="form-group">
                         <label >Thể loại: </label>
-                        <input readonly  type="text" value="C"class="form-control"/>
+                        <input readonly  type="text" value="{{book.theloai}}"class="form-control"/>
                     </div>
                     <div class="form-group">
                         <label >Nhà xuất bản:  </label>
-                        <input readonly  type="text" value="NXB Khoa học và kỹ thuật"class="form-control"/>
+                        <input readonly  type="text"  value="{{book.nhaxuatban}}"class="form-control"/>
                     </div>
                     <div class="form-group">
                         <label >Ngày nhập:</label>
-                        <input readonly type="text" class="form-control" value="1/1/2021" autocomplete="false" >
+                        <input readonly type="text" class="form-control" value="{{book.ngaynhap}}" autocomplete="false" >
                     </div>
                     <div class="form-group">
                         <label >Người tiếp nhận:</label>
-                        <input readonly type="date" class="form-control" value="Trần Minh Kỳ" readonly autocomplete="false" >
+                        <input readonly type="date" class="form-control" value="{{book.nguoitiepnhan}}" readonly autocomplete="false" >
                     </div>
                 </div>
                 <div class="col-12 col-lg-4 order-first order-lg-last text-center">
-                    <label style="text-align: center;">Mã sách: GEO00002</label>
-                    <img class="user-avatar" id="user-avatar" src="/images/librarian/book/book1.png" alt="">
+                    <label style="text-align: center;">Mã sách: {{book.masach}}</label>
+                    <img class="user-avatar" id="user-avatar" src="{{book.anhbia}}" alt="">
                 </div>
             </div>
             <button type="button" class="btn mx-auto">In thông tin sách</button>
