@@ -19,7 +19,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
-app.use(logger('dev'));
+// app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -27,9 +27,20 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({secret:process.env.SESSION_SECRET}));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(function (req, res, next) {
+	res.locals.user = req.user
+	next();
+})
 app.use(flash());
 
 app.use('/', loginRouter);
+app.use(function(req, res, next){
+	if(req.user){
+		next();
+	}else{
+		res.redirect('/');
+	}
+})
 app.use('/chairman', chairmanRouter);
 app.use('/stockkeeper', stockkeeperRouter);
 app.use('/librarian', librarianRouter);
@@ -42,6 +53,7 @@ app.use(function(req, res, next) {
 
 // error handler
 app.use(function(err, req, res, next) {
+  console.log(err);
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
