@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="image/x-icon" href="/public/images/logo_small.png">
     <script src="https://kit.fontawesome.com/28493d7750.js" crossorigin="anonymous"></script>
     <title>SGK Library</title>
@@ -174,7 +174,9 @@
                     </div>
                     <div class="table-responsive">
                         <a href="" class="btn btn-reload-liquidation">Làm mới</a>
-                        <a href="" class="btn btn-filter-liquidation">Bộ lọc</a>
+                        <button class="btn btn-filter-liquidation" data-toggle="modal" data-target="#advancedFilterModal">
+                            Bộ lọc
+                        </button>
                         <table class="table table-borderless" style="border-collapse: unset;">
                             <thead>
                                 <tr>
@@ -194,7 +196,7 @@
                                         <span>Anh văn 2</span>
                                     </td>
                                     <td class="td-near-last-child">
-                                        <button>Thanh lý</button>
+                                        <button data-toggle="modal" data-target="#liquidationReason">Thanh lý</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -208,7 +210,7 @@
                                         <span>Anh văn 2</span>
                                     </td>
                                     <td class="td-near-last-child">
-                                        <button>Thanh lý</button>
+                                        <button data-toggle="modal" data-target="#liquidationReason">Thanh lý</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -222,7 +224,7 @@
                                         <span>Anh văn 2</span>
                                     </td>
                                     <td class="td-near-last-child">
-                                        <button>Thanh lý</button>
+                                        <button data-toggle="modal" data-target="#liquidationReason">Thanh lý</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -236,7 +238,7 @@
                                         <span>Anh văn 2</span>
                                     </td>
                                     <td class="td-near-last-child">
-                                        <button>Thanh lý</button>
+                                        <button data-toggle="modal" data-target="#liquidationReason">Thanh lý</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -250,7 +252,7 @@
                                         <span>Anh văn 2</span>
                                     </td>
                                     <td class="td-near-last-child">
-                                        <button>Thanh lý</button>
+                                        <button data-toggle="modal" data-target="#liquidationReason">Thanh lý</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -264,7 +266,7 @@
                                         <span>Anh văn 2</span>
                                     </td>
                                     <td class="td-near-last-child">
-                                        <button>Thanh lý</button>
+                                        <button data-toggle="modal" data-target="#liquidationReason">Thanh lý</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -278,7 +280,7 @@
                                         <span>Anh văn 2</span>
                                     </td>
                                     <td class="td-near-last-child">
-                                        <button>Thanh lý</button>
+                                        <button data-toggle="modal" data-target="#liquidationReason">Thanh lý</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -312,7 +314,109 @@
                         </div>
                     </div>
                 </main>
-                
+                <div class="modal fade liquidation-book-advance-filter" id="advancedFilterModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h4>Bộ lọc</h4>
+                                <form id="advancedFilterForm" class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-xl-6">
+                                            <div class="form-group row">
+                                                <label for="modal-user-id" class="col-12 col-md-4 col-form-label">Mã sách: </label>
+                                                <div class="col-12 col-md-8 input-wrapper">
+                                                    <input type="text" id="modal-user-id" name="modalUserId" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="modal-user-email" class="col-12 col-md-4 col-form-label">Tên sách: </label>
+                                                <div class="col-12 col-md-8 input-wrapper">
+                                                    <input type="email" id="modal-user-email" name="modalUserEmail" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="modal-user-type" class="col-12 col-md-4 col-form-label">Thể loại:</label>
+                                                <div class="col-12 col-md-8 input-wrapper">
+                                                    <select name="modalUserType" class="form-control" id="modal-user-type">
+                                                        <option value="1">A</option>
+                                                        <option value="2">B</option>
+                                                        <option value="2">C</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="form-group row">
+                                                <label for="modal-user-fullname" class="col-12 col-md-4 col-form-label">Nhà xuất bản: </label>
+                                                <div class="col-12 col-md-8 input-wrapper">
+                                                    <input type="text" id="modal-user-fullname" name="modalFullname" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="modal-user-admin" class="col-12 col-md-4 col-form-label">Năm xuất bản: </label>
+                                                <div class="col-12 col-md-8 input-wrapper">
+                                                    <input type="text" id="modal-user-admin" name="modalUserAdmin" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-xl-6">
+                                            <div class="form-group row">
+                                                <label for="modal-user-fullname" class="col-12 col-md-4 col-form-label">Tên tác giả: </label>
+                                                <div class="col-12 col-md-8 input-wrapper">
+                                                    <input type="text" id="modal-user-fullname" name="modalFullname" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="modal-user-admin" class="col-12 col-md-4 col-form-label">Người tiếp nhận: </label>
+                                                <div class="col-12 col-md-8 input-wrapper">
+                                                    <input type="text" id="modal-user-admin" name="modalUserAdmin" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="modal-user-created-dob" class="col-12 col-md-4 col-form-label">Ngày nhập: </label>
+                                                <div class="col-12 col-md-8 input-wrapper">
+                                                    <input type="date" id="modal-user-dob" name="modalUserDob" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="modal-user-address" class="col-12 col-md-4 col-form-label">Tình trạng: </label>
+                                                <div class="col-12 col-md-8 input-wrapper">
+                                                    <input type="text" id="modal-user-address" name="modalUserAddress" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <button type="submit" form="advancedFilterForm" class="btn btn-primary">Tìm kiếm</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade liquidation-reason" id="liquidationReason" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h4>Lý do thanh lý</h4>
+                                <form id="advancedFilterForm" class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-xl-12">
+                                            <div class="form-group row">
+                                                <button class="btn-reload-liquidation">Hư hỏng</button>
+                                            </div>
+                                            <div class="form-group row">
+                                                <button class="btn-delete-liquidation">Mất</button>
+                                            </div>
+                                            <div class="form-group row">
+                                                <button class="btn-filter-liquidation">Độc giả làm mất</button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           
             </div>
            
         </div>
