@@ -55,118 +55,67 @@
             <table class="table table-borderless" style="border-collapse: unset;">
                 <thead>
                     <tr>
-                            <th scope="col">STT</th>
-                            <th scope="col">Mã danh sách</th>
-                            <th scope="col">Ngày thanh lý</th>
-                            <th scope="col">Mã người thanh lý</th>
-                            <th scope="col">Người thanh lý</th>
+                        <th scope="col">STT</th>
+                        <th scope="col">Mã danh sách</th>
+                        <th scope="col">Ngày thanh lý</th>
+                        <th scope="col">Mã người thanh lý</th>
+                        <th scope="col">Người thanh lý</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="liquidation-item">
-                        <td>00001</td>
-                        <td>
-                            <span>DS0009</span>
-                        </td>
-                        <td>
-                            <span>8/11/2021</span>
-                        </td>
-                        <td>
-                            <span>NV00001</span>
-                        </td>
-                        <td class="td-near-last-child">
-                            <span>Nam Phạm</span>
-                        </td>
-                        <td style="display: none;">
-                            <a href="/stockkeeper/liquidation-book/detail"></a>
-                        </td>
-                    </tr>
-                    <tr class="liquidation-item">
-                        
-                        <td>00001</td>
-                        <td>
-                            <span>DS0009</span>
-                        </td>
-                        <td>
-                            <span>8/11/2021</span>
-                        </td>
-                        <td>
-                            <span>NV00001</span>
-                        </td>
-                        <td class="td-near-last-child">
-                            <span>Nam Phạm</span>
-                        </td>
-                        <td style="display: none;">
-                            <a href="/stockkeeper/liquidation-book/detail"></a>
-                        </td>
-                        
-                    </tr>
-                    <tr class="liquidation-item">
-                        <td>00001</td>
-                        <td>
-                            <span>DS0009</span>
-                        </td>
-                        <td>
-                            <span>8/11/2021</span>
-                        </td>
-                        <td>
-                            <span>NV00001</span>
-                        </td>
-                        <td class="td-near-last-child">
-                            <span>Nam Phạm</span>
-                        </td>
-                        <td style="display: none;">
-                            <a href="/stockkeeper/liquidation-book/detail"></a>
-                        </td>
-                    </tr>
-                    <tr class="liquidation-item">
-                        <td>00001</td>
-                        <td>
-                            <span>DS0009</span>
-                        </td>
-                        <td>
-                            <span>8/11/2021</span>
-                        </td>
-                        <td>
-                            <span>NV00001</span>
-                        </td>
-                        <td class="td-near-last-child">
-                            <span>Nam Phạm</span>
-                        </td>
-                        <td style="display: none;">
-                            <a href="/stockkeeper/liquidation-book/detail"></a>
-                        </td>
-                    </tr>
+                    {{#each items}}
+                         <tr class="liquidation-item">
+                            <td>{{this.No}}</td>
+                            <td>
+                                <span>{{this.mathanhly}}</span>
+                            </td>
+                            <td>
+                                <span>{{this.ngaythanhly}}</span>
+                            </td>
+                            <td>
+                                <span>{{this.nguoithanhly}}</span>
+                            </td>
+                            <td class="td-near-last-child">
+                                <span>{{this.tennguoithanhly}}</span>
+                            </td>
+                            <td style="display: none;">
+                                <a href="/stockkeeper/liquidation-book/detail/{{this.mathanhly}}"></a>
+                            </td>
+                        </tr>
+                    {{/each}}
                 </tbody>
             </table>
-            
         </div>
     </main>
     <div class="d-flex flex-row justify-content-between w-100 mb-4" style="max-width: 90vw; z-index: 1">
         <a href="/stockkeeper/liquidation-book/add" class="btn btn-liquidation">Thêm</a>
-        <div class="pagination">
-            <div class="pagination__item pagination__item--prev">
-                <i class="fas fa-angle-left"></i>
-            </div>
-            <div class="pagination__item">
-                1
-            </div>
-            <div class="pagination__item">
-                2
-            </div>
-            <div class="pagination__item current">
-                3
-            </div>
-            <div class="pagination__item">
-                4
-            </div>
-            <div class="pagination__item">
-                5
-            </div>
-            <div class="pagination__item pagination__item--next">
-                <i class="fas fa-angle-right"></i>
-            </div>
-        </div>
+        {{#if paginationArray}}
+            <form action="/stockkeeper/liquidation-book" method="get">
+                <div class="pagination">
+                    <div class="pagination__item pagination__item--prev">
+                        <input onchange='this.form.submit();' style="display: none;" id="page-prev" value="{{prevPage}}" type="radio" name="page"/>
+                        <label for="page-prev"  class="my-page-button"><i class="fas fa-angle-left"></i></label>
+                    </div>
+                     {{#each paginationArray }}  
+                        {{#if this.isCurrent}}
+                            <div class="pagination__item current">
+                                <input onchange='this.form.submit();' style="display: none;" id="page-{{this.page}}" value="{{this.page}}" type="radio" name="page"/>
+                                <label for="page-{{this.page}}"  class="my-page-link my-current-page">{{this.page}}</label>
+                            </div>
+                        {{else}}
+                            <div class="pagination__item">
+                                <input onchange='this.form.submit();' style="display: none;" id="page-{{this.page}}" value="{{this.page}}" type="radio" name="page"/>
+                                <label for="page-{{this.page}}"  class="my-page-link">{{this.page}}</label>
+                            </div>
+                        {{/if}}
+                    {{/each}}
+                    <div class="pagination__item pagination__item--next">
+                        <input onchange='this.form.submit();' style="display: none;" id="page-next" value="{{nextPage}}" type="radio" name="page"/>
+                        <label for="page-next"  class="my-page-button"><i class="fas fa-angle-right"></i></label>
+                    </div>
+                </div>
+            </form>
+        {{/if}}
         <button class="btn btn-liquidation">Xuất báo cáo</button>
     </div>
    

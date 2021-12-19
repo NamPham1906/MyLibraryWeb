@@ -25,14 +25,13 @@ exports.detail = async (req,res,next)=> {
     }
 }
 
-exports.edit = async (req,res)=> {
+exports.edit = async (req,res,next)=> {
     const id = req.params.id;
     if(id){
         try {
             const user = await readerService.detail(id);
             const admin = await readerService.admin(user.nguoilapthe);
             user.nguoilapthe = admin.hoten;
-            console.log(user);
             res.render('librarian/reader/edit', {
                 user
             });
