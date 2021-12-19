@@ -9,6 +9,7 @@
     "sasstocsspb": "node-sass sass/main.scss public/css/style.css -w"
   },
   "dependencies": {
+    "body-parser": "^1.19.1",
     "connect-flash": "^0.1.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
