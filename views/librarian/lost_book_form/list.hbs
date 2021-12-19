@@ -91,160 +91,65 @@
                         </tr>
                 </thead>
                 <tbody>
-                    <tr class="book-borrow-item">
-                        <td>00001</td>
-                        <td>
-                            <span>XXXXXX</span>
-                        </td>
-                        <td>
-                            <span>DG000001</span>
-                        </td>
-                        <td>
-                            <span>Lê Kiệt</span>
-                        </td>
-                        <td>
-                            <span>Tâm lý đại cương</span>
-                        </td>
-                        <td>
-                            <span>1/1/2020</span>
-                        </td>
-                        <td style="display: none;">
-                            <a href="/librarian/lost-book-form/detail"></a>
-                        </td>
-                        <td>
-                            <span>20.000 vnđ</span>
-                        </td>
-                        
-                    </tr>
-                    <tr class="book-borrow-item">
-                        <td>00001</td>
-                        <td>
-                            <span>XXXXXX</span>
-                        </td>
-                        <td>
-                            <span>DG000001</span>
-                        </td>
-                        <td>
-                            <span>Lê Kiệt</span>
-                        </td>
-                        <td>
-                            <span>Tâm lý đại cương</span>
-                        </td>
-                        <td>
-                            <span>1/1/2020</span>
-                        </td>
-                         <td style="display: none;">
-                            <a href="/librarian/lost-book-form/detail"></a>
-                        </td>
-                        <td>
-                            <span>20.000 vnđ</span>
-                        </td>
-                       
-                    </tr>
-                    <tr class="book-borrow-item">
-                        <td>00001</td>
-                        <td>
-                            <span>XXXXXX</span>
-                        </td>
-                        <td>
-                            <span>DG000001</span>
-                        </td>
-                        <td>
-                            <span>Lê Kiệt</span>
-                        </td>
-                        <td>
-                            <span>Tâm lý đại cương</span>
-                        </td>
-                        <td>
-                            <span>1/1/2020</span>
-                        </td>
-                         <td style="display: none;">
-                            <a href="/librarian/lost-book-form/detail"></a>
-                        </td>
-                        <td>
-                            <span>20.000 vnđ</span>
-                        </td>
-                       
-                    </tr>
-                    <tr class="book-borrow-item">
-                        <td>00001</td>
-                        <td>
-                            <span>XXXXXX</span>
-                        </td>
-                        <td>
-                            <span>DG000001</span>
-                        </td>
-                        <td>
-                            <span>Lê Kiệt</span>
-                        </td>
-                        <td>
-                            <span>Tâm lý đại cương</span>
-                        </td>
-                        <td>
-                            <span>1/1/2020</span>
-                        </td>
-                        <td style="display: none;">
-                            <a href="/librarian/lost-book-form/detail"></a>
-                        </td>
-                        <td>
-                            <span>20.000 vnđ</span>
-                        </td>
-                        
-                    </tr>
-                    <tr class="book-borrow-item">
-                        <td>00001</td>
-                        <td>
-                            <span>XXXXXX</span>
-                        </td>
-                        <td>
-                            <span>DG000001</span>
-                        </td>
-                        <td>
-                            <span>Lê Kiệt</span>
-                        </td>
-                        <td>
-                            <span>Tâm lý đại cương</span>
-                        </td>
-                        <td>
-                            <span>1/1/2020</span>
-                        </td>
-                        <td style="display: none;">
-                            <a href="/librarian/lost-book-form/detail"></a>
-                        </td>
-                        <td>
-                            <span>20.000 vnđ</span>
-                        </td>
-                        
-                    </tr>
+                    {{#each forms}}
+                        <tr class="book-borrow-item">
+                            <td>{{this.stt}}</td>
+                            <td>
+                                <span>{{this.maphieumatsach}}</span>
+                            </td>
+                            <td>
+                                <span>{{this.madocgia}}</span>
+                            </td>
+                            <td>
+                                <span>{{this.readername}}</span>
+                            </td>
+                            <td>
+                                <span>{{this.lostbook}}</span>
+                            </td>
+                            <td>
+                                <span>{{this.ngayghi}}</span>
+                            </td>
+                            <td style="display: none;">
+                                <a href="/librarian/lost-book-form/detail/{{this.maphieumatsach}}"></a>
+                            </td>
+                            <td>
+                                <span>{{this.tienphat}} vnđ</span>
+                            </td>
+                        </tr>
+                    {{/each}}
                 </tbody>
             </table>
         </div>
     </main>
     <div class="d-flex flex-row justify-content-between w-100 mb-4" style="max-width: 90vw; z-index: 1">
         <div style="width: 150px;"></div>
-        <div class="pagination">
-            <div class="pagination__item pagination__item--prev">
-                <i class="fas fa-angle-left"></i>
-            </div>
-            <div class="pagination__item">
-                1
-            </div>
-            <div class="pagination__item">
-                2
-            </div>
-            <div class="pagination__item current">
-                3
-            </div>
-            <div class="pagination__item">
-                4
-            </div>
-            <div class="pagination__item">
-                5
-            </div>
-            <div class="pagination__item pagination__item--next">
-                <i class="fas fa-angle-right"></i>
-            </div>
-        </div>
+        <form method="GET" action="/librarian/lost-book-form">
+                {{#if paginationArray}}
+                    <div class="pagination">
+                        <div class="pagination__item--prev">
+                            <input onchange='this.form.submit();' style="display: none;" id="page-prev" value="{{prevPage}}" type="radio" name="page"/>
+                            <label for="page-prev" class="pagination__item"><i class="fas fa-angle-left"></i></label>
+                        </div>
+                        {{#each paginationArray}}  
+                            {{#if this.isCurrent}}
+                                <div>
+                                    <input onchange='this.form.submit();' style="display: none;" id="page-{{this.page}}" value="{{this.page}}" type="radio" name="page"/>
+                                    <label for="page-{{this.page}}" class="pagination__item current">{{this.page}}</label>
+                                </div>
+                            {{else}}
+                                <div>
+                                    <input onchange='this.form.submit();' style="display: none;" id="page-{{this.page}}" value="{{this.page}}" type="radio" name="page"/>
+                                    <label for="page-{{this.page}}" class="pagination__item">{{this.page}}</label>
+                                </div>
+                            {{/if}}
+                        {{/each}}
+                        <div class="pagination__item--next">
+                            <input onchange='this.form.submit();' style="display: none;" id="page-next" value="{{nextPage}}" type="radio" name="page"/>
+                            <label for="page-next" class="pagination__item"><i class="fas fa-angle-right"></i></label>
+                        </div>
+                    </div>
+                {{/if}}
+            </form>
         <a href="/librarian/lost-book-form/add">
         <button class="btn btn-add-book-return">
             Thêm

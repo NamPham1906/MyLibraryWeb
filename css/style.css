@@ -31,9 +31,27 @@ main {
   padding-left: 20px;
   width: 100%;
   z-index: 1;
+  display: flex;
+  justify-content: space-between;
   box-shadow: 0 5px 3px rgba(119, 119, 119, 0.26); }
   .sgk-nav img {
     width: 300px; }
+  .sgk-nav .user-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 30px;
+    width: 150px;
+    background-color: #F5BD8A; }
+    .sgk-nav .user-icon span {
+      font-size: 16px;
+      color: black; }
+    .sgk-nav .user-icon img {
+      margin-left: 5px;
+      width: 30px;
+      border-radius: 100%; }
 
 .role {
   z-index: 1;
@@ -90,7 +108,7 @@ main {
     z-index: -9;
     position: absolute;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     clip-path: ellipse(84% 39% at 50% 10%);
     background-color: #FCF5E1; }
   .site-bg__paper-plane {
@@ -419,6 +437,42 @@ main {
   font-size: 18px;
   margin: 20px auto 0px auto; }
 
+.stocker-book-advance-filter .modal-content {
+  background-color: #F5BD8A;
+  padding: 20px;
+  border-radius: 20px;
+  padding-bottom: 40px; }
+
+.stocker-book-advance-filter .modal-body {
+  height: fit-content;
+  margin: auto 0;
+  border-radius: 20px;
+  background-color: white; }
+  .stocker-book-advance-filter .modal-body h4 {
+    color: #C4817F;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px; }
+  .stocker-book-advance-filter .modal-body form label {
+    color: #000;
+    font-weight: bold; }
+  .stocker-book-advance-filter .modal-body form input, .stocker-book-advance-filter .modal-body form select {
+    background-color: #F6E5D2;
+    padding-left: 5px;
+    border: none; }
+
+.stocker-book-advance-filter button[type=submit] {
+  background-color: white;
+  width: 150px;
+  color: #F5BD8A;
+  border-radius: 50px;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 20px auto; }
+
 .edit-liquidation {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -565,8 +619,7 @@ main {
   border-radius: 20px;
   max-width: 90vw;
   width: 100%;
-  margin: 30px 0px 30px 0px;
-  margin-bottom: 20px; }
+  height: 100%; }
   .add-liquidation__title {
     text-align: center;
     font-size: 24px;
@@ -607,7 +660,9 @@ main {
   .add-liquidation__search .form-group {
     margin-bottom: 20px; }
   .add-liquidation table {
-    border-spacing: 0 10px; }
+    border-spacing: 0 10px;
+    max-height: 700px;
+    overflow: auto; }
     .add-liquidation table thead th {
       padding: 20px;
       border-top: 1px solid rgba(0, 0, 0, 0.452);
@@ -646,47 +701,117 @@ main {
 .add-liquidation__pagi {
   margin-bottom: 20px; }
 
+.liquidation-book-advance-filter .modal-content {
+  background-color: #F5BD8A;
+  padding: 20px;
+  border-radius: 20px;
+  padding-bottom: 40px; }
+
+.liquidation-book-advance-filter .modal-body {
+  border-radius: 20px;
+  background-color: white; }
+  .liquidation-book-advance-filter .modal-body h4 {
+    color: #C4817F;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px; }
+  .liquidation-book-advance-filter .modal-body form label {
+    color: #000;
+    font-weight: bold; }
+  .liquidation-book-advance-filter .modal-body form input, .liquidation-book-advance-filter .modal-body form select {
+    background-color: #F6E5D2;
+    padding-left: 5px;
+    border: none; }
+
+.liquidation-book-advance-filter button[type=submit] {
+  background-color: white;
+  width: 150px;
+  color: #F5BD8A;
+  border-radius: 50px;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 20px auto; }
+
+.liquidation-reason .modal-content {
+  width: fit-content;
+  margin: 0 auto;
+  background-color: #F5BD8A;
+  padding: 20px;
+  border-radius: 20px;
+  padding-bottom: 40px; }
+
+.liquidation-reason .modal-body {
+  width: fit-content;
+  border-radius: 20px;
+  background-color: white; }
+  .liquidation-reason .modal-body h4 {
+    color: #C4817F;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px; }
+  .liquidation-reason .modal-body form {
+    display: flex;
+    vertical-align: middle; }
+    .liquidation-reason .modal-body form label {
+      color: #000;
+      font-weight: bold; }
+    .liquidation-reason .modal-body form input, .liquidation-reason .modal-body form select {
+      background-color: #F6E5D2;
+      padding-left: 5px;
+      border: none; }
+
+.liquidation-reason button[type=submit] {
+  background-color: white;
+  margin: 20px auto; }
+
 .btn-add-liquidation {
   background-color: forestgreen;
-  width: 150px;
+  width: 170px;
   text-align: center;
   float: right;
   font-weight: 600;
   border-radius: 30px;
-  margin-right: 5px;
+  margin: 0px 5px 0px 5px;
   color: white !important;
   font-size: 18px; }
 
 .btn-delete-liquidation {
   background-color: #EF8885;
-  width: 150px;
+  width: 170px;
   text-align: center;
   float: right;
   font-weight: 600;
   border-radius: 30px;
-  margin-right: 15px;
+  margin: 0px 5px 0px 5px;
   color: white !important;
   font-size: 18px; }
 
 .btn-reload-liquidation {
   background-color: #90d9f1;
-  width: 150px;
+  width: 170px;
   text-align: center;
   float: left;
   font-weight: 600;
   border-radius: 30px;
   color: white !important;
-  font-size: 18px; }
+  font-size: 18px;
+  margin: 0px 5px 0px 5px; }
 
 .btn-filter-liquidation {
   background-color: #F5BD8A;
-  width: 150px;
+  width: 170px;
   text-align: center;
   float: right;
   font-weight: 600;
   border-radius: 30px;
   color: white !important;
-  font-size: 18px; }
+  font-size: 18px;
+  margin: 0px 5px 0px 5px; }
 
 .librarian-menu {
   width: 100%; }
@@ -840,7 +965,13 @@ main {
   .all-fine-form__container {
     margin-top: 20px; }
   .all-fine-form .fine-form {
-    margin: 20px 0; }
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; }
+    @media (max-width: 960px) {
+      .all-fine-form .fine-form {
+        grid-template-columns: repeat(1, 1fr); } }
     .all-fine-form .fine-form__card {
       background-color: white;
       padding: 20px 30px;
@@ -1239,6 +1370,14 @@ input[type=number] {
     .pagination__item.current {
       background-color: #E39697;
       color: white; }
+    .pagination__item label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      margin: 0;
+      width: 100%;
+      height: 100%; }
 
 .all-user {
   padding: 80px 20px; }

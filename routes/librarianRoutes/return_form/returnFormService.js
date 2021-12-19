@@ -1,7 +1,7 @@
-
 const {models} = require('../../../models/index');
 
 const { Op } = require("sequelize");
+
 
 
 exports.list=(page = 0, itemPerPage = 5 ) =>{

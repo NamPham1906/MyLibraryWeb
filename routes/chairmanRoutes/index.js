@@ -13,7 +13,7 @@ router.get('/logout',chairmanController.logout);
 // STAFF
 router.get('/staff',staffController.list);
 router.get('/staff/add',staffController.add);
-router.get('/staff/detail',staffController.detail);
+router.get('/staff/detail/:id',staffController.detail);
 router.get('/staff/list',staffController.list);
 
 // DEBT REPORT
