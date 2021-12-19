@@ -35,7 +35,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true
     },
     anhdaidien: {
-      type: DataTypes.STRING(20),
+      type: DataTypes.STRING(255),
       allowNull: true
     }
   }, {
