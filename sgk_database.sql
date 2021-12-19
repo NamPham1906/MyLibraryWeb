@@ -34,7 +34,7 @@ CREATE TABLE IF not EXISTS sach (
     tacgia varchar(50)  ,
 	trigia int unsigned ,
 	nguoitiepnhan varchar(10) ,
-    anhbia varchar(20),
+    anhbia varchar(255),
 	PRIMARY KEY (masach)
 ) ;
 
@@ -48,7 +48,7 @@ CREATE TABLE IF not EXISTS docgia (
 	ngaylapthe date ,
     nguoilapthe varchar(10),
 	tongno int unsigned,
-	anhdaidien varchar(20),
+	anhdaidien varchar(255),
 	PRIMARY KEY (madocgia)
 ) ;
 
@@ -158,10 +158,30 @@ insert into nhanvien
 values('XXXXXTT','Trần Minh Tuyết', '1988-01-15','Đại Học', 'Thủ Thư','Nhân Viên','42A Lam Sơn, phường 2, quận Tân Bình, HCM', '0332224561','https://via.placeholder.com/150' ),
 	('XXXXXGD','Triệu Thủy Trang','1962-01-16', 'Tiến sĩ', 'Ban Giám Đốc','Giám Đốc','42A Lam Sơn, phường 2, quận Tân Bình, HCM', '0919123456','https://via.placeholder.com/150' ),
     ('XXXXXTK','Trần Minh Kỳ','1982-05-05', 'Đại học', 'Thủ Kho','Nhân Viên','198 Phan Xích Long, phường 2, quận Phú Nhuận, HCM', '0341234556','https://via.placeholder.com/150' ),
-    ('XXXXXTQ','Phạm Sơn Nam','2000-12-30', 'Đại học', 'Thủ Quỹ','Nhân Viên','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM', '0351789423','https://via.placeholder.com/150' );
+    ('XXXXXTQ','Phạm Sơn Nam','2000-12-30', 'Đại học', 'Thủ Quỹ','Nhân Viên','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM', '0351789423','https://via.placeholder.com/150' ),
+    ('XXXXXTT1','Trần Minh Hoa', '1988-01-15','Đại Học', 'Thủ Thư','Nhân Viên','42A Lam Sơn, phường 2, quận Tân Bình, HCM', '0332224561','https://via.placeholder.com/150' ),
+	('XXXXXTT2','Triệu Thủy Trung','1962-01-16', 'Tiến sĩ', 'Thủ Thư','Nhân viên','42A Lam Sơn, phường 2, quận Tân Bình, HCM', '0919123456','https://via.placeholder.com/150' ),
+    ('XXXXXTK1','Trần Minh Công','1982-05-05', 'Đại học', 'Thủ Kho','Nhân Viên','198 Phan Xích Long, phường 2, quận Phú Nhuận, HCM', '0341234556','https://via.placeholder.com/150' ),
+    ('XXXXXTQ1','Phạm Sơn Kê','2000-12-30', 'Đại học', 'Thủ Quỹ','Nhân Viên','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM', '0351789423','https://via.placeholder.com/150' );
     
 insert into taikhoan
 values('giamdoc1','giamdoc1','XXXXXGD'),
 	('thuthu1', 'thuthu1','XXXXXTT'),
     ('thuquy1', 'thuquy1','XXXXXTQ'),
-    ('thukho1', 'thukho1','XXXXXTK');
+    ('thukho1', 'thukho1','XXXXXTK'),
+    ('thuthu2','thuthu2','XXXXXTT1'),
+	('thuthu3', 'thuthu3','XXXXXTT2'),
+    ('thuquy2', 'thuquy2','XXXXXTQ1'),
+    ('thukho2', 'thukho2','XXXXXTK1');
+
+insert into sach
+values('SGK00001','Khoa học trái đất','A','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS','60000','XXXXXTK','/images/stocker/khtd-book.png'),
+	('SGK00002','Khoa học trái đất','B','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS','60000','XXXXXTK','/images/stocker/khtd-book.png'),
+    ('SGK00003','Khoa học trái đất','C','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS','60000','XXXXXTK','/images/stocker/khtd-book.png'),
+    ('SGK00004','Khoa học trái đất','A','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS','60000','XXXXXTK','/images/stocker/khtd-book.png'),
+    ('SGK00005','Khoa học trái đất','B','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS','60000','XXXXXTK','/images/stocker/khtd-book.png'),
+    ('SGK00006','Khoa học trái đất','C','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS','60000','XXXXXTK','/images/stocker/khtd-book.png'),
+    ('SGK00007','Khoa học trái đất','C','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS','60000','XXXXXTK','/images/stocker/khtd-book.png'),
+    ('SGK00008','Khoa học trái đất','C','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS','60000','XXXXXTK','/images/stocker/khtd-book.png'),
+    ('SGK00009','Khoa học trái đất','C','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS','60000','XXXXXTK','/images/stocker/khtd-book.png');
+
