@@ -1,56 +1,55 @@
-
 const {models} = require('../../../models/index');
-
 const { Op } = require("sequelize");
 
-
-exports.list=(page = 0, itemPerPage = 5 ) =>{
+exports.list = (limit, page) => {
     return models.phieumatsach.findAll({
-        offset:page*itemPerPage,
-        limit: itemPerPage,
+        offset: (page - 1)*limit, 
+        limit: limit,
         raw:true
     });
 };
 
-exports.formUser=(userId)=>{
+exports.totalForm = () => {
+    return models.phieumatsach.count({
+        raw: true
+    })
+}
+
+exports.getReader = (id) => {
     return models.docgia.findOne({
+        attributes: ['hoten'],
+        raw: true,
         where:{
-            madocgia: userId
+            madocgia: id
         }
     })
 }
 
-exports.formAdmin=(adminId)=>{
-    return models.nhanvien.findOne({
-        where:{
-            manv: adminId
-        }
-    })
-}
-
-exports.formBook=(bookId)=>{
+exports.getLostBook = (id) => {
     return models.sach.findOne({
+        attributes: ['tensach', 'anhbia'],
+        raw: true,
         where:{
-            masach: bookId
+            masach: id
         }
     })
 }
 
-exports.addForm=(newId, userId, bookId, adminId, createdAt, money)=>{
-    return models.phieumatsach.create({
-        maphieumatsach: newId,
-        madocgia: userId,
-        ngayghinhan: createdAt,
-        nguoighinhan: adminId,
-        masach: bookId,
-        tienphat: money
-    });
+exports.getInfoForm = (id) => {
+    return models.phieumatsach.findOne({
+        raw: true,
+        where:{
+            maphieumatsach: id
+        }
+    })
 }
 
-exports.deleteForm=(formId)=>{
-    return models.phieumatsach.destroy({
+exports.getAdmin = (id) => {
+    return models.nhanvien.findOne({
+        attributes: ['hoten'],
+        raw: true,
         where:{
-            maphieumuon: formId
+            manv: id
         }
     })
 }

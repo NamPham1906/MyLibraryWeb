@@ -25,7 +25,7 @@ exports.detail = async (req,res,next)=> {
     }
 }
 
-exports.edit = async (req,res)=> {
+exports.edit = async (req,res,next)=> {
     const id = req.params.id;
     if(id){
         try {
