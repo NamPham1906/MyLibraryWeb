@@ -48,7 +48,7 @@
     </div>
     <div class="all-book__container">
        {{#each books}}
- <div class="book-card">
+        <div class="book-card">
             <div class="container-fluid ">
                 <div class="row">
                     <div class="col-12 col-md-5">
@@ -99,32 +99,32 @@
        
     </div>
     {{#if paginationArray}}
-            <form action="/librarian/book" method="get">
-                <div class="pagination">
-                    <div class="pagination__item pagination__item--prev">
-                        <input onchange='this.form.submit();' style="display: none;" id="page-prev" value="{{prevPage}}" type="radio" name="page"/>
-                        <label for="page-prev"  class="my-page-button"><i class="fas fa-angle-left"></i></label>
-                    </div>
-                     {{#each paginationArray }}  
-                        {{#if this.isCurrent}}
-                            <div class="pagination__item current">
-                                <input onchange='this.form.submit();' style="display: none;" id="page-{{this.page}}" value="{{this.page}}" type="radio" name="page"/>
-                                <label for="page-{{this.page}}"  class="my-page-link my-current-page">{{this.page}}</label>
-                            </div>
-                        {{else}}
-                            <div class="pagination__item">
-                                <input onchange='this.form.submit();' style="display: none;" id="page-{{this.page}}" value="{{this.page}}" type="radio" name="page"/>
-                                <label for="page-{{this.page}}"  class="my-page-link">{{this.page}}</label>
-                            </div>
-                        {{/if}}
-                    {{/each}}
-                    <div class="pagination__item pagination__item--next">
-                        <input onchange='this.form.submit();' style="display: none;" id="page-next" value="{{nextPage}}" type="radio" name="page"/>
-                        <label for="page-next"  class="my-page-button"><i class="fas fa-angle-right"></i></label>
-                    </div>
+        <form action="/librarian/book" method="get">
+            <div class="pagination">
+                <div class="pagination__item pagination__item--prev">
+                    <input onchange='this.form.submit();' style="display: none;" id="page-prev" value="{{prevPage}}" type="radio" name="page"/>
+                    <label for="page-prev"  class="my-page-button"><i class="fas fa-angle-left"></i></label>
                 </div>
-            </form>
-        {{/if}}
+                    {{#each paginationArray }}  
+                    {{#if this.isCurrent}}
+                        <div class="pagination__item current">
+                            <input onchange='this.form.submit();' style="display: none;" id="page-{{this.page}}" value="{{this.page}}" type="radio" name="page"/>
+                            <label for="page-{{this.page}}"  class="my-page-link my-current-page">{{this.page}}</label>
+                        </div>
+                    {{else}}
+                        <div class="pagination__item">
+                            <input onchange='this.form.submit();' style="display: none;" id="page-{{this.page}}" value="{{this.page}}" type="radio" name="page"/>
+                            <label for="page-{{this.page}}"  class="my-page-link">{{this.page}}</label>
+                        </div>
+                    {{/if}}
+                {{/each}}
+                <div class="pagination__item pagination__item--next">
+                    <input onchange='this.form.submit();' style="display: none;" id="page-next" value="{{nextPage}}" type="radio" name="page"/>
+                    <label for="page-next"  class="my-page-button"><i class="fas fa-angle-right"></i></label>
+                </div>
+            </div>
+        </form>
+    {{/if}}
 </main>
 <div class="modal fade book-advance-filter" id="advancedFilterModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-xl">

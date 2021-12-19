@@ -33,3 +33,12 @@ exports.getAdmin=(adminId)=>{
         raw: true   
     })
 }
+
+exports.getDetail=(id)=>{
+    return models.phieuthutienphat.findOne({
+        where:{
+            maphieuthu: id
+        },
+        raw: true
+    })
+}

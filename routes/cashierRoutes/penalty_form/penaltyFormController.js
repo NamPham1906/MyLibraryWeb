@@ -8,7 +8,7 @@ exports.detail = async (req,res)=> {
     res.render('cashier/penalty_form/detail');
 }
 
-const formPerPage = 5;
+const formPerPage = 6;
 const maximumPagination = 5;
 let currentPage = 1;
 let totalPage = 1;
@@ -25,7 +25,9 @@ exports.list = async (req,res, next)=> {
             const admin = await penaltyFormService.getAdmin(forms[i].nguoithu);
             const user = await penaltyFormService.getUser(forms[i].madocgia);
             forms[i].docgia = user.hoten;
-            forms[i].nguoithu = admin.hoten
+            forms[i].nguoithu = admin.hoten;
+            forms[i].tienno = user.tongno;
+            forms[i].conlai = user.tongno - forms[i].tienthu;
         }
         let totalBook=total;
         let paginationArray = [];
@@ -53,9 +55,9 @@ exports.list = async (req,res, next)=> {
         }
         const formsLength = forms.length;
         for(let i = 0 ; i  < formsLength;i++){
-            books[i].No = (currentPage -1)*formPerPage + 1 + i;
+            forms[i].No = (currentPage -1)*formPerPage + 1 + i;
         }
-        res.render("cashier/penalty-form/list",{
+        res.render("cashier/penalty_form/list",{
             forms,
             currentPage,
             paginationArray,
@@ -70,6 +72,22 @@ exports.list = async (req,res, next)=> {
     
 }
 
-exports.print = async (req,res)=> {
-    res.render('cashier/penalty_form/print');
+exports.print = async (req,res, next)=> {
+    const id = req.params.id;
+    try {
+        const form = await penaltyFormService.getDetail(id);
+        const admin = await penaltyFormService.getAdmin(form.nguoithu);
+        const user = await penaltyFormService.getUser(form.madocgia);
+        form.docgia = user.hoten;
+        form.nguoithu = admin.hoten;
+        form.tienno = user.tongno;
+        form.conlai = user.tongno - form.tienthu;
+        res.render('cashier/penalty_form/print', {
+            form
+        });
+    } catch (error) {
+        console.log(error);
+        next();
+    }
+    
 }

@@ -965,7 +965,13 @@ main {
   .all-fine-form__container {
     margin-top: 20px; }
   .all-fine-form .fine-form {
-    margin: 20px 0; }
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; }
+    @media (max-width: 960px) {
+      .all-fine-form .fine-form {
+        grid-template-columns: repeat(1, 1fr); } }
     .all-fine-form .fine-form__card {
       background-color: white;
       padding: 20px 30px;
