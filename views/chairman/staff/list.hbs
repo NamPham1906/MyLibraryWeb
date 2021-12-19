@@ -47,102 +47,55 @@
             </form>
         </div>
         <div class="all-staff__container">
-            <div class="staff-card">
-                <div class="container-fluid ">
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            <div class="row">
-                                <div class="col-12 col-sm-4">
-                                    <div class="staff-card__avatar mx-auto mx-sm-0">
-                                        <img  src="/images/ceo/small-staff-1.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-8">
-                                    <div class="staff-card__info">
-                                        <p><b>Mã nhân viên: NV000005</b></p>
-                                        <p>Họ và tên: Trần Minh Tuyết</p>
-                                        <p>Ngày sinh: 15/01/1988</p>
-                                        <p>Địa chỉ: 42A Lam Sơn, phường 2, quận Tân Bình, HCM</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="row h-100">
-                                <div class="col-12 col-sm-7">
-                                    <div class="staff-card__info">
-                                        <p>Tài khoản: tt_tmtuyet</p>
-                                        <p>Bằng cấp: Đại học</p>
-                                        <p>Bộ phận: Thủ thư</p>
-                                        <p>Chức vụ: Nhân viên</p>
-                                        <p>Điện thoại: 0123456789</p>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-5">
-                                    <div class="d-flex flex-column justify-content-between staff-card__action">
-                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
-                                            <img src="/images/ceo/edit-staff.png" alt="">
-                                            <span>Chỉnh sửa</span>
+            {{#each staffs}}
+                <div class="staff-card">
+                    <div class="container-fluid ">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="row">
+                                    <div class="col-12 col-sm-4">
+                                        <div class="staff-card__avatar mx-auto mx-sm-0">
+                                            {{!-- <img  src="/images/ceo/small-staff-1.png" alt=""> --}}
+                                            <img  src="{{this.anhdaidien}}" alt="">
                                         </div>
-                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
-                                            <img src="/images/ceo/delete-staff.png" alt="">
-                                            <span>Xóa</span>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
-                                            <img src="/images/ceo/print-staff.png" alt="">
-                                            <span>In hồ sơ nhân viên</span>
+                                    </div>
+                                    <div class="col-12 col-sm-8">
+                                        <div class="staff-card__info">
+                                            <p><b>Mã nhân viên: {{this.manv}}</b></p>
+                                            <p>Họ và tên: {{this.hoten}}</p>
+                                            <p>Ngày sinh: {{this.dob}}</p>
+                                            <p>Địa chỉ: {{this.diachi}}</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="staff-card">
-                <div class="container-fluid ">
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            <div class="row">
-                                <div class="col-12 col-sm-4">
-                                    <div class="staff-card__avatar mx-auto mx-sm-0">
-                                        <img  src="/images/ceo/small-staff-1.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-8">
-                                    <div class="staff-card__info">
-                                        <p><b>Mã nhân viên: NV000005</b></p>
-                                        <p>Họ và tên: Trần Minh Tuyết</p>
-                                        <p>Ngày sinh: 15/01/1988</p>
-                                        <p>Địa chỉ: 42A Lam Sơn, phường 2, quận Tân Bình, HCM</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="row h-100">
-                                <div class="col-12 col-sm-7">
-                                    <div class="staff-card__info">
-                                        <p>Tài khoản: tt_tmtuyet</p>
-                                        <p>Bằng cấp: Đại học</p>
-                                        <p>Bộ phận: Thủ thư</p>
-                                        <p>Chức vụ: Nhân viên</p>
-                                        <p>Điện thoại: 0123456789</p>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-5">
-                                    <div class="d-flex flex-column justify-content-between staff-card__action">
-                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
-                                            <img src="/images/ceo/edit-staff.png" alt="">
-                                            <span>Chỉnh sửa</span>
+                            <div class="col-12 col-md-6">
+                                <div class="row h-100">
+                                    <div class="col-12 col-sm-7">
+                                        <div class="staff-card__info">
+                                            <p>Tài khoản: {{this.username}}</p>
+                                            <p>Bằng cấp: {{this.bangcap}}</p>
+                                            <p>Bộ phận: {{this.bophan}}</p>
+                                            <p>Chức vụ: {{this.chucvu}}</p>
+                                            <p>Điện thoại: {{this.dienthoai}}</p>
                                         </div>
-                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
-                                            <img src="/images/ceo/delete-staff.png" alt="">
-                                            <span>Xóa</span>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
-                                            <img src="/images/ceo/print-staff.png" alt="">
-                                            <span>In hồ sơ nhân viên</span>
+                                    </div>
+                                    <div class="col-12 col-sm-5">
+                                        <div class="d-flex flex-column justify-content-between staff-card__action">
+                                            <a href="/chairman/staff/detail/{{this.manv}}">
+                                                <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
+                                                    <img src="/images/ceo/edit-staff.png" alt="">
+                                                    <span style="color: black;">Chỉnh sửa</span>
+                                                </div>
+                                            </a>
+                                            <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
+                                                <img src="/images/ceo/delete-staff.png" alt="">
+                                                <span>Xóa</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
+                                                <img src="/images/ceo/print-staff.png" alt="">
+                                                <span>In hồ sơ nhân viên</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -150,186 +103,36 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="staff-card">
-                <div class="container-fluid ">
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            <div class="row">
-                                <div class="col-12 col-sm-4">
-                                    <div class="staff-card__avatar mx-auto mx-sm-0">
-                                        <img  src="/images/ceo/small-staff-1.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-8">
-                                    <div class="staff-card__info">
-                                        <p><b>Mã nhân viên: NV000005</b></p>
-                                        <p>Họ và tên: Trần Minh Tuyết</p>
-                                        <p>Ngày sinh: 15/01/1988</p>
-                                        <p>Địa chỉ: 42A Lam Sơn, phường 2, quận Tân Bình, HCM</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="row h-100">
-                                <div class="col-12 col-sm-7">
-                                    <div class="staff-card__info">
-                                        <p>Tài khoản: tt_tmtuyet</p>
-                                        <p>Bằng cấp: Đại học</p>
-                                        <p>Bộ phận: Thủ thư</p>
-                                        <p>Chức vụ: Nhân viên</p>
-                                        <p>Điện thoại: 0123456789</p>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-5">
-                                    <div class="d-flex flex-column justify-content-between staff-card__action">
-                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
-                                            <img src="/images/ceo/edit-staff.png" alt="">
-                                            <span>Chỉnh sửa</span>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
-                                            <img src="/images/ceo/delete-staff.png" alt="">
-                                            <span>Xóa</span>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
-                                            <img src="/images/ceo/print-staff.png" alt="">
-                                            <span>In hồ sơ nhân viên</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="staff-card">
-                <div class="container-fluid ">
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            <div class="row">
-                                <div class="col-12 col-sm-4">
-                                    <div class="staff-card__avatar mx-auto mx-sm-0">
-                                        <img  src="/images/ceo/small-staff-1.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-8">
-                                    <div class="staff-card__info">
-                                        <p><b>Mã nhân viên: NV000005</b></p>
-                                        <p>Họ và tên: Trần Minh Tuyết</p>
-                                        <p>Ngày sinh: 15/01/1988</p>
-                                        <p>Địa chỉ: 42A Lam Sơn, phường 2, quận Tân Bình, HCM</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="row h-100">
-                                <div class="col-12 col-sm-7">
-                                    <div class="staff-card__info">
-                                        <p>Tài khoản: tt_tmtuyet</p>
-                                        <p>Bằng cấp: Đại học</p>
-                                        <p>Bộ phận: Thủ thư</p>
-                                        <p>Chức vụ: Nhân viên</p>
-                                        <p>Điện thoại: 0123456789</p>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-5">
-                                    <div class="d-flex flex-column justify-content-between staff-card__action">
-                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
-                                            <img src="/images/ceo/edit-staff.png" alt="">
-                                            <span>Chỉnh sửa</span>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
-                                            <img src="/images/ceo/delete-staff.png" alt="">
-                                            <span>Xóa</span>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
-                                            <img src="/images/ceo/print-staff.png" alt="">
-                                            <span>In hồ sơ nhân viên</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="staff-card">
-                <div class="container-fluid ">
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            <div class="row">
-                                <div class="col-12 col-sm-4">
-                                    <div class="staff-card__avatar mx-auto mx-sm-0">
-                                        <img  src="/images/ceo/small-staff-1.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-8">
-                                    <div class="staff-card__info">
-                                        <p><b>Mã nhân viên: NV000005</b></p>
-                                        <p>Họ và tên: Trần Minh Tuyết</p>
-                                        <p>Ngày sinh: 15/01/1988</p>
-                                        <p>Địa chỉ: 42A Lam Sơn, phường 2, quận Tân Bình, HCM</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="row h-100">
-                                <div class="col-12 col-sm-7">
-                                    <div class="staff-card__info">
-                                        <p>Tài khoản: tt_tmtuyet</p>
-                                        <p>Bằng cấp: Đại học</p>
-                                        <p>Bộ phận: Thủ thư</p>
-                                        <p>Chức vụ: Nhân viên</p>
-                                        <p>Điện thoại: 0123456789</p>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-5">
-                                    <div class="d-flex flex-column justify-content-between staff-card__action">
-                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
-                                            <img src="/images/ceo/edit-staff.png" alt="">
-                                            <span>Chỉnh sửa</span>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
-                                            <img src="/images/ceo/delete-staff.png" alt="">
-                                            <span>Xóa</span>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0">
-                                            <img src="/images/ceo/print-staff.png" alt="">
-                                            <span>In hồ sơ nhân viên</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {{/each}}
         </div>
         <div class="pagination">
-            <div class="pagination__item pagination__item--prev">
-                <i class="fas fa-angle-left"></i>
-            </div>
-            <div class="pagination__item">
-                1
-            </div>
-            <div class="pagination__item">
-                2
-            </div>
-            <div class="pagination__item current">
-                3
-            </div>
-            <div class="pagination__item">
-                4
-            </div>
-            <div class="pagination__item">
-                5
-            </div>
-            <div class="pagination__item pagination__item--next">
-                <i class="fas fa-angle-right"></i>
-            </div>
+			<form method="GET" action="/chairman/staff">
+                {{#if paginationArray}}
+                    <div class="pagination">
+                        <div class="pagination__item--prev">
+                            <input onchange='this.form.submit();' style="display: none;" id="page-prev" value="{{prevPage}}" type="radio" name="page"/>
+                            <label for="page-prev" class="pagination__item"><i class="fas fa-angle-left"></i></label>
+                        </div>
+                        {{#each paginationArray}}  
+                            {{#if this.isCurrent}}
+                                <div>
+                                    <input onchange='this.form.submit();' style="display: none;" id="page-{{this.page}}" value="{{this.page}}" type="radio" name="page"/>
+                                    <label for="page-{{this.page}}" class="pagination__item current">{{this.page}}</label>
+                                </div>
+                            {{else}}
+                                <div>
+                                    <input onchange='this.form.submit();' style="display: none;" id="page-{{this.page}}" value="{{this.page}}" type="radio" name="page"/>
+                                    <label for="page-{{this.page}}" class="pagination__item">{{this.page}}</label>
+                                </div>
+                            {{/if}}
+                        {{/each}}
+                        <div class="pagination__item--next">
+                            <input onchange='this.form.submit();' style="display: none;" id="page-next" value="{{nextPage}}" type="radio" name="page"/>
+                            <label for="page-next" class="pagination__item"><i class="fas fa-angle-right"></i></label>
+                        </div>
+                    </div>
+                {{/if}}
+            </form>
         </div>
     </main>
     <div class="modal fade staff-advance-filter" id="advancedFilterModal" tabindex="-1" aria-hidden="true">
