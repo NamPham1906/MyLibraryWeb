@@ -13,6 +13,10 @@ exports.list=(page = 0, itemPerPage = 10 ) =>{
     });
 };
 
+exports.total =()=>{
+    return models.sach.count();
+}
+
 exports.bookDetail=(book_id ="0") =>{
     return models.sach.findOne({
         where: {
@@ -23,7 +27,7 @@ exports.bookDetail=(book_id ="0") =>{
 }
 
 exports.updateBook=(book_id ="0", book_name,book_type,publisher,publish_date,author,cost,importer,cover,importdate) =>{
-    models.sach.update({ 
+    return models.sach.update({ 
         tensach: book_name,
         theloai: book_type,
         nhaxuatban: publisher,
@@ -42,7 +46,7 @@ exports.updateBook=(book_id ="0", book_name,book_type,publisher,publish_date,aut
 
 exports.addBook=(newid, book_name,book_type,publisher,publish_date,author,cost,importer,cover,importdate) =>{
     
-    const newbook =  models.sach.create({ 
+    return models.sach.create({ 
         masach: newid,
         tensach: book_name,
         theloai: book_type,
@@ -57,5 +61,12 @@ exports.addBook=(newid, book_name,book_type,publisher,publish_date,author,cost,i
 }
 
 
+exports.admin=(adminId)=>{
+    return models.nhanvien.findOne({
+        where:{
+            manv: adminId
+        }
+    })
+}
 
 

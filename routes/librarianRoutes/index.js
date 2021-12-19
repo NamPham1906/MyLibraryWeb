@@ -17,13 +17,13 @@ router.get('/logout',librarianController.logout);
 //READER
 router.get('/reader',readerController.list);
 router.get('/reader/add',readerController.add);
-router.get('/reader/detail',readerController.detail);
-router.get('/reader/edit',readerController.edit);
+router.get('/reader/detail/:id',readerController.detail);
+router.get('/reader/edit/:id',readerController.edit);
 router.get('/reader/list',readerController.list);
 
 //BOOK
 router.get('/book',bookController.list);
-router.get('/book/detail',bookController.detail);
+router.get('/book/detail/:id',bookController.detail);
 router.get('/book/list',bookController.list);
 
 //LOST BOOK FORM

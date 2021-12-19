@@ -1,5 +1,5 @@
-const { raw } = require('express');
-const { NULL } = require('node-sass');
+
+
 const {models} = require('../../../models/index');
 
 const { Op } = require("sequelize");
@@ -12,9 +12,10 @@ exports.list=(page = 0, itemPerPage = 10 ) =>{
     });
 };
 
+
 exports.total=()=>{
     return models.phieumuonsach.count();
-}
+};
 
 exports.getUser=(userId)=>{
     return models.docgia.findOne({
@@ -23,7 +24,8 @@ exports.getUser=(userId)=>{
         },
         raw: true
     })
-}
+};
+
 
 
 exports.totalBooks=(borrowId)=>{
@@ -32,4 +34,3 @@ exports.totalBooks=(borrowId)=>{
             maphieumuon: borrowId
         }
     });
-}
