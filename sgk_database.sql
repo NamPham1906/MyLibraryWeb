@@ -186,14 +186,15 @@ values('SGK00001','Khoa học trái đất','A','NXB Khoa học và Kỹ thuật
     ('SGK00009','Khoa học trái đất','C','NXB Khoa học và Kỹ thuật','2019','2021-01-01','HCMUS',60000,'XXXXXTK','/images/stocker/khtd-book.png');
 
 insert into docgia
-values('DG00001','Phạm Sơn Nam','X','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam1@gmail.com','2021-12-07','XXXXXTT',8000,'\images\librarian\user1.png'),
-('DG00002','Phạm Sơn Nam','Y','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam2@gmail.com','2021-12-07','XXXXXTT',13000,'\images\librarian\user1.png'),
-('DG00003','Phạm Sơn Nam','Y','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam3@gmail.com','2021-12-07','XXXXXTT',0,'\images\librarian\user1.png'),
-('DG00004','Phạm Sơn Nam','Y','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam4@gmail.com','2021-12-07','XXXXXTT',0,'\images\librarian\user1.png'),
-('DG00005','Phạm Sơn Nam','X','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam5@gmail.com','2021-12-07','XXXXXTT',0,'\images\librarian\user1.png'),
-('DG00006','Phạm Sơn Nam','X','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam6@gmail.com','2021-12-07','XXXXXTT',0,'\images\librarian\user1.png'),
-('DG00007','Phạm Sơn Nam','Y','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam7@gmail.com','2021-12-07','XXXXXTT',0,'\images\librarian\user1.png'),
-('DG00008','Phạm Sơn Nam','X','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam8@gmail.com','2021-12-07','XXXXXTT',0,'\images\librarian\user1.png');
+
+values('DG00001','Phạm Sơn Nam','X','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam1@gmail.com','2021-12-07','XXXXXTT',8000,'/images/librarian/user1.png'),
+('DG00002','Phạm Sơn Nam','Y','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam2@gmail.com','2021-12-07','XXXXXTT',13000,'/images/librarian/user1.png'),
+('DG00003','Phạm Sơn Nam','Y','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam3@gmail.com','2021-12-07','XXXXXTT',0,'/images/librarian/user1.png'),
+('DG00004','Phạm Sơn Nam','Y','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam4@gmail.com','2021-12-07','XXXXXTT',0,'/images/librarian/user1.png'),
+('DG00005','Phạm Sơn Nam','X','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam5@gmail.com','2021-12-07','XXXXXTT',0,'/images/librarian/user1.png'),
+('DG00006','Phạm Sơn Nam','X','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam6@gmail.com','2021-12-07','XXXXXTT',0,'/images/librarian/user1.png'),
+('DG00007','Phạm Sơn Nam','Y','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam7@gmail.com','2021-12-07','XXXXXTT',0,'/images/librarian/user1.png'),
+('DG00008','Phạm Sơn Nam','X','2001-06-19','364-366 Nguyễn Văn Lương, phường 12, Quận 6 HCM','phamsonnam8@gmail.com','2021-12-07','XXXXXTT',0,'/images/librarian/user1.png');
 
 insert into phieumuonsach
 values('MS00001','DG00001','2021-02-01'),
@@ -235,3 +236,4 @@ values('TL00003','SGK00003','Người dùng làm mất'),
 ('TL00001','SGK00001','Hư hỏng'),
 ('TL00002','SGK00008','Hư hỏng'),
 ('TL00002','SGK00009','Mất');
+

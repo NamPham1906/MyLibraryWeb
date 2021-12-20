@@ -20,7 +20,7 @@ router.get('/book/list',bookController.list);
 //LIQUIDATION BOOK
 router.get('/liquidation-book',liquidationBookController.list);
 router.get('/liquidation-book/add',liquidationBookController.add);
-router.get('/liquidation-book/detail',liquidationBookController.detail);
+router.get('/liquidation-book/detail/:id',liquidationBookController.detail);
 router.get('/liquidation-book/list',liquidationBookController.list);
 
 module.exports = router;

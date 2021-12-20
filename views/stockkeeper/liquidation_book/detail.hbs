@@ -3,7 +3,7 @@
     </div>
     <main class="edit-liquidation">
         <div class="edit-liquidation__id">
-            <h5>Mã phiếu: DS0009</h5>
+            <h5>Mã phiếu: {{thanhly.mathanhly}}</h5>
         </div>
         <div class="edit-liquidation__title">
             <h2>THANH LÝ SÁCH</h2>
@@ -13,20 +13,20 @@
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <div class="form-group">
-                            <label for="fullname">Họ tên người thanh lý:</label>
-                            <input type="text" class="form-control" name="fullname" id="fullname" autocomplete="false" value="Nam Phạm">
+                            <label >Họ tên người thanh lý:</label>
+                            <input type="text" class="form-control" readonly autocomplete="false" value="{{thanhly.tennguoithanhly}}">
                         </div>
                     </div>
                     <div class="col-12 col-md-4">
                         <div class="form-group">
-                            <label for="user-id">Mã người thanh lý:</label>
-                            <input type="text" class="form-control" name="userId" id="user-id" autocomplete="false" value="NV00001" >
+                            <label >Mã người thanh lý:</label>
+                            <input type="text" class="form-control" readonly autocomplete="false" value="{{thanhly.nguoithanhly}}" >
                         </div>
                     </div>
                     <div class="col-12 col-md-4">
                         <div class="form-group">
                             <label for="created-at">Ngày thanh lý: </label>
-                            <input type="text" readonly class="form-control" name="createdAt" id="created-at" autocomplete="false" value="08/11/2021" >
+                            <input type="text" readonly class="form-control" autocomplete="false" value="{{thanhly.ngaythanhly}}" >
                         </div>
                     </div>
                 </div>
@@ -45,91 +45,31 @@
                             </tr>
                         </thead>
                         <tbody id="book-table">
-                            <tr data-id="1">
-                                <th scope="row" class="row-no">1</th>
+                            {{#each books}}
+                                <tr >
+                                    <th scope="row" class="row-no">{{this.no}}</th>
                                 <td>
-                                    <input class="form-control" type="text" name="bookIds[]" id="book-id-1" value="BAA00011">
+                                    <input  class="form-control" type="text" readonly value="{{this.masach}}">
                                 </td>
                                 <td>
-                                    <input class="form-control"  type="text" name="bookNames[]" id="book-name-1" value="Anh văn 2">
+                                    <input class="form-control" readonly type="text"  value="{{this.tensach}}">
                                 </td>
                                 <td>
-                                    <input class="form-control input-liquidation"  type="text" name="liquidation[]" id="book-type-1" value="Hư hỏng">
-                                </td>
-                                <td class="delete-row" onclick="removeRow(this)">
-                                    <i class="far fa-trash-alt"></i>
+                                    <input class="form-control input-liquidation"  type="text" readonly value="{{this.lydothanhly}}">
                                 </td>
                             </tr>
-                            <tr data-id="1">
-                                <th scope="row" class="row-no">2</th>
-                                <td>
-                                    <input class="form-control" type="text" name="bookIds[]" id="book-id-1" value="BAA00011">
-                                </td>
-                                <td>
-                                    <input class="form-control"  type="text" name="bookNames[]" id="book-name-1" value="Anh văn 2">
-                                </td>
-                                <td>
-                                    <input class="form-control input-liquidation"  type="text" name="liquidation[]" id="book-type-1" value="Hư hỏng">
-                                </td>
-                                <td class="delete-row" onclick="removeRow(this)">
-                                    <i class="far fa-trash-alt"></i>
-                                </td>
-                            </tr>
-                            <tr data-id="1">
-                                <th scope="row" class="row-no">3</th>
-                                <td>
-                                    <input class="form-control" type="text" name="bookIds[]" id="book-id-1" value="BAA00011">
-                                </td>
-                                <td>
-                                    <input class="form-control"  type="text" name="bookNames[]" id="book-name-1" value="Anh văn 2">
-                                </td>
-                                <td>
-                                    <input class="form-control input-liquidation"  type="text" name="liquidation[]" id="book-type-1" value="Hư hỏng">
-                                </td>
-                                <td class="delete-row" onclick="removeRow(this)">
-                                    <i class="far fa-trash-alt"></i>
-                                </td>
-                            </tr>
-                            <tr data-id="1">
-                                <th scope="row" class="row-no">4</th>
-                                <td>
-                                    <input class="form-control" type="text" name="bookIds[]" id="book-id-1" value="BAA00011">
-                                </td>
-                                <td>
-                                    <input class="form-control"  type="text" name="bookNames[]" id="book-name-1" value="Anh văn 2">
-                                </td>
-                                <td>
-                                    <input class="form-control input-liquidation"  type="text" name="liquidation[]" id="book-type-1" value="Hư hỏng">
-                                </td>
-                                <td class="delete-row" onclick="removeRow(this)">
-                                    <i class="far fa-trash-alt"></i>
-                                </td>
-                            </tr>
+                            {{/each}}
+
                         </tbody>
                     </table>
                     
                 </div>
-                <div class="row">
-                    <button type="submit" class="btn">Lưu thông tin</button>
-                    <button class="btn">In danh sách</button>
+                <div class="row d-flex flex-row justify-content-around">
+                    <a href="/stockkeeper/liquidation-book/edit/{{thanhly.mathanhly}}">
+                        <button type="button" class="btn">Sửa phiếu</button>
+                    </a>
+                    <button class="btn mx-0">In danh sách</button>
                 </div>
             </div>
         </form>
     </main>
-    <script>
-        $(document).ready(function(){
-            const bookTable = document.getElementById("book-table");
-            let currentId = bookTable.getElementsByTagName("tr").length + 1;
-            const deleteRowBtns = document.getElementsByClassName("delete-row");
-            
-        });
-        function removeRow(o){
-            var p=o.parentNode;
-            p.parentNode.removeChild(p);
-            const nos = document.getElementsByClassName("row-no");
-            const len = nos.length;
-            for(let i = 0 ; i < len ;i++){
-                nos[i].innerHTML=i+1;
-            }
-        }
-    </script>
