@@ -26,7 +26,23 @@ exports.getUser=(userId)=>{
     })
 };
 
+exports.getBorrowDetailList = (borrowId) => {
+    return models.sachthuocphieumuon.findAll({
+        raw: true,
+        where:{
+            maphieumuon: borrowId
+        }
+    })
+}
 
+exports.getInfoBorrowBook=(bookId)=>{
+    return models.sach.findOne({
+        where:{
+            masach: bookId
+        },
+        raw: true
+    })
+};
 
 exports.totalBooks=(borrowId)=>{
     return models.sachthuocphieumuon.count({
@@ -35,3 +51,12 @@ exports.totalBooks=(borrowId)=>{
         }
     });
 };
+
+exports.getInfoForm = (id) => {
+    return models.phieumuonsach.findOne({
+        raw: true,
+        where:{
+            maphieumuon: id
+        }
+    })
+}

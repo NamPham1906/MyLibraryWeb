@@ -35,7 +35,7 @@ router.get('/lost-book-form/list',lostBookFormController.list);
 //BORROW FORM 
 router.get('/borrow-form',borrowFormController.list);
 router.get('/borrow-form/add',borrowFormController.add);
-router.get('/borrow-form/detail',borrowFormController.detail);
+router.get('/borrow-form/detail/:id',borrowFormController.detail);
 router.get('/borrow-form/print',borrowFormController.print);
 router.get('/borrow-form/list',borrowFormController.list);
 
