@@ -5,7 +5,44 @@ exports.add = async (req,res)=> {
 }
 
 exports.detail = async (req,res)=> {
-    res.render('librarian/borrow_form/detail');
+    const id = req.params.id;
+    Promise.all([borrowFormService.getInfoForm(id)])
+    .then(([form])=>{
+        Promise.all([borrowFormService.getUser(form.madocgia), borrowFormService.getBorrowDetailList(form.maphieumuon)])
+        .then(([reader, borrowdetail])=>{
+            const ngayghi = new Date(form.ngaymuon);
+            if (!isNaN(ngayghi.getTime())) {
+                let d = ngayghi.getDate();
+                let m = ngayghi.getMonth() + 1;
+                let y = ngayghi.getFullYear();
+                form.ngayghi = d + '/' + m + '/' + y;
+            }
+            form.readername = reader.hoten;
+            const bookBorrow = borrowdetail.map(book=>{
+                return borrowFormService.getInfoBorrowBook(book.masach);
+            });
+            Promise.all(bookBorrow)
+            .then(bookList=>{
+                //console.log(bookList);
+                res.render("librarian/borrow_form/detail",{
+                    form,
+                    bookList
+                });
+            })
+            .catch(err=>{
+                console.log(err);
+                next();
+            })
+        })
+        .catch(err=>{
+            console.log(err);
+            next();
+        })
+    })
+    .catch(err=>{
+        console.log(err);
+        next();
+    })
 }
 
 
